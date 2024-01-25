@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Build docker image">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Updated release branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +139,7 @@
       <workItem from="1706163665727" duration="560000" />
       <workItem from="1706167632515" duration="826000" />
       <workItem from="1706168857182" duration="2678000" />
-      <workItem from="1706184457549" duration="1372000" />
+      <workItem from="1706184457549" duration="2781000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -199,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706185492565</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated release branch">
+      <option name="closed" value="true" />
+      <created>1706185927645</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706185927645</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,8 +215,8 @@
     <MESSAGE value="First commit, adding initial files." />
     <MESSAGE value="Added App.java file" />
     <MESSAGE value="create a self-contained JAR" />
-    <MESSAGE value="Updated release branch" />
     <MESSAGE value="Build docker image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Build docker image" />
+    <MESSAGE value="Updated release branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated release branch" />
   </component>
 </project>
