@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Updated release branch">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="xml file update">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +140,7 @@
       <workItem from="1706163665727" duration="560000" />
       <workItem from="1706167632515" duration="826000" />
       <workItem from="1706168857182" duration="2678000" />
-      <workItem from="1706184457549" duration="6181000" />
+      <workItem from="1706184457549" duration="8632000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -230,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706191003979</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="xml file update">
+      <option name="closed" value="true" />
+      <created>1706191576212</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706191576212</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +250,7 @@
     <MESSAGE value="create a self-contained JAR" />
     <MESSAGE value="Build docker image" />
     <MESSAGE value="Updated release branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated release branch" />
+    <MESSAGE value="xml file update" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml file update" />
   </component>
 </project>
