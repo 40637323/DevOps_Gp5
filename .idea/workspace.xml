@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Added App.java file">
-      <changelist_data name="Su Thiri Htun" email="157453120+suthirihtun@users.noreply.github.com" />
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="create a self-contained JAR">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,9 +24,15 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Hein Htet Naing &lt;135005782+heinhn@users.noreply.github.com&gt;" />
         <option value="Su Thiri Htun &lt;157453120+suthirihtun@users.noreply.github.com&gt;" />
         <option value="Su Thiri Htun" />
       </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -46,32 +52,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.test-dockerfile/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOpsCourseWork_GP5&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Docker.Docker Image.executor": "Run",
+    "Docker.test-dockerfile/Dockerfile.executor": "Run",
+    "Maven.DevOpsCW_Gp5 [package].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "release",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOpsCourseWork_GP5",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+}]]></component>
+  <component name="RunManager" selected="Docker.Docker Image">
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="mongo:latest" />
+          <option name="containerName" value="" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
@@ -90,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Docker Image" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.test-dockerfile/Dockerfile" />
       </list>
@@ -115,7 +137,7 @@
       <workItem from="1706160134786" duration="175000" />
       <workItem from="1706163665727" duration="560000" />
       <workItem from="1706167632515" duration="826000" />
-      <workItem from="1706168857182" duration="448000" />
+      <workItem from="1706168857182" duration="2678000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -133,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706159215646</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create a self-contained JAR">
+      <option name="closed" value="true" />
+      <created>1706169670610</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706169670611</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +172,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit, adding initial files." />
     <MESSAGE value="Added App.java file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added App.java file" />
+    <MESSAGE value="create a self-contained JAR" />
+    <option name="LAST_COMMIT_MESSAGE" value="create a self-contained JAR" />
   </component>
 </project>
