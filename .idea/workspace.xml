@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Added App.java file">
-      <changelist_data name="Su Thiri Htun" email="157453120+suthirihtun@users.noreply.github.com" />
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="adding documentation and input user roles in Readme file">
+      <changelist_data name="Pwint Phoo Wai" email="40637323@live.napier.ac.uk" />
+      <change afterPath="$PROJECT_DIR$/documentation/documentation_lists.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -23,6 +31,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Pwint Phoo Wai &lt;40637323@live.napier.ac.uk&gt;" />
         <option value="Su Thiri Htun &lt;157453120+suthirihtun@users.noreply.github.com&gt;" />
         <option value="Su Thiri Htun" />
       </list>
@@ -48,6 +57,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
     "Docker.test-dockerfile/Dockerfile.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -61,11 +71,15 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.31726283",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Docker.Dockerfile">
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
           <option name="sourceFilePath" value="Dockerfile" />
@@ -89,7 +103,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.test-dockerfile/Dockerfile" />
       </list>
     </recent_temporary>
@@ -114,6 +127,8 @@
       <workItem from="1706160134786" duration="175000" />
       <workItem from="1706163665727" duration="560000" />
       <workItem from="1706167632515" duration="826000" />
+      <workItem from="1706169353749" duration="1960000" />
+      <workItem from="1706171349861" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -140,6 +155,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit, adding initial files." />
     <MESSAGE value="Added App.java file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added App.java file" />
+    <MESSAGE value="adding documentation and input user roles in Readme file" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding documentation and input user roles in Readme file" />
   </component>
 </project>
