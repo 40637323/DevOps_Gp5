@@ -1,4 +1,4 @@
 FROM openjdk:latest
-COPY ./"target/DevOpsCW_Gp5-0.1.0.2(0.1-alpha-2)-jar-with-dependencies.jar" /tmp
+COPY ./target/classes/com /tmp/com
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar", "DevOpsCW_Gp5-0.1.0.2(0.1-alpha-2)-jar-with-dependencies.jar"]
+ENTRYPOINT ["java", "com.universal.App"]
