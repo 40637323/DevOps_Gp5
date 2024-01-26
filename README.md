@@ -9,3 +9,4 @@ Develop Build Status ![GitHub Actions Workflow Status](https://img.shields.io/gi
 [![LICENSE](https://img.shields.io/github/license/40637323/sem.svg?style=flat-square)](https://github.com/40637323/DevOps_Gp5/blob/master/LICENSE)
 
 [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/all.svg?style=flat-square)](https://github.com/40637323/DevOps_Gp5/releases)
+
