@@ -6,11 +6,10 @@
 
 ==============Scope and applicability================
 
-This project is created by DevOps subject form Edinburgh Napier University with the module name of SET09623 2023-4 TR2 001.
-Group number is 5 and there has 6 members who has ability in each task. 
-There has 4 software students and 2 network students. 
-Each members have their own manners for this subject and assign to all their related tasks. 
-The six members are.
+This is SET09623 2023-4 TR2 001 DevOps Project for students in Edinburgh Napier University.
+The following Gp5 students are assigned to do the relevant to assess designing and implementing a new system to allow easy access to this population information.
+There are total 6 members: 2 network specialized students, and 4 software specialized students.
+The six students are.
 
 	Pwint Phoo Wai
 
@@ -26,7 +25,7 @@ The six members are.
 
 ============Roles and tasks==============
 
-Group 5 For DevOps
+Group 5 For DevOps Assessment
 
 Group Members
 
@@ -43,13 +42,7 @@ Group Members
 - Developer - Hein Htet Naing (40632027@live.napier.ac.uk)
 
 
-This is Group 5 Assessment.
-CI to Our repository is added.
-DockerFile is added.
-Self-Contained Jar with Maven is added.
-
-Assign Rules and Marks
-
+=============Assigned Rules and Marks===============
 
 1.	School late 	                   - 1 mark
 2.	School absent 	                 - 2 marks
