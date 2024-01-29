@@ -4,7 +4,7 @@ on: push
 jobs:
   build:
     name: Universal action
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04K
     steps:
       - name: Checkout
         uses: actions/checkout@v2
