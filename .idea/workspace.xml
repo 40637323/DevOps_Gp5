@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Project and world database is connected">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +60,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "feature/view-record",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOpsCourseWork_GP5",
+    "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOps_Gp5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,18 +72,19 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Docker.db/Dockerfile">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="buildOnly" value="true" />
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
@@ -116,8 +119,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.db/Dockerfile" />
         <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Docker.db/Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.test-dockerfile/Dockerfile" />
       </list>
@@ -142,6 +145,7 @@
       <workItem from="1706157260153" duration="2809000" />
       <workItem from="1706160134786" duration="175000" />
       <workItem from="1706163665727" duration="560000" />
+      <workItem from="1706692154253" duration="145000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -175,7 +179,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706691500963</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Project and world database is connected">
+      <option name="closed" value="true" />
+      <created>1706691919854</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706691919854</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Project and world database is connected">
+      <option name="closed" value="true" />
+      <created>1706691934637</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706691934637</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
