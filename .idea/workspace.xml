@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="updated release branch">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Added App.java file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
@@ -22,13 +21,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Su Thiri Htun &lt;157453120+suthirihtun@users.noreply.github.com&gt;" />
-        <option value="Hein Htet Naing &lt;135005782+heinhn@users.noreply.github.com&gt;" />
-        <option value="Su Thiri Htun" />
-      </list>
-    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -55,18 +47,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
-    "Docker.Docker Image.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
     "Docker.test-dockerfile/Dockerfile.executor": "Run",
+    "Maven.DevOpsCW_Gp5 [clean].executor": "Run",
+    "Maven.DevOpsCW_Gp5 [compile].executor": "Run",
     "Maven.DevOpsCW_Gp5 [package].executor": "Run",
-    "Maven.DevOps_Gp5 [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "release",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "git-widget-placeholder": "feature/view-record",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOpsCourseWork_GP5",
+    "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOps_Gp5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,15 +66,6 @@
   }
 }]]></component>
   <component name="RunManager" selected="Docker.Dockerfile">
-    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
-      <deployment type="docker-image">
-        <settings>
-          <option name="imageTag" value="mongo:latest" />
-          <option name="containerName" value="" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -93,15 +74,25 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
-      <deployment type="docker-image">
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
         <settings />
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+    <configuration name="db/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
-        <settings />
+        <settings>
+          <option name="sourceFilePath" value="db/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
       </deployment>
       <method v="2" />
     </configuration>
@@ -115,8 +106,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.test-dockerfile/Dockerfile" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Docker.Docker Image" />
+        <item itemvalue="Docker.test-dockerfile/Dockerfile" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.test-dockerfile/Dockerfile" />
       </list>
     </recent_temporary>
@@ -140,9 +133,6 @@
       <workItem from="1706157260153" duration="2809000" />
       <workItem from="1706160134786" duration="175000" />
       <workItem from="1706163665727" duration="560000" />
-      <workItem from="1706167632515" duration="826000" />
-      <workItem from="1706168857182" duration="2678000" />
-      <workItem from="1706184457549" duration="9713000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -160,95 +150,7 @@
       <option name="project" value="LOCAL" />
       <updated>1706159215646</updated>
     </task>
-    <task id="LOCAL-00003" summary="create a self-contained JAR">
-      <option name="closed" value="true" />
-      <created>1706169670610</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1706169670611</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Updated release branch">
-      <option name="closed" value="true" />
-      <created>1706174847912</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1706174847912</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Updated release branch">
-      <option name="closed" value="true" />
-      <created>1706175207982</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1706175207982</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Updated release branch">
-      <option name="closed" value="true" />
-      <created>1706184918746</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1706184918746</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Build docker image">
-      <option name="closed" value="true" />
-      <created>1706185492565</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1706185492565</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Updated release branch">
-      <option name="closed" value="true" />
-      <created>1706185927645</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1706185927645</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Updated release branch">
-      <option name="closed" value="true" />
-      <created>1706188297460</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1706188297461</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Updated release branch">
-      <option name="closed" value="true" />
-      <created>1706189951400</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1706189951400</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Updated release branch">
-      <option name="closed" value="true" />
-      <created>1706191003979</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1706191003979</updated>
-    </task>
-    <task id="LOCAL-00012" summary="xml file update">
-      <option name="closed" value="true" />
-      <created>1706191576212</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1706191576212</updated>
-    </task>
-    <task id="LOCAL-00013" summary="updated release branch">
-      <option name="closed" value="true" />
-      <created>1706196203450</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1706196203450</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,11 +159,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit, adding initial files." />
     <MESSAGE value="Added App.java file" />
-    <MESSAGE value="create a self-contained JAR" />
-    <MESSAGE value="Build docker image" />
-    <MESSAGE value="Updated release branch" />
-    <MESSAGE value="xml file update" />
-    <MESSAGE value="updated release branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated release branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added App.java file" />
   </component>
 </project>
