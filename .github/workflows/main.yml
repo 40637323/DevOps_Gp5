@@ -3,7 +3,7 @@ on: push
 
 jobs:
   build:
-    name: Universal Action
+    name: Universal action
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -19,5 +19,4 @@ jobs:
         run: mvn package
       - name: Run docker compose
         run: docker-compose up --abort-on-container-exit
-
 
