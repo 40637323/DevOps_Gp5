@@ -54,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/view-record",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOps_Gp5",
     "node.js.detected.package.eslint": "true",
@@ -133,6 +133,7 @@
       <workItem from="1706157260153" duration="2809000" />
       <workItem from="1706160134786" duration="175000" />
       <workItem from="1706163665727" duration="560000" />
+      <workItem from="1706765447426" duration="269000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
