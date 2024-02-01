@@ -1,3 +1,7 @@
+/**
+ * This class is a collection of variables related with country class to generate the organization's requests.
+ * In this class, getter setter method are used within "country" class.
+ */
 package com.universal;
 
 /**
@@ -84,7 +88,7 @@ public class Country
 
 
     /**
-     * Getter Setter method for all variable
+     * The following is getter setter method related to code.
      */
     public int getCode() {
         return Code;
@@ -94,6 +98,9 @@ public class Country
         Code = code;
     }
 
+    /**
+     * The following is getter setter method related to capital.
+     */
     public String getCapital() {
         return Capital;
     }
@@ -102,6 +109,9 @@ public class Country
         Capital = capital;
     }
 
+    /**
+     * The following is getter setter method related to code2.
+     */
     public int getCode2() {
         return Code2;
     }
@@ -110,6 +120,9 @@ public class Country
         Code2 = code2;
     }
 
+    /**
+     * The following is getter setter method related to continent.
+     */
     public String getContinent() {
         return Continent;
     }
@@ -118,6 +131,9 @@ public class Country
         Continent = continent;
     }
 
+    /**
+     * The following is getter setter method related to GNP.
+     */
     public String getGNP() {
         return GNP;
     }
@@ -126,6 +142,9 @@ public class Country
         this.GNP = GNP;
     }
 
+    /**
+     * The following is getter setter method related to GNPOld.
+     */
     public String getGNPOld() {
         return GNPOld;
     }
@@ -134,6 +153,9 @@ public class Country
         this.GNPOld = GNPOld;
     }
 
+    /**
+     * The following is getter setter method related to governmentform.
+     */
     public String getGovernmentForm() {
         return GovernmentForm;
     }
@@ -142,6 +164,9 @@ public class Country
         GovernmentForm = governmentForm;
     }
 
+    /**
+     * The following is getter setter method related to headofstate.
+     */
     public String getHeadOfState() {
         return HeadOfState;
     }
@@ -150,6 +175,9 @@ public class Country
         HeadOfState = headOfState;
     }
 
+    /**
+     * The following is getter setter method related to IndepYear.
+     */
     public String getIndepYear() {
         return IndepYear;
     }
@@ -158,6 +186,9 @@ public class Country
         IndepYear = indepYear;
     }
 
+    /**
+     * The following is getter setter method related to LifeExpectancy.
+     */
     public String getLifeExpectancy() {
         return LifeExpectancy;
     }
@@ -166,6 +197,9 @@ public class Country
         LifeExpectancy = lifeExpectancy;
     }
 
+    /**
+     * The following is getter setter method related to LocalName.
+     */
     public String getLocalName() {
         return LocalName;
     }
@@ -174,6 +208,9 @@ public class Country
         LocalName = localName;
     }
 
+    /**
+     * The following is getter setter method related to name.
+     */
     public String getName() {
         return Name;
     }
@@ -182,6 +219,9 @@ public class Country
         Name = name;
     }
 
+    /**
+     * The following is getter setter method related to population.
+     */
     public int getPopulation() {
         return Population;
     }
@@ -190,6 +230,9 @@ public class Country
         Population = population;
     }
 
+    /**
+     * The following is getter setter method related to region.
+     */
     public String getRegion() {
         return Region;
     }
@@ -198,6 +241,9 @@ public class Country
         Region = region;
     }
 
+    /**
+     * The following is getter setter method related to surfacearea.
+     */
     public String getSurfaceArea() {
         return SurfaceArea;
     }
