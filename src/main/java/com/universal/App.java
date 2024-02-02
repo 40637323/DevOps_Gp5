@@ -120,6 +120,33 @@ public class App
         }
         return countries;
     }
+    /**
+     * Retrieves a list of countries from the Central Africa region and orders them by population.
+     * @return a List of Country for representing countries in Central Africa.
+     */
+    public List<Country> getCountriesInCentralAfrica() {
+        List<Country> countries = new ArrayList<>();
+        try (Statement stmt = con.createStatement()) {
+            String sql = "SELECT code, name, continent, region, population, capital FROM country WHERE region = 'Central Africa' ORDER BY population DESC";
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                Country country = new Country();
+                country.setCode(rs.getString("code"));
+                country.setName(rs.getString("name"));
+                country.setContinent(rs.getString("continent"));
+                country.setRegion(rs.getString("region"));
+                country.setPopulation(rs.getInt("population"));
+                country.setCapital(rs.getString("capital"));
+                // Set other attributes as necessary
+
+                countries.add(country);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return countries;
+    }
     public static void main(String[] args)
     {
         // Create new Application
@@ -144,6 +171,18 @@ public class App
         List<Country> africanCountries = a.getCountriesInAfrica(); // Use a different variable for African countries
         System.out.println("\nAfrican Countries:");
         for (Country country : africanCountries) {
+            System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-25s Population: %,d Capital: %s\n",
+                    country.getCode(),
+                    country.getName(),
+                    country.getContinent(),
+                    country.getRegion(),
+                    country.getPopulation(),
+                    country.getCapital());
+        }
+        // Get countries from Central Africa and print them
+        List<Country> centralAfricanCountries = a.getCountriesInCentralAfrica();
+        System.out.println("Central African Countries:");
+        for (Country country : centralAfricanCountries) {
             System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-25s Population: %,d Capital: %s\n",
                     country.getCode(),
                     country.getName(),
