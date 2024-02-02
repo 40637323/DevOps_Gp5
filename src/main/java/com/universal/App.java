@@ -172,6 +172,37 @@ public class App
         }
         return cities;
     }
+    /**
+     * Retrieves a list of cities within a given continent, ordered by population in descending order.
+     * @param continent the continent to filter the cities by.
+     * @return a List of City objects.
+     */
+    public List<City> getCitiesByContinentOrderedByPopulation(String continent) {
+        List<City> cities = new ArrayList<>();
+        try (PreparedStatement pstmt = con.prepareStatement(
+                "SELECT city.ID, city.Name, city.CountryCode, city.District, city.Population, country.Continent " +
+                        "FROM city JOIN country ON city.CountryCode = country.Code " +
+                        "WHERE country.Continent = ? ORDER BY city.Population DESC")) {
+
+            pstmt.setString(1, continent);
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                City city = new City();
+                city.setID(rs.getInt("ID"));
+                city.setName(rs.getString("Name"));
+                city.setCountryCode(rs.getString("CountryCode"));
+                city.setDistrict(rs.getString("District"));
+                city.setPopulation(rs.getInt("Population"));
+                // Optionally set other attributes you may have added to the City class
+
+                cities.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return cities;
+    }
 
 
     public static void main(String[] args)
@@ -222,6 +253,17 @@ public class App
         List<City> cities = a.getCitiesOrderedByPopulation();
         System.out.println("Cities Ordered by Population:");
         for (City city : cities) {
+            System.out.printf("ID: %-5d Name: %-30s Country Code: %-5s District: %-20s Population: %,d\n",
+                    city.getID(),
+                    city.getName(),
+                    city.getCountryCode(),
+                    city.getDistrict(),
+                    city.getPopulation());
+        }
+        // Print cities in Africa ordered by population
+        List<City> africanCities = a.getCitiesByContinentOrderedByPopulation("Africa");
+        System.out.println("Cities in Africa Ordered by Population:");
+        for (City city : africanCities) {
             System.out.printf("ID: %-5d Name: %-30s Country Code: %-5s District: %-20s Population: %,d\n",
                     city.getID(),
                     city.getName(),
