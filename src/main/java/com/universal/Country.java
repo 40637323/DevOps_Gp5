@@ -12,7 +12,7 @@ public class Country
     /**
      * Country's code
      */
-    private int Code;
+    private String Code;
 
 
     /**
@@ -90,11 +90,11 @@ public class Country
     /**
      * The following is getter setter method related to code.
      */
-    public int getCode() {
+    public String getCode() {
         return Code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         Code = code;
     }
 
