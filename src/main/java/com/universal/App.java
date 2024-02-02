@@ -147,6 +147,33 @@ public class App
         }
         return countries;
     }
+    /**
+     * Retrieves a list of cities and orders them by population in descending order.
+     * @return a List of City.
+     */
+    public List<City> getCitiesOrderedByPopulation() {
+        List<City> cities = new ArrayList<>();
+        try (Statement stmt = con.createStatement()) {
+            String sql = "SELECT ID, name, CountryCode, district, Population FROM city ORDER BY Population DESC";
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                City city = new City();
+                city.setID(rs.getInt("ID"));
+                city.setName(rs.getString("name"));
+                city.setCountryCode(rs.getString("CountryCode"));
+                city.setDistrict(rs.getString("district"));
+                city.setPopulation(rs.getInt("Population"));
+
+                cities.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return cities;
+    }
+
+
     public static void main(String[] args)
     {
         // Create new Application
@@ -190,6 +217,17 @@ public class App
                     country.getRegion(),
                     country.getPopulation(),
                     country.getCapital());
+        }
+        // Retrieve and print cities ordered by population
+        List<City> cities = a.getCitiesOrderedByPopulation();
+        System.out.println("Cities Ordered by Population:");
+        for (City city : cities) {
+            System.out.printf("ID: %-5d Name: %-30s Country Code: %-5s District: %-20s Population: %,d\n",
+                    city.getID(),
+                    city.getName(),
+                    city.getCountryCode(),
+                    city.getDistrict(),
+                    city.getPopulation());
         }
 
         // Disconnect from database
