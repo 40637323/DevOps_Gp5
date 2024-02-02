@@ -203,6 +203,45 @@ public class App
         }
         return cities;
     }
+    /**
+     * Retrieves a list of cities within a given region, ordered by population in descending order.
+     * @param region the continent to filter the cities by.
+     * @return a List of City objects.
+     */
+    public List<City> getCitiesByRegionOrderedByPopulation(String region) {
+        List<City> cities = new ArrayList<>();
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try {
+            String sql = "SELECT city.ID, city.Name, city.CountryCode, city.District, city.Population, country.Region " +
+                    "FROM city JOIN country ON city.CountryCode = country.Code " +
+                    "WHERE country.Region = ? ORDER BY city.Population DESC";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, region);
+            rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                City city = new City();
+                city.setID(rs.getInt("ID"));
+                city.setName(rs.getString("Name"));
+                city.setCountryCode(rs.getString("CountryCode"));
+                city.setDistrict(rs.getString("District"));
+                city.setPopulation(rs.getInt("Population"));
+                cities.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        } finally {
+            // Close resources
+            try {
+                if (pstmt != null) pstmt.close();
+                if (rs != null) rs.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return cities;
+    }
 
 
     public static void main(String[] args)
@@ -264,6 +303,17 @@ public class App
         List<City> africanCities = a.getCitiesByContinentOrderedByPopulation("Africa");
         System.out.println("Cities in Africa Ordered by Population:");
         for (City city : africanCities) {
+            System.out.printf("ID: %-5d Name: %-30s Country Code: %-5s District: %-20s Population: %,d\n",
+                    city.getID(),
+                    city.getName(),
+                    city.getCountryCode(),
+                    city.getDistrict(),
+                    city.getPopulation());
+        }
+        //'Central Africa' with the region from city
+        List<City> citiesInRegion = a.getCitiesByRegionOrderedByPopulation("Central Africa");
+        System.out.println("Cities in Central Africa Ordered by Population:");
+        for (City city : citiesInRegion) {
             System.out.printf("ID: %-5d Name: %-30s Country Code: %-5s District: %-20s Population: %,d\n",
                     city.getID(),
                     city.getName(),
