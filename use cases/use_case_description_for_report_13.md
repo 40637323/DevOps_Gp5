@@ -8,7 +8,7 @@ Organization black box
 ### Level
 User goals
 ### Preconditions
-The system will connect the World database successfully.
+The system connected the database successfully.
 ### Success End Condition
 The analyst will generate a report for the top 7 populated cities in the continent just as the organization’s request.
 ### Failed End Condition
