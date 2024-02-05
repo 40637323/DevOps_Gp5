@@ -12,7 +12,7 @@ The system will connect the World database successfully.
 ### Success End Condition
 The analyst generates population report about the countries in the world and it meets the organization’s request.
 ### Failed End Condition
-The generated population report for the countries in the world is inaccurate.
+The generated population report for the countries in the world is empty and generate error message.
 ### Primary Actor
 Analyst
 ### Trigger
@@ -22,7 +22,7 @@ An organization will make a request to get the report of the population sorted f
 2.  The system extracts the population data for the countries in the world.
 3.  The system shows a clear and readable list of countries’ population from largest to smallest.
 ### Extensions
-In Step 2, the system unable to extract the required data for the organization and generate empty list.
+In Step 2, the system unable to extract the required data for the organization and generate error message.
 ### Sub-Variations
 None
 ### SCHEDULE
