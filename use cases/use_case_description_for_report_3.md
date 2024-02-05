@@ -8,11 +8,11 @@ Organization black box
 ### Level
 User goals
 ### Preconditions
-The system will connect the World database successfully.
+The system connected to the database successfully.
 ### Success End Condition
 The analyst generates population report about the countries in a region ascending from largest to smallest and it meets the organization’s request.
 ### Failed End Condition
-The generated population report for the countries in the region is empty and inaccurate.
+The generated population report for the countries in the region is an error message.
 ### Primary Actor
 Analyst
 ### Trigger
@@ -23,7 +23,7 @@ An organization will make a request to get the report of the population sorted f
 3.  The system shows a clear and readable list of all the countries’ population in the region from largest to smallest.
 ### Extensions
 In Step 2, failure to connect database and unable to extract the required data for the organization.
-In Step 3, The system generated report for population of all the countries in the region is empty.
+In Step 3, The system generated report for population of all the countries in the region is an error message.
 ### Sub-Variations
 None
 ### SCHEDULE
