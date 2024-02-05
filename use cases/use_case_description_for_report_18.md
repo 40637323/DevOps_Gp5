@@ -8,7 +8,7 @@ Organizational black box
 ### Level
 User goals
 ### Preconditions
-The system will connect the World database successfully.
+The system connected to the database successfully.
 ### Success End Condition
 The analyst generates population report about the cities in the continent organized by largest population to smallest and it meets the organization’s request.
 ### Failed End Condition
