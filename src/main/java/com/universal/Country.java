@@ -74,7 +74,7 @@ public class Country
     /**
      * Country's Population
      */
-    private int Population;
+    private Long Population;
 
     /**
      * Country's Region
@@ -222,11 +222,11 @@ public class Country
     /**
      * The following is getter setter method related to population.
      */
-    public int getPopulation() {
+    public Long getPopulation() {
         return Population;
     }
 
-    public void setPopulation(int population) {
+    public void setPopulation(Long population) {
         Population = population;
     }
 

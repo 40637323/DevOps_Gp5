@@ -82,7 +82,7 @@ public class App
                 country.setName(rs.getString("name"));
                 country.setContinent(rs.getString("continent"));
                 country.setRegion(rs.getString("region"));
-                country.setPopulation(rs.getInt("population"));
+                country.setPopulation(rs.getLong("population"));
                 country.setCapital(rs.getString("capital"));
                 // Set other attributes as necessary
 
@@ -109,7 +109,7 @@ public class App
                 country.setName(rs.getString("name"));
                 country.setContinent(rs.getString("continent"));
                 country.setRegion(rs.getString("region"));
-                country.setPopulation(rs.getInt("population"));
+                country.setPopulation(rs.getLong("population"));
                 country.setCapital(rs.getString("capital"));
                 // Set other attributes as necessary
 
@@ -136,7 +136,7 @@ public class App
                 country.setName(rs.getString("name"));
                 country.setContinent(rs.getString("continent"));
                 country.setRegion(rs.getString("region"));
-                country.setPopulation(rs.getInt("population"));
+                country.setPopulation(rs.getLong("population"));
                 country.setCapital(rs.getString("capital"));
                 // Set other attributes as necessary
 
@@ -255,7 +255,7 @@ public class App
             while (rs.next()) {
                 Country country = new Country(); // Assuming Country class has default constructor
                 country.setName(rs.getString("name")); // Assuming setName method exists
-                country.setPopulation(rs.getInt("population")); // Assuming setPopulation method exists
+                country.setPopulation(rs.getLong("population")); // Assuming setPopulation method exists
 
                 topCountries.add(country);
             }
@@ -264,6 +264,28 @@ public class App
         }
         return topCountries;
     }
+    public List<Country> getTop7PopulatedContinents() {
+        List<Country> topContinents = new ArrayList<>();
+        String sql = "SELECT continent AS name, SUM(population) AS population FROM country GROUP BY continent ORDER BY population DESC LIMIT 7";
+
+        try (PreparedStatement pstmt = con.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
+
+            while (rs.next()) {
+                Country continent = new Country(); // Reusing Country class for demonstration
+                continent.setName(rs.getString("name")); // Storing continent in the name field
+                continent.setPopulation(rs.getLong("population")); // Aggregated population
+
+                topContinents.add(continent);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return topContinents;
+    }
+
+
+
 
 
     public static void main(String[] args)
@@ -352,6 +374,16 @@ public class App
                     number++, // Increment the counter in each iteration
                     country.getName(),
                     country.getPopulation());
+        }
+        // Top 7 populated continents
+        List<Country> topContinents = a.getTop7PopulatedContinents();
+        System.out.println("Top 7 Populated Continents by Total Population:");
+        int number2 = 1; // Initialize a counter variable for numbering
+        for (Country continent : topContinents) {
+            System.out.printf("%d. Continent: %-20s Total Population: %,d\n",
+                    number2++, // Increment the counter in each iteration
+                    continent.getName(),
+                    continent.getPopulation());
         }
 
         // Disconnect from database
