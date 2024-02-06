@@ -242,6 +242,28 @@ public class App
         }
         return cities;
     }
+    /**
+     * Retrieves a list of Top 7 Countries form world, ordered by population in descending order.
+     */
+    public List<Country> getTop7CountriesByPopulation() {
+        List<Country> topCountries = new ArrayList<>();
+        String sql = "SELECT name, population FROM country ORDER BY population DESC LIMIT 7";
+
+        try (PreparedStatement pstmt = con.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
+
+            while (rs.next()) {
+                Country country = new Country(); // Assuming Country class has default constructor
+                country.setName(rs.getString("name")); // Assuming setName method exists
+                country.setPopulation(rs.getInt("population")); // Assuming setPopulation method exists
+
+                topCountries.add(country);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return topCountries;
+    }
 
 
     public static void main(String[] args)
@@ -320,6 +342,16 @@ public class App
                     city.getCountryCode(),
                     city.getDistrict(),
                     city.getPopulation());
+        }
+        // Top 7 populated countries in the world
+        List<Country> topCountries = a.getTop7CountriesByPopulation();
+        System.out.println("Top 7 Countries by Population:");
+        int number = 1; // Initialize a counter variable
+        for (Country country : topCountries) {
+            System.out.printf("%d. Name: %-40s Population: %,d\n",
+                    number++, // Increment the counter in each iteration
+                    country.getName(),
+                    country.getPopulation());
         }
 
         // Disconnect from database
