@@ -244,16 +244,65 @@ public class App
     }
 
 
-    public static void main(String[] args)
-    {
-        // Create new Application
-        App a = new App();
+    /**
+     * Retrieves a list of cities within a given country, ordered by population in descending order.
+     */
+    public List<City> getCitiesInFranceOrderedByPopulation() {
+        List<City> cities = new ArrayList<>();
+        // SQL query to select cities in France ordered by population
+        String sql = "SELECT city.Name AS CityName, city.Population FROM city JOIN country ON city.CountryCode = country.Code WHERE country.Name = 'France' ORDER BY city.Population DESC";
 
-        // Connect to database
-        a.connect();
+        try (PreparedStatement pstmt = con.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
 
+            while (rs.next()) {
+                City city = new City();
+                city.setName(rs.getString("CityName")); // Set the city name
+                city.setPopulation(rs.getInt("Population")); // Set the city population
+
+                cities.add(city); // Add the city object to the list
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return cities; // Return the list of cities
+    }
+
+    /**
+     * Retrieves a list of cities within a given District of 'Buenos Aires', ordered by population in descending order.
+     */
+    public List<City> getCitiesInDistrict(String district) {
+        List<City> cities = new ArrayList<>();
+        // Correct SQL with parameter placeholder for district
+        String sql = "SELECT Name, Population FROM city WHERE District = ? ORDER BY Population DESC";
+
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setString(1, district); // Correctly setting the district parameter
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+
+                while (rs.next()) {
+                    City city = new City();
+                    city.setName(rs.getString("Name")); // Set the city name
+                    city.setPopulation(rs.getInt("Population")); // Set the city population
+
+                    cities.add(city); // Add the city object to the list
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return cities;
+    }
+
+
+
+    /** retrieves and print all the countries in the world ordered by population by descending
+     */
+
+    public static void displayAllCountriesInWorldOrderedByPopulation (App app){
         // Now get all the ALL Countries
-        List<Country> countries = a.getCountries();
+        List<Country> countries = app.getCountries();
         System.out.println("All Countries:");
         for (Country country : countries) {
             System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-25s Population: %,d Capital: %s\n",
@@ -264,8 +313,13 @@ public class App
                     country.getPopulation(),
                     country.getCapital());
         }
-        // Now get countries from Africa and print them
-        List<Country> africanCountries = a.getCountriesInAfrica(); // Use a different variable for African countries
+    }
+
+    /** retrieves and print all countries from Africa ordered by population in descending
+     */
+
+    public static void displayAllCountriesInContinentOrderedByPopulation(App app){
+        List<Country> africanCountries = app.getCountriesInAfrica(); // Use a different variable for African countries
         System.out.println("\nAfrican Countries:");
         for (Country country : africanCountries) {
             System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-25s Population: %,d Capital: %s\n",
@@ -276,8 +330,12 @@ public class App
                     country.getPopulation(),
                     country.getCapital());
         }
-        // Get countries from Central Africa and print them
-        List<Country> centralAfricanCountries = a.getCountriesInCentralAfrica();
+    }
+
+    /** retrieve and print all countries from Central Africa ordered by population in descending
+     */
+    public static void displayAllCountriesInRegionOrderedByPopulation (App app){
+        List<Country> centralAfricanCountries = app.getCountriesInCentralAfrica();
         System.out.println("Central African Countries:");
         for (Country country : centralAfricanCountries) {
             System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-25s Population: %,d Capital: %s\n",
@@ -288,8 +346,12 @@ public class App
                     country.getPopulation(),
                     country.getCapital());
         }
-        // Retrieve and print cities ordered by population
-        List<City> cities = a.getCitiesOrderedByPopulation();
+    }
+
+    /** Retrieve and print all the cities in the world ordered by population in descending
+     */
+    public static void displayAllCitiesInWorldOrderedByPopulation (App app){
+        List<City> cities = app.getCitiesOrderedByPopulation();
         System.out.println("Cities Ordered by Population:");
         for (City city : cities) {
             System.out.printf("ID: %-5d Name: %-30s Country Code: %-5s District: %-20s Population: %,d\n",
@@ -299,8 +361,12 @@ public class App
                     city.getDistrict(),
                     city.getPopulation());
         }
-        // Print cities in Africa ordered by population
-        List<City> africanCities = a.getCitiesByContinentOrderedByPopulation("Africa");
+    }
+
+    /** retrieves and print all the cities in Africa ordered by population in descending
+     */
+    public static void displayAllCitiesInContinentOrderedByPopulation(App app){
+        List<City> africanCities = app.getCitiesByContinentOrderedByPopulation("Africa");
         System.out.println("Cities in Africa Ordered by Population:");
         for (City city : africanCities) {
             System.out.printf("ID: %-5d Name: %-30s Country Code: %-5s District: %-20s Population: %,d\n",
@@ -310,8 +376,12 @@ public class App
                     city.getDistrict(),
                     city.getPopulation());
         }
-        //'Central Africa' with the region from city
-        List<City> citiesInRegion = a.getCitiesByRegionOrderedByPopulation("Central Africa");
+    }
+
+    /** retrieves and print all the cities from 'Central Africa' ordered by population in descending
+     */
+    public static void displayAllCitiesInRegionOrderedByPopulation(App app){
+        List<City> citiesInRegion = app.getCitiesByRegionOrderedByPopulation("Central Africa");
         System.out.println("Cities in Central Africa Ordered by Population:");
         for (City city : citiesInRegion) {
             System.out.printf("ID: %-5d Name: %-30s Country Code: %-5s District: %-20s Population: %,d\n",
@@ -321,6 +391,68 @@ public class App
                     city.getDistrict(),
                     city.getPopulation());
         }
+    }
+
+    /** display all the cities in the country order by largest to smallest population
+     */
+    public static void displayAllCitiesInFranceOrderedByPopulation(App app){
+        List<City> citiesInCountry = app.getCitiesInFranceOrderedByPopulation();
+        String ANSI_BOLD7 = "\u001B[1m";
+        // ANSI escape code to reset formatting
+        String ANSI_RESET7 = "\u001B[0m";
+        String message = "Cities in France Ordered by Population:";
+        System.out.println(ANSI_BOLD7 + message + ANSI_RESET7);
+        for (City city : citiesInCountry) {
+            System.out.printf("City Name: %-30s Population: %,d\n", city.getName(), city.getPopulation());
+        }
+    }
+
+    /** display all the cities from the district given by the user
+     */
+
+    public static void displayAllCitiesInDistrictOrderedByPopulation(App app){
+        String district = "Buenos Aires";
+        List<City> citiesInDistrict = app.getCitiesInDistrict(district);
+        String ANSI_BOLD1 = "\u001B[1m"; // ANSI escape code for bold
+        String ANSI_RESET1 = "\u001B[0m"; // ANSI escape code to reset formatting
+        System.out.printf(ANSI_BOLD1 + "Cities in %s District Ordered by Population:\n" + ANSI_RESET1, district);
+        for (City city : citiesInDistrict) {
+            System.out.printf("City Name: %-30s Population: %,d\n", city.getName(), city.getPopulation());
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        // Create new Application
+        App a = new App();
+
+        // Connect to database
+        a.connect();
+
+
+        // show all countries in the world ordered by population in descending
+        displayAllCountriesInWorldOrderedByPopulation(a);
+
+        // show all countries from Africa in the world ordered by population in descending
+        displayAllCountriesInContinentOrderedByPopulation(a);
+
+        // show all countries from Central Africa in the world ordered by population in descending
+        displayAllCountriesInRegionOrderedByPopulation(a);
+
+        // show all cities in the world  ordered by population in descending
+        displayAllCitiesInWorldOrderedByPopulation(a);
+
+        // show all the cities in Africa ordered by population in descending
+        displayAllCitiesInContinentOrderedByPopulation(a);
+
+        // all the cities from 'Central Africa' ordered by population in descending
+        displayAllCitiesInRegionOrderedByPopulation(a);
+
+        // display all the cities in the country order by largest to smallest population
+        displayAllCitiesInFranceOrderedByPopulation(a);
+
+        //display all the cities from the district given by the user
+        displayAllCitiesInDistrictOrderedByPopulation(a);
 
         // Disconnect from database
         a.disconnect();
