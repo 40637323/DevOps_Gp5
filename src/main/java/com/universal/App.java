@@ -2,6 +2,7 @@ package com.universal;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -13,42 +14,48 @@ public class App
     /**
      * Connection to MySQL database.
      */
-    Connection con = null;
+    private Connection con = null;
 
     /**
      * Connect to the MySQL database.
      */
-
-    public void connect(String location, int delay) {
-        try {
+    public void connect()
+    {
+        try
+        {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
+        }
+        catch (ClassNotFoundException e)
+        {
             System.out.println("Could not load SQL driver");
             System.exit(-1);
         }
 
         int retries = 10;
-        for (int i = 0; i < retries; ++i) {
+        for (int i = 0; i < retries; ++i)
+        {
             System.out.println("Connecting to database...");
-            try {
+            try
+            {
                 // Wait a bit for db to start
-                Thread.sleep(delay);
+                Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://" + location
-                                + "/world?allowPublicKeyRetrieval=true&useSSL=false",
-                        "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
-            } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt " +                                  Integer.toString(i));
+            }
+            catch (SQLException sqle)
+            {
+                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
                 System.out.println(sqle.getMessage());
-            } catch (InterruptedException ie) {
+            }
+            catch (InterruptedException ie)
+            {
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
     }
-
 
     /**
      * Disconnect from the MySQL database.
@@ -64,15 +71,11 @@ public class App
         }
 
     }
-    public List<Country> getCountries() {
 
+    /** report related to all the countries in the world organised by largest population to smallest.
+     */
+    public List<Country> getCountries() {
         List<Country> countries = new ArrayList<>();
-        // Check connection is not null
-        if (con == null)
-        {
-            System.out.println("No connection");
-            return countries;
-        }
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery("SELECT code, name, continent, region, population, capital FROM country ORDER BY population DESC");
 
@@ -91,20 +94,14 @@ public class App
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-
         return countries;
     }
     /**
-     * Retrieves a list of countries from the African continent and orders them by population.
+     * Retrieves all the countries in a 'Africa' continent organised by largest population to smallest.
      * @return a List of Country objects representing countries in Africa.
      */
     public List<Country> getCountriesInAfrica() {
         List<Country> countries = new ArrayList<>();
-        if (con == null)
-        {
-            System.out.println("No connection");
-            return countries;
-        }
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT code, name, continent, region, population, capital FROM country WHERE continent = 'Africa' ORDER BY population DESC";
             ResultSet rs = stmt.executeQuery(sql);
@@ -127,16 +124,11 @@ public class App
         return countries;
     }
     /**
-     * Retrieves a list of countries from the Central Africa region and orders them by population.
+     * report related to all the countries in a 'Central Africa' region organised by largest population to smallest.
      * @return a List of Country for representing countries in Central Africa.
      */
     public List<Country> getCountriesInCentralAfrica() {
         List<Country> countries = new ArrayList<>();
-        if (con == null)
-        {
-            System.out.println("No connection");
-            return countries;
-        }
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT code, name, continent, region, population, capital FROM country WHERE region = 'Central Africa' ORDER BY population DESC";
             ResultSet rs = stmt.executeQuery(sql);
@@ -160,7 +152,7 @@ public class App
     }
 
     /** report related to all the capital cities in the world organised by largest population to smallest.
-        */
+     */
 
     public List<City> getAllCapitalCitiesByPopulation() {
         List<City> capitalCities = new ArrayList<>();
@@ -277,54 +269,49 @@ public class App
         }
     }
 
-    /** retrieves and print all the countries ordered by population by descending
-     */
-
-    public void displayCountriesOrderedByPopulation (List<Country> list){
-        if (list == null){
-            System.out.println("Country is Null");
-        }
-        // Now get all the ALL Countries
-        //System.out.println("All Countries:");
-        for (Country country : list) {
-
-            System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-25s Population: %,d Capital: %s\n",
-                    country.getCode(),
-                    country.getName(),
-                    country.getContinent(),
-                    country.getRegion(),
-                    country.getPopulation(),
-                    country.getCapital());
-        }
-    }
-
-
     public static void main(String[] args)
     {
         // Create new Application
         App a = new App();
 
-        if(args.length < 1){
-            a.connect("localhost:33060", 30000);
-        }else{
-            a.connect(args[0], Integer.parseInt(args[1]));
-        }
-
         // Connect to database
-       // a.connect();
+        a.connect();
 
+        //All the countries in the world organised by largest population to smallest.
+        List <Country> countryWorld = a.getCountries();
+        System.out.println("All the countries in the world organised by largest population to smallest");
+        a.displayCountries(countryWorld);
 
-        // show all countries in the world ordered by population in descending
-        List<Country> worldList = a.getCountries();
-        List<Country> continentList= a.getCountriesInAfrica();
-        List<Country> regionList = a.getCountriesInCentralAfrica();
-        System.out.println("All Countries:");
-        a.displayCountriesOrderedByPopulation(worldList);
-        System.out.println("All Countries In Africa:");
-        a.displayCountriesOrderedByPopulation(continentList);
-        System.out.println("All Countries In Central Africa Region:");
-        a.displayCountriesOrderedByPopulation(regionList);
+        //All the countries in a 'Africa' continent organised by largest population to smallest.
+        List <Country> countryContinent = a.getCountriesInAfrica();
+        System.out.println("All the countries in a 'Africa' continent organised by largest population to smallest.");
+        a.displayCountries(countryContinent);
 
+        //All the countries in a 'Central Africa' region organised by largest population to smallest.
+        List <Country> countryRegion = a.getCountriesInCentralAfrica();
+        System.out.println("All the countries in a 'Central Africa' region organised by largest population to smallest");
+        a.displayCountries(countryRegion);
+
+        //All the cities in the world organised by largest population to smallest.
+        //All the cities in a continent organised by largest population to smallest.
+        //All the cities in a region organised by largest population to smallest.
+        //All the cities in a country organised by largest population to smallest.
+        //All the cities in a district organised by largest population to smallest.
+
+        //All the capital cities in the world organised by largest population to smallest.
+        List <City> capitalCitiesWorld = a.getAllCapitalCitiesByPopulation();
+        System.out.println("All the capital cities in the world organised by largest population to smallest.");
+        a.displayCapitalCities(capitalCitiesWorld);
+
+        //All the capital cities in a 'Africa' continent organised by largest population to smallest.
+        List <City> capitalCitiesContinent = a.getCapitalCitiesByContinentOrderedByPopulation();
+        System.out.println("All the capital cities in a 'Africa' continent organised by largest population to smallest.");
+        a.displayCapitalCities(capitalCitiesContinent);
+
+        //All the capital cities in a 'Central Africa' region organised by largest to smallest.
+        List <City> capitalCitiesRegion = a.getCapitalCitiesByRegionOrderedByPopulation();
+        System.out.println("All the capital cities in a 'Central Africa' region organised by largest population to smallest");
+        a.displayCapitalCities(capitalCitiesRegion);
 
 
         // Disconnect from database
