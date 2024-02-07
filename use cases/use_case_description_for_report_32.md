@@ -17,7 +17,7 @@ The system connected to the database successfully.
 ### Success End Condition
 The analyst will generate a report the number of people who speak the following the Chinese, English, Hindi, Spanish, Arabic languages from greatest number to smallest, including the percentage of the world population so that I can use that population information in the related area.
 ### Failed End Condition
-The system generates the report as an error message.
+The system generates an error message behind "Error Executing Query" term.
 ### Primary Actor
 Analyst
 ### Trigger
