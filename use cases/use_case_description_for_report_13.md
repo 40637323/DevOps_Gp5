@@ -8,11 +8,11 @@ Organization black box
 ### Level
 User goals
 ### Preconditions
-The system connected the database successfully.
+The system connected to the database successfully.
 ### Success End Condition
 The analyst will generate a report for the top 7 populated cities in the continent just as the organization’s request.
 ### Failed End Condition
-The system generating the top 7 populated cities in the continent as an error message.
+The system generates an error message behind "Error Executing Query" term.
 ### Primary Actor
 Analyst
 ### Trigger
