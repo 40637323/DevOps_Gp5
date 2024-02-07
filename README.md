@@ -1,7 +1,7 @@
-# DevOps Group-5
+# SET09623 DevOps (Group-5)
 
 ## Purpose: 
-To generate population reports cities, countries, continents, regions and capitals with different circumstances. So that consumers can easily view on the reports with the information they want.
+To generate population reports for city, country, continent, region, capital, world and distirct with different circumstances using SQL database provided by the organization. So that consumers can easily view on the reports with the information they want.
 
 ## Installation: 
 - IntelliJ IDEA 2023.3.2
@@ -22,11 +22,11 @@ To generate population reports cities, countries, continents, regions and capita
 ## Branches
 - master
   - develop
-    -feature
-      -all-view
-      -top_n_population
-      -view-record
-  -release
+    - feature
+      - all-view
+      - top_n_population
+      - view-record
+  - release
 
 ## Tests:
 - Unit Testing (Pass)
