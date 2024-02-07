@@ -12,7 +12,7 @@ The system connected to the database successfully.
 ### Success End Condition
 The analyst will generate a report for the population of people, people living in cities and people not living in cities in each continent as the organization’s request.
 ### Failed End Condition
-The generated the population of people, people who living in cities and people not living in cities in each continent as an error message.
+The system generates an error message behind "Error Executing Query" term.
 ### Primary Actor
 Analyst
 ### Trigger
