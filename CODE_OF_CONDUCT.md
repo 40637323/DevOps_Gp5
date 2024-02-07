@@ -6,11 +6,10 @@
 
 ==============Scope and applicability================
 
-This project is created by DevOps subject form Edinburgh Napier University with the module name of SET09623 2023-4 TR2 001.
-Group number is 5 and there has 6 members who has ability in each task. 
-There has 4 software members and 2 network members. 
-Each members have their own manners for this subject and assign to all their related tasks. 
-The six members are.
+This is SET09623 2023-4 TR2 001 DevOps Project for students in Edinburgh Napier University.
+The following Gp5 students are assigned to do the relevant to assess designing and implementing a new system to allow easy access to this population information.
+There are total 6 members: 2 network specialized students, and 4 software specialized students.
+The six students are.
 
 	Pwint Phoo Wai
 
@@ -26,29 +25,33 @@ The six members are.
 
 ============Roles and tasks==============
 
-	Pwint Phoo Wai (owner)
+Group 5 For DevOps Assessment
 
-	Phoo Thwin Cho (scrum manager)
+Group Members
 
-	Pa Pa Myint Aung (Developer)
+- Project Owner - Pwint Phoo Wai (40637323@live.napier.ac.uk)
 
-	Su Thiri Htun (Technical Writer)
+- Scrum Manager - Phoo Thwin Cho (40637326@live.napier.ac.uk)
 
-	Hein Wai Yan Soe (Developer) and 
+- Technical Writer - Su Thiri Htun (40632022@live.napier.ac.uk)
 
-	Hein Htet Naing (Developer)
+- Developer - Pa Pa Myint Aung (40637324@live.napier.ac.uk)
 
-Assign Rules and Marks
+- Developer - Hein Wai Yan Soe (40637318@live.napier.ac.uk)
+
+- Developer - Hein Htet Naing (40632027@live.napier.ac.uk)
 
 
-1.	School late 	                    1
-2.	School absent 	                  2
-3.	Does not complete assign to you 	4
-4.	Leave the class early 	          1
-5.	Meeting late 	                    1
-6.	Argument with team member 	      2
-7.	Playing games, watching YouTube	  1
-8.	Meeting absent 	                  2
-9.	Doesn’t listen to teammates 	    1
-10.	Lies to the team members that he completes the task	1
+=============Assigned Rules and Marks===============
+
+1.	School late 	                   - 1 mark
+2.	School absent 	                 - 2 marks
+3.	Does not complete assign to you  - 4 marks
+4.	Leave the class early 	         - 1 mark
+5.	Meeting late 	                   - 1 mark
+6.	Argument with team member 	     - 2 marks
+7.	Playing games, watching YouTube	 - 1 mark
+8.	Meeting absent 	                 - 2 marks
+9.	Doesn’t listen to teammates 	   - 1 mark
+10.	Lies to the team members that he completes the task  - 1 mark
 

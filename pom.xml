@@ -6,12 +6,19 @@
 
     <groupId>com.universal</groupId>
     <artifactId>DevOpsCW_Gp5</artifactId>
-    <version>0.1.0.2(0.1-alpha-2)</version>
+    <version>0.1.0.2</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.25</version>
+        </dependency>
+    </dependencies>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>10</maven.compiler.source>
+        <maven.compiler.target>10</maven.compiler.target>
     </properties>
 
     <build>
