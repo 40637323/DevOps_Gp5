@@ -12,7 +12,7 @@ The system connected to the database successfully.
 ### Success End Condition
 The analyst will generate a report for the top 7 populated capital cities in the world as the organization’s request.
 ### Failed End Condition
-The generated top 7 populated capital cities in the world as an an error message.
+The system generates an error message behind "Error Executing Query" term.
 ### Primary Actor
 Analyst
 ### Trigger
