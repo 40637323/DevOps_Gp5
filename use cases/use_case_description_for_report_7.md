@@ -12,7 +12,7 @@ The system connected to the database successfully.
 ### Success End Condition
 The analyst generates population report about the cities in the world organized by largest to smallest and it meets the organization’s request.
 ### Failed End Condition
-The system generates the population report for the cities in the world as an error message.
+The system generates an error message behind "Error Executing Query" term.
 ### Primary Actor
 Analyst
 ### Trigger
