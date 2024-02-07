@@ -413,9 +413,9 @@ public class App
     public static void displayAllCitiesInDistrictOrderedByPopulation(App app){
         String district = "Buenos Aires";
         List<City> citiesInDistrict = app.getCitiesInDistrict(district);
-        String ANSI_BOLD1 = "\u001B[1m"; // ANSI escape code for bold
-        String ANSI_RESET1 = "\u001B[0m"; // ANSI escape code to reset formatting
-        System.out.printf(ANSI_BOLD1 + "Cities in %s District Ordered by Population:\n" + ANSI_RESET1, district);
+        String ANSI_BOLD8 = "\u001B[1m"; // ANSI escape code for bold
+        String ANSI_RESET8 = "\u001B[0m"; // ANSI escape code to reset formatting
+        System.out.printf(ANSI_BOLD8 + "Cities in %s District Ordered by Population:\n" + ANSI_RESET8, district);
         for (City city : citiesInDistrict) {
             System.out.printf("City Name: %-30s Population: %,d\n", city.getName(), city.getPopulation());
         }
