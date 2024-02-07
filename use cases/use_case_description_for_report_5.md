@@ -12,7 +12,7 @@ The system connected to the database successfully.
 ### Success End Condition
 The analyst will generate a report for the top 7 populated countries in a continent just as the organization’s request.
 ### Failed End Condition
-The system generating the top 7 populated countries in a continent as an error message.
+The system generates an error message behind "Error Executing Query" term.
 ### Primary Actor
 Analyst
 ### Trigger
