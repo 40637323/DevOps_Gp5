@@ -4,6 +4,8 @@
  */
 package com.universal;
 
+import java.util.ArrayList;
+
 public class City {
     /**
      * City's ID
@@ -55,34 +57,53 @@ public class City {
     /**
      * The following is getter setter method related to district.
      */
-    public String getDistrict() {
+    public String getCityDistrict() {
         return District;
     }
 
-    public void setDistrict(String district) {
+    public void setCityDistrict(String district) {
         District = district;
     }
 
     /**
      * The following is getter setter method related to name.
      */
-    public String getName() {
+    public String getCityName() {
         return Name;
     }
 
-    public void setName(String name) {
+    public void setCityName(String name) {
         Name = name;
     }
 
     /**
      * The following is getter setter method related to population.
      */
-    public int getPopulation() {
+    public int getCityPopulation() {
         return Population;
     }
 
-    public void setPopulation(int population) {
+    public void setCityPopulation(int population) {
         Population = population;
     }
+
+    /**
+     * The following is getter setter method for retrieving country name where related city located.
+     */
+
+    //private String nameOfCountry = String.valueOf(new ArrayList<>());  // private ArrayList
+
+    // Getter
+    private String countryName;
+    public String getCountryOfCity() {
+        return countryName;
+    }
+
+    // Setter
+    public void setCountryOfCity(String newCountryOfName) {
+        countryName = newCountryOfName;
+    }
+
+
 }
 
