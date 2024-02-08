@@ -50,14 +50,14 @@ jobs:
           docker rm world
           docker image rm database
       - name: CodeCov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v4.0.1
         with:
           env:
-            token:9b9bf058-33bf-4392-92b2-89212f226ce8
-          # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          directory: ./target/site/jacoco
-          flags: Integration Tests # optional
-          verbose: true # optional (default = false)
+           token: 9b9bf058-33bf-4392-92b2-89212f226ce8
+           # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+           directory: ./target/site/jacocok
+           flags: Integration Tests # optional
+           verbose: true # optional (default = false)
   build:
     name: Build and Start Using docker-compose
     runs-on: ubuntu-22.04
