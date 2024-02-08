@@ -384,7 +384,7 @@ public class App
      */
     public void displayCountries(List <Country> list){
         for (Country country : list) {
-            System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-27s Population: %,d Capital: %s\n",
+            System.out.printf(" Country Code: %-5s Name: %-40s Continent: %-15s Region: %-27s Population: %,d Capital: %s\n",
                     country.getCode(),
                     country.getName(),
                     country.getContinent(),
@@ -396,7 +396,7 @@ public class App
 
     public void displayCities(List <City> list){
         for (City city : list) {
-            System.out.printf(" City Name: %-30s Country Name: %-40s District: %-20s Population: %,d\n",
+            System.out.printf("City Name: %-30s Country Name: %-40s District: %-20s Population: %,d\n",
                     city.getCityName(),
                     city.getCountryOfCity(),
                     city.getCityDistrict(),
@@ -423,6 +423,7 @@ public class App
         }
         // Now get all the ALL Countries
         //System.out.println("All Countries:");
+        assert list != null;
         for (Country country : list) {
 
             System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-25s Population: %,d Capital: %s\n",
@@ -450,59 +451,62 @@ public class App
         // Connect to database
        // a.connect();
 
+        String ANSI_BOLD1 = "\u001B[1m"; // ANSI escape code for bold
+        String ANSI_RESET1 = "\u001B[0m"; // ANSI escape code to reset formatting
+
         //All the countries in the world organised by largest population to smallest.
         List <Country> countryWorld = a.getCountries();
-        System.out.println("All the countries in the world organised by largest population to smallest");
+        System.out.printf(ANSI_BOLD1 + "All the countries in the world organised by largest population to smallest\n" + ANSI_RESET1);
         a.displayCountries(countryWorld);
 
         //All the countries in a 'Africa' continent organised by largest population to smallest.
         List <Country> countryContinent = a.getCountriesInAfrica();
-        System.out.println("All the countries in a 'Africa' continent organised by largest population to smallest.");
+        System.out.println(ANSI_BOLD1 + "All the countries in a 'Africa' continent organised by largest population to smallest\n" + ANSI_RESET1);
         a.displayCountries(countryContinent);
 
         //All the countries in a 'Central Africa' region organised by largest population to smallest.
         List <Country> countryRegion = a.getCountriesInCentralAfrica();
-        System.out.println("All the countries in a 'Central Africa' region organised by largest population to smallest");
+        System.out.println(ANSI_BOLD1 + "All the countries in a 'Central Africa' region organised by largest population to smallest\n" + ANSI_RESET1);
         a.displayCountries(countryRegion);
 
         //All the cities in the world organised by largest population to smallest.
         List <City> citiesWorld = a.getCitiesOrderedByPopulation();
-        System.out.println("All the capital cities in the world organised by largest population to smallest.");
+        System.out.println(ANSI_BOLD1 + "All the capital cities in the world organised by largest population to smallest" + ANSI_RESET1);
         a.displayCities(citiesWorld);
 
         //All the cities in a continent organised by largest population to smallest.
         List <City> citiesContinent = a.getCitiesByContinentOrderedByPopulation();
-        System.out.println("All the cities in 'Africa' continent organised by largest population to smallest.");
+        System.out.println(ANSI_BOLD1 + "All the cities in 'Africa' continent organised by largest population to smallest" + ANSI_RESET1);
         a.displayCities(citiesContinent);
 
         //All the cities in a region organised by largest population to smallest.
         List <City> citiesRegion = a.getCitiesByRegionOrderedByPopulation();
-        System.out.println("All the cities in 'Central Africa' region organised by largest population to smallest.");
+        System.out.println(ANSI_BOLD1 + "All the cities in 'Central Africa' region organised by largest population to smallest" + ANSI_RESET1);
         a.displayCities(citiesRegion);
 
         //All the cities in a country organised by largest population to smallest.
         List <City> citiesCountry = a.getCitiesInCountryOrderedByPopulation();
-        System.out.println("All the cities in 'France' country organised by largest population to smallest.");
+        System.out.println(ANSI_BOLD1 + "All the cities in 'France' country organised by largest population to smallest" + ANSI_RESET1);
         a.displayCities(citiesCountry);
 
         //All the cities in a district organised by largest population to smallest.
         List <City> citiesDistrict = a.getCitiesInDistrict();
-        System.out.println("All the cities in 'Buenos Aires' district organised by largest population to smallest.");
+        System.out.println(ANSI_BOLD1 + "All the cities in 'Buenos Aires' district organised by largest population to smallest" + ANSI_RESET1);
         a.displayCities(citiesDistrict);
 
         //All the capital cities in the world organised by largest population to smallest.
         List <City> capitalCitiesWorld = a.getAllCapitalCitiesByPopulation();
-        System.out.println("All the capital cities in the world organised by largest population to smallest.");
+        System.out.println(ANSI_BOLD1 + "All the capital cities in the world organised by largest population to smallest" + ANSI_RESET1);
         a.displayCapitalCities(capitalCitiesWorld);
 
         //All the capital cities in a 'Africa' continent organised by largest population to smallest.
         List <City> capitalCitiesContinent = a.getCapitalCitiesByContinentOrderedByPopulation();
-        System.out.println("All the capital cities in a 'Africa' continent organised by largest population to smallest.");
+        System.out.println(ANSI_BOLD1 + "All the capital cities in a 'Africa' continent organised by largest population to smallest" + ANSI_RESET1);
         a.displayCapitalCities(capitalCitiesContinent);
 
         //All the capital cities in a 'Central Africa' region organised by largest to smallest.
         List <City> capitalCitiesRegion = a.getCapitalCitiesByRegionOrderedByPopulation();
-        System.out.println("All the capital cities in a 'Central Africa' region organised by largest population to smallest");
+        System.out.println(ANSI_BOLD1 + "All the capital cities in a 'Central Africa' region organised by largest population to smallest" + ANSI_RESET1);
         a.displayCapitalCities(capitalCitiesRegion);
 
 
