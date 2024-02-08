@@ -159,6 +159,33 @@ public class App
         return countries;
     }
 
+    /** report related to all the cities in the world organised by largest population to smallest.
+     * */
+    public List<City> getCitiesOrderedByPopulation() {
+        List<City> allCitiesWorld = new ArrayList<>();
+        try (Statement stmt = con.createStatement()) {
+            // Adjusted SQL query to exclude city ID
+            String sql = "SELECT city.name, city.district, city.Population, country.name AS CountryName " +
+                    "FROM city " +
+                    "JOIN country ON city.CountryCode = country.Code " +
+                    "ORDER BY city.Population DESC";
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                City city = new City();
+                city.setCityName(rs.getString("name")); // Set the city name
+                city.setCountryOfCity(rs.getString("CountryName")); // Set the country name
+                city.setCityDistrict(rs.getString("district")); // Set the district
+                city.setCityPopulation(rs.getInt("Population")); // Set the population
+
+
+                allCitiesWorld.add(city); // Add the city object to the list
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return allCitiesWorld;
+    }
     /** report related to all the capital cities in the world organised by largest population to smallest.
         */
 
@@ -313,18 +340,40 @@ public class App
         // Connect to database
        // a.connect();
 
+        //All the countries in the world organised by largest population to smallest.
+        List <Country> countryWorld = a.getCountries();
+        System.out.println("All the countries in the world organised by largest population to smallest");
+        a.displayCountries(countryWorld);
 
-        // show all countries in the world ordered by population in descending
-        List<Country> worldList = a.getCountries();
-        List<Country> continentList= a.getCountriesInAfrica();
-        List<Country> regionList = a.getCountriesInCentralAfrica();
-        System.out.println("All Countries:");
-        a.displayCountriesOrderedByPopulation(worldList);
-        System.out.println("All Countries In Africa:");
-        a.displayCountriesOrderedByPopulation(continentList);
-        System.out.println("All Countries In Central Africa Region:");
-        a.displayCountriesOrderedByPopulation(regionList);
+        //All the countries in a 'Africa' continent organised by largest population to smallest.
+        List <Country> countryContinent = a.getCountriesInAfrica();
+        System.out.println("All the countries in a 'Africa' continent organised by largest population to smallest.");
+        a.displayCountries(countryContinent);
 
+        //All the countries in a 'Central Africa' region organised by largest population to smallest.
+        List <Country> countryRegion = a.getCountriesInCentralAfrica();
+        System.out.println("All the countries in a 'Central Africa' region organised by largest population to smallest");
+        a.displayCountries(countryRegion);
+
+        //All the cities in the world organised by largest population to smallest.
+        List <City> citiesWorld = a.getCitiesOrderedByPopulation();
+        System.out.println("All the capital cities in the world organised by largest population to smallest.");
+        a.displayCities(citiesWorld);
+
+        //All the capital cities in the world organised by largest population to smallest.
+        List <City> capitalCitiesWorld = a.getAllCapitalCitiesByPopulation();
+        System.out.println("All the capital cities in the world organised by largest population to smallest.");
+        a.displayCapitalCities(capitalCitiesWorld);
+
+        //All the capital cities in a 'Africa' continent organised by largest population to smallest.
+        List <City> capitalCitiesContinent = a.getCapitalCitiesByContinentOrderedByPopulation();
+        System.out.println("All the capital cities in a 'Africa' continent organised by largest population to smallest.");
+        a.displayCapitalCities(capitalCitiesContinent);
+
+        //All the capital cities in a 'Central Africa' region organised by largest to smallest.
+        List <City> capitalCitiesRegion = a.getCapitalCitiesByRegionOrderedByPopulation();
+        System.out.println("All the capital cities in a 'Central Africa' region organised by largest population to smallest");
+        a.displayCapitalCities(capitalCitiesRegion);
 
 
         // Disconnect from database
