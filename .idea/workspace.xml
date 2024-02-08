@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="All the capital cities in the world organised by largest population to smallest.">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="All the cities in 'Central Africa' region organised by largest population to smallest">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +25,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="WaiYan083 &lt;157358890+waiyan083@users.noreply.github.com&gt;" />
         <option value="PaPaMyintAung03 &lt;40637324@live.napier.ac.uk&gt;" />
         <option value="40637323 &lt;40637323@live.napier.ac.uk&gt;" />
       </list>
@@ -240,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707368602109</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="All the cities in 'Central Africa' region organised by largest population to smallest">
+      <option name="closed" value="true" />
+      <created>1707369233270</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707369233271</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +261,8 @@
     <MESSAGE value="Added App.java file" />
     <MESSAGE value="Updating the code in the App file to be convenient in testing" />
     <MESSAGE value="All the capital cities in the world organised by largest population to smallest." />
-    <option name="LAST_COMMIT_MESSAGE" value="All the capital cities in the world organised by largest population to smallest." />
+    <MESSAGE value="All the cities in 'Central Africa' region organised by largest population to smallest" />
+    <option name="LAST_COMMIT_MESSAGE" value="All the cities in 'Central Africa' region organised by largest population to smallest" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1707328321474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

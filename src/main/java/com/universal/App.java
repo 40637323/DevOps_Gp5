@@ -239,7 +239,33 @@ public class App
         return allCitiesRegion;
     }
 
+    /** report related to all the cities in a country organised by largest population to smallest.
+     *
+     */
 
+    public List<City> getCitiesInCountryOrderedByPopulation() {
+        List<City> allCitiesCountry = new ArrayList<>();
+        try (Statement stmt = con.createStatement()) {
+            // SQL query to select cities in a specific country ordered by population
+            String sql = "SELECT city.Name, city.District, city.Population, country.name AS CountryName " +
+                    "FROM city JOIN country ON city.CountryCode = country.Code " +
+                    "WHERE country.Name = 'France' ORDER BY city.Population DESC";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                City city = new City();
+                city.setCityName(rs.getString("Name"));
+                city.setCountryOfCity(rs.getString("CountryName"));
+                city.setCityDistrict(rs.getString("District"));
+                city.setCityPopulation(rs.getInt("Population"));
+
+                allCitiesCountry.add(city); // Add the city object to the list
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return allCitiesCountry;
+    }
 
     /** report related to all the capital cities in the world organised by largest population to smallest.
         */
@@ -424,6 +450,11 @@ public class App
         List <City> citiesRegion = a.getCitiesByRegionOrderedByPopulation();
         System.out.println("All the cities in 'Central Africa' region organised by largest population to smallest.");
         a.displayCities(citiesRegion);
+
+        //All the cities in a country organised by largest population to smallest.
+        List <City> citiesCountry = a.getCitiesInCountryOrderedByPopulation();
+        System.out.println("All the cities in 'France' country organised by largest population to smallest.");
+        a.displayCities(citiesCountry);
 
         //All the capital cities in the world organised by largest population to smallest.
         List <City> capitalCitiesWorld = a.getAllCapitalCitiesByPopulation();
