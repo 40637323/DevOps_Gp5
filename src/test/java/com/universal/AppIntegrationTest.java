@@ -1,3 +1,8 @@
+/**
+ * This is the report for the integration testing which testing the expected
+ * only largest and smallest countries, cities, capital cities on world or continent or
+ * region or country or district.
+ */
 package com.universal;
 
 import org.junit.jupiter.api.BeforeAll;
