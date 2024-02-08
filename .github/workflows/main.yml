@@ -1,4 +1,4 @@
-name: A workflow for my Hello World App
+name: Universal App
 on:
   push:
     branches:
@@ -34,15 +34,23 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Integration Tests
+      - name: Integration Tests and CodeCov
         run: |
           docker build -t database ./db 
           docker run --name world -dp 33060:3306 database
-          mvn -Dtest=com.universal.AppIntegrationTest test
+          mvn -Dtest=com.universal.AppIntegrationTest test          
           docker stop world
           docker rm world
-          docker image rm database                    
-
+          docker image rm database
+      - name: CodeCov
+        uses: codecov/codecov-action@v2
+        with:
+          env:
+            token: 9b9bf058-33bf-4392-92b2-89212f226ce8
+          # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          directory: ./target/site/jacocok
+          flags: Integration Tests # optional
+          verbose: true # optional (default = false)
   build:
     name: Build and Start Using docker-compose
     runs-on: ubuntu-22.04
