@@ -20,8 +20,8 @@ jobs:
       - name: Run docker compose
         run: docker-compose up --abort-on-container-exit
       - name: CodeCov
-        uses: codecov/codecov-action@v4.0.1
+        uses: codecov/codecov-action@v2
         with:
           env:
-          #token: 9b9bf058-33bf-4392-92b2-89212f226ce8
-          slug: 40637323/DevOps_Gp5
+          token: 9b9bf058-33bf-4392-92b2-89212f226ce8
+          
