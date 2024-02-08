@@ -33,14 +33,14 @@ public class AppTest {
         List<Country> countries = app.getCountries();
         assertNotNull(countries);
         System.out.println("Get Country Function's output is not null");
-    }
+        }
 
     @Test
     public void testGetCountriesInAfrica() {
         List<Country> africanCountries = app.getCountriesInAfrica();
         assertNotNull(africanCountries);
         System.out.println("Get Country In Africa Function's output is not null");
-    }
+       }
 
     @Test
     public void testGetCountriesInCentralAfrica() {
@@ -75,14 +75,14 @@ public class AppTest {
         List<City> cityRegion = app.getCitiesByRegionOrderedByPopulation();
         assertNotNull(cityRegion);
         System.out.println("Get Cities by Region Function's output is not null");
-    }
+        }
 
     @Test
     public void testGetCitiesInCountryOrderByPopulation() {
         List<City> cityCountry = app.getCitiesInCountryOrderedByPopulation();
         assertNotNull(cityCountry);
         System.out.println("Get Cities in Country Function's output is not null");
-    }
+        }
 
     @Test
     public void testGetCitiesInDistinct() {
@@ -111,6 +111,8 @@ public class AppTest {
         assertNotNull(CapitalRegion);
         System.out.println("Get Capital Cities by Region Function's output is not null");
     }
+
+
     @Test
     void displayCities()
     {
