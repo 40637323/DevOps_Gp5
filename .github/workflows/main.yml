@@ -1,3 +1,4 @@
+
 name: Universal App
 on:
   push:
@@ -68,3 +69,4 @@ jobs:
         run: |
           mvn package -DskipTests
           docker-compose up --abort-on-container-exit
+
