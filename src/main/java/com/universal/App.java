@@ -186,125 +186,16 @@ public class App
         }
         return allCitiesWorld;
     }
-
-    /** report related to all the cities in a continent organised by largest population to smallest.
-     * @return a List of City objects.
-     */
-    public List<City> getCitiesByContinentOrderedByPopulation() {
-        List<City> allCitiesContinent = new ArrayList<>();
-        try (Statement stmt = con.createStatement()) {
-            String sql = "SELECT city.Name, city.District, city.Population, country.name AS CountryName " +
-                    "FROM city JOIN country ON city.CountryCode = country.Code " +
-                    "WHERE country.Continent = 'Africa' ORDER BY city.Population DESC";
-
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next()) {
-                City city = new City();
-                city.setCityName(rs.getString("Name"));
-                city.setCountryOfCity(rs.getString("CountryName"));
-                city.setCityDistrict(rs.getString("District"));
-                city.setCityPopulation(rs.getInt("Population"));
-
-                allCitiesContinent.add(city);
-            }
-
-        } catch (SQLException e) {
-            System.out.println("Error executing query: " + e.getMessage());
-        }
-        return allCitiesContinent;
-    }
-
-    /** report related to all the cities in a region organised by largest population to smallest.
-     */
-    public List<City> getCitiesByRegionOrderedByPopulation(){
-        List<City> allCitiesRegion = new ArrayList<>();
-        try (Statement stmt = con.createStatement()) {
-            String sql = "SELECT city.Name, city.District, city.Population, country.name AS CountryName " +
-                    "FROM city JOIN country ON city.CountryCode = country.Code " +
-                    "WHERE country.Region = 'Central Africa' ORDER BY city.Population DESC";
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next()) {
-                City city = new City();
-                city.setCityName(rs.getString("Name"));
-                city.setCountryOfCity(rs.getString("CountryName"));
-                city.setCityDistrict(rs.getString("District"));
-                city.setCityPopulation(rs.getInt("Population"));
-
-                allCitiesRegion.add(city);
-            }
-
-        } catch (SQLException e) {
-            System.out.println("Error executing query: " + e.getMessage());
-        }
-        return allCitiesRegion;
-    }
-
-    /** report related to all the cities in a country organised by largest population to smallest.
-     *
-     */
-
-    public List<City> getCitiesInCountryOrderedByPopulation() {
-        List<City> allCitiesCountry = new ArrayList<>();
-        try (Statement stmt = con.createStatement()) {
-            // SQL query to select cities in a specific country ordered by population
-            String sql = "SELECT city.Name, city.District, city.Population, country.name AS CountryName " +
-                    "FROM city JOIN country ON city.CountryCode = country.Code " +
-                    "WHERE country.Name = 'France' ORDER BY city.Population DESC";
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next()) {
-                City city = new City();
-                city.setCityName(rs.getString("Name"));
-                city.setCountryOfCity(rs.getString("CountryName"));
-                city.setCityDistrict(rs.getString("District"));
-                city.setCityPopulation(rs.getInt("Population"));
-
-                allCitiesCountry.add(city); // Add the city object to the list
-            }
-
-        } catch (SQLException e) {
-            System.out.println("Error executing query: " + e.getMessage());
-        }
-        return allCitiesCountry;
-    }
-
-    /** report related to all the cities in a 'Bueno Aires' district organised by largest population to smallest.
-     */
-    public List<City> getCitiesInDistrict() {
-        List<City> allCitiesDistrict = new ArrayList<>();
-        try (Statement stmt = con.createStatement()) {
-            // Corrected SQL query to dynamically use the district parameter
-            String sql = "SELECT city.name AS cityName, country.name AS countryName, city.District, city.population " +
-                    "FROM city " +
-                    "JOIN country ON city.CountryCode = country.Code " +
-                    "WHERE city.District = 'Buenos Aires' " +
-                    "ORDER BY city.Population DESC";
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next()) {
-                City city = new City();
-                city.setCityName(rs.getString("cityName"));
-                city.setCountryOfCity(rs.getString("countryName"));
-                city.setCityDistrict(rs.getString("District"));
-                city.setCityPopulation(rs.getInt("population"));
-
-                allCitiesDistrict.add(city);
-            }
-
-        } catch (SQLException e) {
-            System.out.println("Error executing query: " + e.getMessage());
-        }
-        return allCitiesDistrict;
-    }
-
-
-/** report related to all the capital cities in the world organised by largest population to smallest.
+    /** report related to all the capital cities in the world organised by largest population to smallest.
         */
+
     public List<City> getAllCapitalCitiesByPopulation() {
         List<City> capitalCities = new ArrayList<>();
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
                     "INNER JOIN country\n" +
-                    "ON city.countryCode = country.code AND city.id = country.capital\n" +
+                    "ON city.countryCode = country.code\n" +
                     "ORDER BY city.population DESC\n";
             ResultSet rs = stmt.executeQuery(sql);
             //executeQuery(): It returns an instance of ResultSet when a select query is executed.
@@ -331,7 +222,7 @@ public class App
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
                     "INNER JOIN country\n" +
-                    "ON city.countryCode = country.code AND city.id = country.capital\n" +
+                    "ON city.countryCode = country.code\n" +
                     "WHERE country.continent = 'Africa'\n" +
                     "ORDER BY city.population DESC\n";
             ResultSet rs = stmt.executeQuery(sql);
@@ -360,8 +251,8 @@ public class App
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
                     "INNER JOIN country\n" +
-                    "ON city.countryCode = country.code AND city.id = country.capital\n" +
-                    "WHERE country.continent = 'Africa' AND country.region = 'Central Africa'\n" +
+                    "ON city.countryCode = country.code\n" +
+                    "WHERE country.region = 'Central Africa'\n" +
                     "ORDER BY city.population DESC\n";
             ResultSet rs = stmt.executeQuery(sql);
             //executeQuery(): It returns an instance of ResultSet when a select query is executed.
@@ -378,7 +269,6 @@ public class App
         }
         return capitalInRegion;
     }
-
 
     /** retrieve and print all countries from Central Africa ordered by population in descending
      */
@@ -470,26 +360,6 @@ public class App
         System.out.println("All the capital cities in the world organised by largest population to smallest.");
         a.displayCities(citiesWorld);
 
-        //All the cities in a continent organised by largest population to smallest.
-        List <City> citiesContinent = a.getCitiesByContinentOrderedByPopulation();
-        System.out.println("All the cities in 'Africa' continent organised by largest population to smallest.");
-        a.displayCities(citiesContinent);
-
-        //All the cities in a region organised by largest population to smallest.
-        List <City> citiesRegion = a.getCitiesByRegionOrderedByPopulation();
-        System.out.println("All the cities in 'Central Africa' region organised by largest population to smallest.");
-        a.displayCities(citiesRegion);
-
-        //All the cities in a country organised by largest population to smallest.
-        List <City> citiesCountry = a.getCitiesInCountryOrderedByPopulation();
-        System.out.println("All the cities in 'France' country organised by largest population to smallest.");
-        a.displayCities(citiesCountry);
-
-        //All the cities in a district organised by largest population to smallest.
-        List <City> citiesDistrict = a.getCitiesInDistrict();
-        System.out.println("All the cities in 'Buenos Aires' district organised by largest population to smallest.");
-        a.displayCities(citiesDistrict);
-
         //All the capital cities in the world organised by largest population to smallest.
         List <City> capitalCitiesWorld = a.getAllCapitalCitiesByPopulation();
         System.out.println("All the capital cities in the world organised by largest population to smallest.");
@@ -508,6 +378,5 @@ public class App
 
         // Disconnect from database
         a.disconnect();
-
     }
 }
