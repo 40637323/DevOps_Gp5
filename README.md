@@ -68,7 +68,7 @@ There are five classes implemented. These classes are located under src/main/jav
 
 - Developer - Hein Htet Naing (40632027@live.napier.ac.uk)
 
-# Software Engineering Methods
+# Necessary Badges
 
 Master Build Status ![workflow](https://github.com/40637323/DevOps_Gp5/actions/workflows/main.yml/badge.svg)
 
@@ -77,3 +77,5 @@ Develop Build Status ![workflow](https://img.shields.io/github/actions/workflow/
 License [![LICENSE](https://img.shields.io/github/license/40637323/sem.svg?style=flat-square)](https://github.com/40637323/DevOps_Gp5/blob/master/LICENSE)
 
 Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/all.svg?style=flat-square)](https://github.com/40637323/DevOps_Gp5/releases)
+
+[![codecov](https://codecov.io/gh/40637323/DevOps_Gp5/graph/badge.svg?token=W4ZP8XRJ8I)](https://codecov.io/gh/40637323/DevOps_Gp5)
