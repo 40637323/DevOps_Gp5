@@ -1,3 +1,8 @@
+/**
+ * This class is the main class where the reports are generated. In this class, there are different public
+ * methods where each report is represented. There are four main type of reports in the class. They are related
+ * on country, city, capital city and population.
+ */
 package com.universal;
 
 import java.sql.Connection;
@@ -267,6 +272,34 @@ public class App
         return allCitiesCountry;
     }
 
+    /** report related to all the cities in a 'Bueno Aires' district organised by largest population to smallest.
+     */
+    public List<City> getCitiesInDistrict() {
+        List<City> allCitiesDistrict = new ArrayList<>();
+        try (Statement stmt = con.createStatement()) {
+            // Corrected SQL query to dynamically use the district parameter
+            String sql = "SELECT city.name AS cityName, country.name AS countryName, city.District, city.population " +
+                    "FROM city " +
+                    "JOIN country ON city.CountryCode = country.Code " +
+                    "WHERE city.District = 'Buenos Aires' " +
+                    "ORDER BY city.Population DESC";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                City city = new City();
+                city.setCityName(rs.getString("cityName"));
+                city.setCountryOfCity(rs.getString("countryName"));
+                city.setCityDistrict(rs.getString("District"));
+                city.setCityPopulation(rs.getInt("population"));
+
+                allCitiesDistrict.add(city);
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return allCitiesDistrict;
+    }
+
     /** report related to all the capital cities in the world organised by largest population to smallest.
         */
 
@@ -276,7 +309,7 @@ public class App
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
                     "INNER JOIN country\n" +
-                    "ON city.countryCode = country.code\n" +
+                    "ON city.countryCode = country.code AND city.id = country.capital\n" +
                     "ORDER BY city.population DESC\n";
             ResultSet rs = stmt.executeQuery(sql);
             //executeQuery(): It returns an instance of ResultSet when a select query is executed.
@@ -303,7 +336,7 @@ public class App
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
                     "INNER JOIN country\n" +
-                    "ON city.countryCode = country.code\n" +
+                    "ON city.countryCode = country.code AND city.id = country.capital\n" +
                     "WHERE country.continent = 'Africa'\n" +
                     "ORDER BY city.population DESC\n";
             ResultSet rs = stmt.executeQuery(sql);
@@ -332,8 +365,8 @@ public class App
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
                     "INNER JOIN country\n" +
-                    "ON city.countryCode = country.code\n" +
-                    "WHERE country.region = 'Central Africa'\n" +
+                    "ON city.countryCode = country.code AND city.id = country.capital\n" +
+                    "WHERE country.continent = 'Africa' AND country.region = 'Central Africa'\n" +
                     "ORDER BY city.population DESC\n";
             ResultSet rs = stmt.executeQuery(sql);
             //executeQuery(): It returns an instance of ResultSet when a select query is executed.
@@ -455,6 +488,11 @@ public class App
         List <City> citiesCountry = a.getCitiesInCountryOrderedByPopulation();
         System.out.println("All the cities in 'France' country organised by largest population to smallest.");
         a.displayCities(citiesCountry);
+
+        //All the cities in a district organised by largest population to smallest.
+        List <City> citiesDistrict = a.getCitiesInDistrict();
+        System.out.println("All the cities in 'Buenos Aires' district organised by largest population to smallest.");
+        a.displayCities(citiesDistrict);
 
         //All the capital cities in the world organised by largest population to smallest.
         List <City> capitalCitiesWorld = a.getAllCapitalCitiesByPopulation();
