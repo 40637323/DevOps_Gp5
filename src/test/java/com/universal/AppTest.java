@@ -56,14 +56,14 @@ public class AppTest {
 //    }
 
     @Test
-    public void testGetCitiesOrderbyPopulation() {
+    public void testGetCitiesOrderByPopulation() {
         List<City> cityWorld = app.getCitiesOrderedByPopulation();
         assertNotNull(cityWorld);
         System.out.println("Get Cities ordered by population Function's output is not null");
     }
 
     @Test
-    public void testGetCitiesbyContinentOrderbyPopulation() {
+    public void testGetCitiesByContinentOrderByPopulation() {
         List<City> cityContinent = app.getCitiesByContinentOrderedByPopulation();
         assertNotNull(cityContinent);
         System.out.println("Get Cities by Continent Function's output is not null");
@@ -71,42 +71,42 @@ public class AppTest {
     }
 
     @Test
-    public void testGetCitiesbyRegionOrderbyPopulation() {
+    public void testGetCitiesByRegionOrderByPopulation() {
         List<City> cityRegion = app.getCitiesByRegionOrderedByPopulation();
         assertNotNull(cityRegion);
         System.out.println("Get Cities by Region Function's output is not null");
         }
 
     @Test
-    public void testGetCitiesinCountryOrderbyPopulation() {
+    public void testGetCitiesInCountryOrderByPopulation() {
         List<City> cityCountry = app.getCitiesInCountryOrderedByPopulation();
         assertNotNull(cityCountry);
         System.out.println("Get Cities in Country Function's output is not null");
         }
 
     @Test
-    public void testGetCitiesinDistinct() {
+    public void testGetCitiesInDistinct() {
         List<City> cityDiscrict = app.getCitiesInDistrict();
         assertNotNull(cityDiscrict);
         System.out.println("Get Cities in Distinct Function's output is not null");
     }
 
     @Test
-    public void testGetAllCapitalCitiesbyPopulation() {
+    public void testGetAllCapitalCitiesByPopulation() {
         List<City> CapitalCities = app.getAllCapitalCitiesByPopulation();
         assertNotNull(CapitalCities);
         System.out.println("Get all Capital Cities by Population Function's output is not null");
     }
 
     @Test
-    public void testCapitalinContinent() {
+    public void testCapitalInContinent() {
         List<City> CapitalContinent = app.getCapitalCitiesByContinentOrderedByPopulation();
         assertNotNull(CapitalContinent);
         System.out.println("Get Capital Cities by Continent Function's output is not null");
     }
 
     @Test
-    public void testCapitalinRegion() {
+    public void testCapitalInRegion() {
         List<City> CapitalRegion = app.getCapitalCitiesByRegionOrderedByPopulation();
         assertNotNull(CapitalRegion);
         System.out.println("Get Capital Cities by Region Function's output is not null");
@@ -139,7 +139,7 @@ public class AppTest {
     }
 
     @Test
-    void displayCountriesorderbyPopulation()
+    void displayCountriesOrderByPopulation()
     {
         List<Country> countries = new ArrayList<>();
         Country country = new Country();
@@ -167,4 +167,3 @@ public class AppTest {
         app.displayCountries(countries);
     }
 }
-
