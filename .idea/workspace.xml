@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update the AppTest for Unit Testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,7 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" activateToolWindowBeforeRun="false" nameIsGenerated="true">
       <module name="DevOpsCW_Gp5" />
       <extension name="coverage">
@@ -191,10 +190,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.test-dockerfile/Dockerfile" />
       </list>
     </recent_temporary>
