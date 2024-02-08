@@ -384,7 +384,7 @@ public class App
      */
     public void displayCountries(List <Country> list){
         for (Country country : list) {
-            System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-25s Population: %,d Capital: %s\n",
+            System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-27s Population: %,d Capital: %s\n",
                     country.getCode(),
                     country.getName(),
                     country.getContinent(),
@@ -396,7 +396,7 @@ public class App
 
     public void displayCities(List <City> list){
         for (City city : list) {
-            System.out.printf(" City Name: %-30s Country Name: %-15s District: %-20s Population: %,d\n",
+            System.out.printf(" City Name: %-30s Country Name: %-40s District: %-20s Population: %,d\n",
                     city.getCityName(),
                     city.getCountryOfCity(),
                     city.getCityDistrict(),
