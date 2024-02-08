@@ -1,6 +1,6 @@
 # Software Engineering Methods
 
-this is changees
+this is changees to 
 
 Master Build Status ![workflow](https://github.com/40637323/DevOps_Gp5/actions/workflows/main.yml/badge.svg)
 
