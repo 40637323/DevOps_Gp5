@@ -78,4 +78,4 @@ License [![LICENSE](https://img.shields.io/github/license/40637323/sem.svg?style
 
 Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/all.svg?style=flat-square)](https://github.com/40637323/DevOps_Gp5/releases)
 
-[![codecov](https://codecov.io/gh/40637323/DevOps_Gp5/graph/badge.svg?token=W4ZP8XRJ8I)](https://codecov.io/gh/40637323/DevOps_Gp5)
+Code Cov [![codecov](https://codecov.io/gh/40637323/DevOps_Gp5/graph/badge.svg?token=W4ZP8XRJ8I)](https://codecov.io/gh/40637323/DevOps_Gp5)

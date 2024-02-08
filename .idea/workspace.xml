@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Added App.java file">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,13 +24,31 @@
     <option name="BRANCH" value="origin/devlop" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="40637323 &lt;40637323@live.napier.ac.uk&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="release" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;40637326phoo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="357dc539-e9b1-4de2-bd52-b298829005f8" />
+        <option name="url" value="https://github.com/40637323/DevOps_Gp5.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -49,15 +68,26 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml.app: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "Docker.test-dockerfile/Dockerfile.executor": "Run",
+    "JUnit.AppIntegrationTest.executor": "Coverage",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.Unnamed.executor": "Coverage",
     "Maven.DevOpsCW_Gp5 [clean].executor": "Run",
     "Maven.DevOpsCW_Gp5 [compile].executor": "Run",
     "Maven.DevOpsCW_Gp5 [package].executor": "Run",
+    "Maven.DevOpsCW_Gp5 [test].executor": "Run",
+    "Maven.DevOpsCW_Gp5 [verify].executor": "Run",
+    "Maven.DevOpsGroup3 [clean].executor": "Run",
+    "Maven.DevOpsGroup3 [package].executor": "Run",
+    "Maven.DevOpsGroup3 [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/all-view",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOps_Gp5",
     "node.js.detected.package.eslint": "true",
@@ -65,15 +95,58 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.query.execution",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RunManager" selected="JUnit.AppIntegrationTest">
+    <configuration name="AppIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DevOpsCW_Gp5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.universal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.universal" />
+      <option name="MAIN_CLASS_NAME" value="com.universal.AppIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+      <module name="DevOpsCW_Gp5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.universal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.universal" />
+      <option name="MAIN_CLASS_NAME" value="com.universal.AppTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
       </deployment>
       <method v="2" />
     </configuration>
@@ -83,37 +156,56 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="db/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="db/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="envFilePath" value="" />
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="test-dockerfile/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
+    <configuration name="docker-compose.yml.app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="test-dockerfile/Dockerfile" />
+          <option name="services">
+            <list>
+              <option value="app" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="JUnit.AppIntegrationTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.test-dockerfile/Dockerfile" />
-        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="JUnit.AppIntegrationTest" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.db/Dockerfile" />
-        <item itemvalue="Docker.test-dockerfile/Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+        <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +213,6 @@
     <attachedChunks>
       <set>
         <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
       </set>
     </attachedChunks>
   </component>
@@ -137,6 +228,8 @@
       <workItem from="1706160134786" duration="175000" />
       <workItem from="1706163665727" duration="560000" />
       <workItem from="1706765447426" duration="269000" />
+      <workItem from="1707318230465" duration="18319000" />
+      <workItem from="1707400365420" duration="6358000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -162,16 +255,124 @@
       <option name="project" value="LOCAL" />
       <updated>1706771046841</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updating the code in the App file to be convenient in testing">
+      <option name="closed" value="true" />
+      <created>1707284997256</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707284997256</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update the files to make testing and Add AppTest to make unit testing">
+      <option name="closed" value="true" />
+      <created>1707329188197</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707329188197</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update the AppTest for Unit Testing">
+      <option name="closed" value="true" />
+      <created>1707375742969</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707375742969</updated>
+    </task>
+    <task id="LOCAL-00007" summary="starting intergration testing">
+      <option name="closed" value="true" />
+      <created>1707383061397</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707383061397</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updating main.yml for integrating testing">
+      <option name="closed" value="true" />
+      <created>1707385279430</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707385279430</updated>
+    </task>
+    <task id="LOCAL-00009" summary="updating main.yml for integrating testing">
+      <option name="closed" value="true" />
+      <created>1707385343365</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707385343365</updated>
+    </task>
+    <task id="LOCAL-00010" summary="updating main.yml for integrating testing">
+      <option name="closed" value="true" />
+      <created>1707386026554</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707386026554</updated>
+    </task>
+    <task id="LOCAL-00011" summary="adding bold in printing to app.java">
+      <option name="closed" value="true" />
+      <created>1707403689477</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707403689477</updated>
+    </task>
+    <task id="LOCAL-00012" summary="adding bold in printing to app.java">
+      <option name="closed" value="true" />
+      <created>1707404108971</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707404108971</updated>
+    </task>
+    <task id="LOCAL-00013" summary="adding bold in printing to app.java">
+      <option name="closed" value="true" />
+      <created>1707405397667</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707405397667</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit, adding initial files." />
-    <MESSAGE value="Added App.java file" />
     <MESSAGE value="attempt to merge into dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="attempt to merge into dev" />
+    <MESSAGE value="Added App.java file" />
+    <MESSAGE value="Updating the code in the App file to be convenient in testing" />
+    <MESSAGE value="Update the files to make testing and Add AppTest to make unit testing" />
+    <MESSAGE value="Update the AppTest for Unit Testing" />
+    <MESSAGE value="starting intergration testing" />
+    <MESSAGE value="updating main.yml for integrating testing" />
+    <MESSAGE value="adding bold in printing to app.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding bold in printing to app.java" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1707411480955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.universal.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1707370209890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.universal.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1707370918063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.universal.*</FILTER>
+    </SUITE>
   </component>
 </project>
