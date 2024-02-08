@@ -6,6 +6,28 @@ To generate population reports for city, country, continent, region, capital, wo
 ## Installation: 
 - IntelliJ IDEA 2023.3.2
 - Latest Docker Desktop
+- Docker Integration including Docker Compose
+- Continuous Integration (CI) [GitHub Actions]
+- Deploying self-contained JAR
+- Running MySQL driver
+- Connection to Database
+
+## Dependency
+- mysql-connector-java (Version - 8.0.25)
+- junit-jupiter-api (Version - 5.1.0)
+- junit-platform-surefire-provider (Version - 1.1.0)
+- junit-jupiter-engine (5.1.0)
+
+## Plugin
+- maven-assembly-plugin (Version - 3.3.0)
+
+## Project Structure
+There are five classes implemented. These classes are located under src/main/java/com.universal/
+- App.java
+- City.java
+- Country.java
+- Countrylanguage.java
+- Main.java
 
 ## Code of Conduct:
 - School late - 1 mark
