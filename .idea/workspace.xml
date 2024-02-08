@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="All the cities in 'Africa' continent organised by largest population to smallest">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update the AppTest for Unit Testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +26,6 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="PaPaMyintAung03 &lt;40637324@live.napier.ac.uk&gt;" />
         <option value="40637323 &lt;40637323@live.napier.ac.uk&gt;" />
       </list>
     </option>
@@ -37,7 +35,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;40637326phoo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="357dc539-e9b1-4de2-bd52-b298829005f8" />
+        <option name="url" value="https://github.com/40637323/DevOps_Gp5.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -80,11 +91,17 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.db: Compose Deployment">
-    <configuration name="Unnamed" type="JUnit" factoryName="JUnit" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" activateToolWindowBeforeRun="false" nameIsGenerated="true">
       <module name="DevOpsCW_Gp5" />
       <extension name="coverage">
         <pattern>
@@ -169,13 +186,13 @@
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="Docker.test-dockerfile/Dockerfile" />
-      <item itemvalue="JUnit.Unnamed" />
+      <item itemvalue="JUnit.AppTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.test-dockerfile/Dockerfile" />
       </list>
@@ -200,7 +217,7 @@
       <workItem from="1706160134786" duration="175000" />
       <workItem from="1706163665727" duration="560000" />
       <workItem from="1706765447426" duration="269000" />
-      <workItem from="1707318230465" duration="9392000" />
+      <workItem from="1707318230465" duration="18319000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -234,21 +251,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707284997256</updated>
     </task>
-    <task id="LOCAL-00005" summary="All the capital cities in the world organised by largest population to smallest.">
+    <task id="LOCAL-00005" summary="Update the files to make testing and Add AppTest to make unit testing">
       <option name="closed" value="true" />
-      <created>1707368602109</created>
+      <created>1707329188197</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1707368602109</updated>
+      <updated>1707329188197</updated>
     </task>
-    <task id="LOCAL-00006" summary="All the cities in 'Africa' continent organised by largest population to smallest">
+    <task id="LOCAL-00006" summary="Update the AppTest for Unit Testing">
       <option name="closed" value="true" />
-      <created>1707368857463</created>
+      <created>1707375742969</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1707368857463</updated>
+      <updated>1707375742969</updated>
     </task>
     <option name="localTasksCounter" value="7" />
     <servers />
@@ -256,20 +273,31 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit, adding initial files." />
     <MESSAGE value="attempt to merge into dev" />
     <MESSAGE value="Added App.java file" />
     <MESSAGE value="Updating the code in the App file to be convenient in testing" />
-    <MESSAGE value="All the capital cities in the world organised by largest population to smallest." />
-    <MESSAGE value="All the cities in 'Africa' continent organised by largest population to smallest" />
-    <option name="LAST_COMMIT_MESSAGE" value="All the cities in 'Africa' continent organised by largest population to smallest" />
+    <MESSAGE value="Update the files to make testing and Add AppTest to make unit testing" />
+    <MESSAGE value="Update the AppTest for Unit Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the AppTest for Unit Testing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DevOps_Gp5$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1707328321474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1707370209890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.universal.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1707321284310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1707370918063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.universal.*</FILTER>
     </SUITE>
   </component>
