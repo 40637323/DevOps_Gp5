@@ -212,7 +212,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24582b8d" />
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
       </set>
     </attachedChunks>
   </component>
@@ -229,6 +229,7 @@
       <workItem from="1706163665727" duration="560000" />
       <workItem from="1706765447426" duration="269000" />
       <workItem from="1707318230465" duration="18319000" />
+      <workItem from="1707400365420" duration="6358000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -302,7 +303,39 @@
       <option name="project" value="LOCAL" />
       <updated>1707385343365</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updating main.yml for integrating testing">
+      <option name="closed" value="true" />
+      <created>1707386026554</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707386026554</updated>
+    </task>
+    <task id="LOCAL-00011" summary="adding bold in printing to app.java">
+      <option name="closed" value="true" />
+      <created>1707403689477</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707403689477</updated>
+    </task>
+    <task id="LOCAL-00012" summary="adding bold in printing to app.java">
+      <option name="closed" value="true" />
+      <created>1707404108971</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707404108971</updated>
+    </task>
+    <task id="LOCAL-00013" summary="adding bold in printing to app.java">
+      <option name="closed" value="true" />
+      <created>1707405397667</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707405397667</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +361,8 @@
     <MESSAGE value="Update the AppTest for Unit Testing" />
     <MESSAGE value="starting intergration testing" />
     <MESSAGE value="updating main.yml for integrating testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating main.yml for integrating testing" />
+    <MESSAGE value="adding bold in printing to app.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding bold in printing to app.java" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1707411480955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
