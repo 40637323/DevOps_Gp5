@@ -1,8 +1,3 @@
-/**
- * This class is the main class where the reports are generated. In this class, there are different public
- * methods where each report is represented. There are four main type of reports in the class. They are related
- * on country, city, capital city and population.
- */
 package com.universal;
 
 import java.sql.Connection;
@@ -113,7 +108,6 @@ public class App
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT code, name, continent, region, population, capital FROM country WHERE continent = 'Africa' ORDER BY population DESC";
             ResultSet rs = stmt.executeQuery(sql);
-
             while (rs.next()) {
                 Country country = new Country();
                 country.setCode(rs.getString("code"));
@@ -201,7 +195,6 @@ public class App
             String sql = "SELECT city.Name, city.District, city.Population, country.name AS CountryName " +
                     "FROM city JOIN country ON city.CountryCode = country.Code " +
                     "WHERE country.Continent = 'Africa' ORDER BY city.Population DESC";
-
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 City city = new City();
@@ -271,7 +264,6 @@ public class App
         }
         return allCitiesCountry;
     }
-
     /** report related to all the cities in a 'Bueno Aires' district organised by largest population to smallest.
      */
     public List<City> getCitiesInDistrict() {
@@ -300,9 +292,9 @@ public class App
         return allCitiesDistrict;
     }
 
-    /** report related to all the capital cities in the world organised by largest population to smallest.
-        */
 
+    /** report related to all the capital cities in the world organised by largest population to smallest.
+     */
     public List<City> getAllCapitalCitiesByPopulation() {
         List<City> capitalCities = new ArrayList<>();
         try (Statement stmt = con.createStatement()) {
@@ -354,7 +346,6 @@ public class App
         }
         return capitalInContinent;
     }
-
     /** All the capital cities in a region organised by largest to smallest.
      *
      * @return
@@ -383,6 +374,7 @@ public class App
         }
         return capitalInRegion;
     }
+
 
     /** retrieve and print all countries from Central Africa ordered by population in descending
      */
@@ -452,7 +444,7 @@ public class App
         }
 
         // Connect to database
-       // a.connect();
+        // a.connect();
 
         //All the countries in the world organised by largest population to smallest.
         List <Country> countryWorld = a.getCountries();
@@ -512,5 +504,6 @@ public class App
 
         // Disconnect from database
         a.disconnect();
+
     }
 }
