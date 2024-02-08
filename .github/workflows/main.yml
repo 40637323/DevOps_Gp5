@@ -21,6 +21,7 @@ jobs:
           mvn -Dtest=com.universal.AppTest test          
           docker stop world
           docker rm world
+          
 
   #IntegrationTests:
   #  name: Integration Tests
