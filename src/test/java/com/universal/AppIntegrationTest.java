@@ -3,18 +3,24 @@
  * only largest and smallest countries, cities, capital cities on world or continent or
  * region or country or district.
  */
+
 package com.universal;
 
+import com.google.protobuf.AbstractMessage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.io.ByteArrayOutputStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AppIntegrationTest
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 {
     static App app;
 
@@ -344,4 +350,11 @@ public class AppIntegrationTest
         countries.add(country);
         app.displayCountries(countries);
     }
+
+    @Test
+    public void testMainWithNoArguments() {
+        String[] args = {};
+        App.main(args);
+        assertFalse(outContent.toString().contains("All the countries in the world organised by largest population to smallest"));
+}
 }
