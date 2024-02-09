@@ -352,6 +352,7 @@ public class AppIntegrationTest
         app.displayCountries(countries);
     }
 
+    //app test
     @Test
     public void testMainWithNoArguments() {
         String[] args = {};

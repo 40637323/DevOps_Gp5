@@ -172,3 +172,6 @@ public class AppTest {
     }
 }
 
+//test Empty
+//isNull
+//isContain
