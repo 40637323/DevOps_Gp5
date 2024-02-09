@@ -20,8 +20,9 @@ import java.io.ByteArrayOutputStream;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AppIntegrationTest
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 {
+
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     static App app;
 
     @BeforeAll
@@ -356,5 +357,6 @@ public class AppIntegrationTest
         String[] args = {};
         App.main(args);
         assertFalse(outContent.toString().contains("All the countries in the world organised by largest population to smallest"));
-}
+
+    }
 }

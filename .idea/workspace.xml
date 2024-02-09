@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,45 +71,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.docker-compose.yml.app: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Docker.test-dockerfile/Dockerfile.executor": "Run",
-    "JUnit.AppIntegrationTest.executor": "Coverage",
-    "JUnit.AppTest.executor": "Coverage",
-    "JUnit.Unnamed.executor": "Coverage",
-    "Maven.DevOpsCW_Gp5 [clean].executor": "Run",
-    "Maven.DevOpsCW_Gp5 [compile].executor": "Run",
-    "Maven.DevOpsCW_Gp5 [package].executor": "Run",
-    "Maven.DevOpsCW_Gp5 [test].executor": "Run",
-    "Maven.DevOpsCW_Gp5 [verify].executor": "Run",
-    "Maven.DevOpsGroup3 [clean].executor": "Run",
-    "Maven.DevOpsGroup3 [package].executor": "Run",
-    "Maven.DevOpsGroup3 [test].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOps_Gp5",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.app: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.test-dockerfile/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppIntegrationTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.AppTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.Unnamed.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven.DevOpsCW_Gp5 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DevOpsCW_Gp5 [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DevOpsCW_Gp5 [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DevOpsCW_Gp5 [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DevOpsCW_Gp5 [verify].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DevOpsGroup3 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DevOpsGroup3 [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DevOpsGroup3 [test].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOps_Gp5&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.AppIntegrationTest">
     <configuration name="AppIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DevOpsCW_Gp5" />
@@ -220,7 +218,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24582b8d" />
       </set>
     </attachedChunks>
   </component>
@@ -239,6 +237,7 @@
       <workItem from="1707318230465" duration="18319000" />
       <workItem from="1707400365420" duration="6358000" />
       <workItem from="1707444301753" duration="1802000" />
+      <workItem from="1707456716396" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
