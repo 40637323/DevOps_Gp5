@@ -74,16 +74,20 @@ public class App
             return countries;
         }
         try (Statement stmt = con.createStatement()) {
-            ResultSet rs = stmt.executeQuery("SELECT code, name, continent, region, population, capital FROM country ORDER BY population DESC");
+            ResultSet rs = stmt.executeQuery("SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
+                    "FROM city\n" +
+                    "INNER JOIN country\n" +
+                    "ON city.id = country.capital\n" +
+                    "ORDER BY city.population DESC");
 
             while (rs.next()) {
                 Country country = new Country();
-                country.setCode(rs.getString("code"));
-                country.setName(rs.getString("name"));
-                country.setContinent(rs.getString("continent"));
-                country.setRegion(rs.getString("region"));
-                country.setPopulation(rs.getLong("population"));
-                country.setCapital(rs.getString("capital"));
+                country.setCode(rs.getString("country.code"));
+                country.setName(rs.getString("country.name"));
+                country.setContinent(rs.getString("country.continent"));
+                country.setRegion(rs.getString("country.region"));
+                country.setPopulation(rs.getLong("country.population"));
+                country.setCapital(rs.getString("city.name"));
                 // Set other attributes as necessary
 
                 countries.add(country);
