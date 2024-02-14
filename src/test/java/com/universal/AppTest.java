@@ -26,8 +26,7 @@ public class AppTest {
         app.disconnect();
     }
 
-
-    //
+    //check if the output is null or not
     @Test
     public void testGetCountries() {
         List<Country> countries = app.getCountries();
@@ -35,6 +34,23 @@ public class AppTest {
         System.out.println("Get Country Function's output is not null");
         }
 
+    // check if the countries in the world is Empty or not
+    @Test
+    public void testReportCountryIsEmpty() {
+        // Prepare test data
+        ArrayList<Country> emptyList = new ArrayList<>();
+        // Call the method
+        app.displayCountries(emptyList);
+    }
+
+    //check if the countries in the world contain null value or not
+    @Test
+    void printSalariesTestContainsNull()
+    {
+        ArrayList<Country> countriesContainNull = new ArrayList<>();
+        countriesContainNull.add(null);
+        app.displayCountries(countriesContainNull);
+    }
     @Test
     public void testGetCountriesInAfrica() {
         List<Country> africanCountries = app.getCountriesInAfrica();
@@ -139,20 +155,6 @@ public class AppTest {
     }
 
     @Test
-    void displayCountriesOrderByPopulation()
-    {
-        List<Country> countries = new ArrayList<>();
-        Country country = new Country();
-        country.setCode("CMR");
-        country.setName("Cameroon");
-        country.setContinent("Africa");
-        country.setRegion("Central Africa");
-        country.setPopulation(15085000);
-        countries.add(country);
-        app.displayCountriesOrderedByPopulation(countries);
-    }
-
-    @Test
     void displayCountries()
     {
         List<Country> countries = new ArrayList<>();
@@ -161,7 +163,7 @@ public class AppTest {
         country.setName("Gabon");
         country.setContinent("Africa");
         country.setRegion("Central Africa");
-        country.setPopulation(1226000);
+        country.setPopulation(Long.valueOf(1226000));
         country.setCapital("902");
         countries.add(country);
         app.displayCountries(countries);

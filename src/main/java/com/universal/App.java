@@ -82,7 +82,7 @@ public class App
                 country.setName(rs.getString("name"));
                 country.setContinent(rs.getString("continent"));
                 country.setRegion(rs.getString("region"));
-                country.setPopulation(rs.getInt("population"));
+                country.setPopulation(rs.getLong("population"));
                 country.setCapital(rs.getString("capital"));
                 // Set other attributes as necessary
 
@@ -115,7 +115,7 @@ public class App
                 country.setName(rs.getString("name"));
                 country.setContinent(rs.getString("continent"));
                 country.setRegion(rs.getString("region"));
-                country.setPopulation(rs.getInt("population"));
+                country.setPopulation(rs.getLong("population"));
                 country.setCapital(rs.getString("capital"));
                 // Set other attributes as necessary
 
@@ -147,7 +147,7 @@ public class App
                 country.setName(rs.getString("name"));
                 country.setContinent(rs.getString("continent"));
                 country.setRegion(rs.getString("region"));
-                country.setPopulation(rs.getInt("population"));
+                country.setPopulation(rs.getLong("population"));
                 country.setCapital(rs.getString("capital"));
                 // Set other attributes as necessary
 
@@ -383,14 +383,24 @@ public class App
     /** retrieve and print all countries from Central Africa ordered by population in descending
      */
     public void displayCountries(List <Country> list){
+        if (con == null)
+        {
+            System.out.println("No connection");
+            return;
+        }
         for (Country country : list) {
-            System.out.printf(" Country Code: %-5s Name: %-40s Continent: %-15s Region: %-27s Population: %,d Capital: %s\n",
-                    country.getCode(),
-                    country.getName(),
-                    country.getContinent(),
-                    country.getRegion(),
-                    country.getPopulation(),
-                    country.getCapital());
+            try {
+                System.out.printf(" Country Code: %-5s Name: %-40s Continent: %-15s Region: %-27s Population: %,d Capital: %s\n",
+                        country.getCode(),
+                        country.getName(),
+                        country.getContinent(),
+                        country.getRegion(),
+                        country.getPopulation(),
+                        country.getCapital());
+            }catch (NullPointerException e){
+                System.out.println("There has Null value" + e.getMessage());
+            }
+
         }
     }
 
@@ -417,25 +427,66 @@ public class App
     /** retrieves and print all the countries ordered by population by descending
      */
 
-    public void displayCountriesOrderedByPopulation (List<Country> list){
-        if (list == null){
-            System.out.println("Country is Null");
-        }
-        // Now get all the ALL Countries
-        //System.out.println("All Countries:");
-        assert list != null;
-        for (Country country : list) {
+    public void displayAllQuerys() {
+        String ANSI_BOLD1 = "\u001B[1m"; // ANSI escape code for bold
+        String ANSI_RESET1 = "\u001B[0m"; // ANSI escape code to reset formatting
 
-            System.out.printf("Country Code: %-5s Name: %-40s Continent: %-15s Region: %-25s Population: %,d Capital: %s\n",
-                    country.getCode(),
-                    country.getName(),
-                    country.getContinent(),
-                    country.getRegion(),
-                    country.getPopulation(),
-                    country.getCapital());
-        }
+        //All the countries in the world organised by largest population to smallest.
+        List <Country> countryWorld = getCountries();
+        System.out.printf(ANSI_BOLD1 + "All the countries in the world organised by largest population to smallest\n" + ANSI_RESET1);
+        displayCountries(countryWorld);
+
+        //All the countries in a 'Africa' continent organised by largest population to smallest.
+        List <Country> countryContinent = getCountriesInAfrica();
+        System.out.println(ANSI_BOLD1 + "All the countries in a 'Africa' continent organised by largest population to smallest\n" + ANSI_RESET1);
+        displayCountries(countryContinent);
+
+        //All the countries in a 'Central Africa' region organised by largest population to smallest.
+        List <Country> countryRegion = getCountriesInCentralAfrica();
+        System.out.println(ANSI_BOLD1 + "All the countries in a 'Central Africa' region organised by largest population to smallest\n" + ANSI_RESET1);
+        displayCountries(countryRegion);
+
+        //All the cities in the world organised by largest population to smallest.
+        List <City> citiesWorld = getCitiesOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "All the capital cities in the world organised by largest population to smallest" + ANSI_RESET1);
+        displayCities(citiesWorld);
+
+        //All the cities in a continent organised by largest population to smallest.
+        List <City> citiesContinent = getCitiesByContinentOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "All the cities in 'Africa' continent organised by largest population to smallest" + ANSI_RESET1);
+        displayCities(citiesContinent);
+
+        //All the cities in a region organised by largest population to smallest.
+        List <City> citiesRegion = getCitiesByRegionOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "All the cities in 'Central Africa' region organised by largest population to smallest" + ANSI_RESET1);
+        displayCities(citiesRegion);
+
+        //All the cities in a country organised by largest population to smallest.
+        List <City> citiesCountry = getCitiesInCountryOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "All the cities in 'France' country organised by largest population to smallest" + ANSI_RESET1);
+        displayCities(citiesCountry);
+
+        //All the cities in a district organised by largest population to smallest.
+        List <City> citiesDistrict = getCitiesInDistrict();
+        System.out.println(ANSI_BOLD1 + "All the cities in 'Buenos Aires' district organised by largest population to smallest" + ANSI_RESET1);
+        displayCities(citiesDistrict);
+
+        //All the capital cities in the world organised by largest population to smallest.
+        List <City> capitalCitiesWorld = getAllCapitalCitiesByPopulation();
+        System.out.println(ANSI_BOLD1 + "All the capital cities in the world organised by largest population to smallest" + ANSI_RESET1);
+        displayCapitalCities(capitalCitiesWorld);
+
+        //All the capital cities in a 'Africa' continent organised by largest population to smallest.
+        List <City> capitalCitiesContinent = getCapitalCitiesByContinentOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "All the capital cities in a 'Africa' continent organised by largest population to smallest" + ANSI_RESET1);
+        displayCapitalCities(capitalCitiesContinent);
+
+        //All the capital cities in a 'Central Africa' region organised by largest to smallest.
+        List <City> capitalCitiesRegion = getCapitalCitiesByRegionOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "All the capital cities in a 'Central Africa' region organised by largest population to smallest" + ANSI_RESET1);
+        displayCapitalCities(capitalCitiesRegion);
+
     }
-
 
     public static void main(String[] args)
     {
@@ -449,66 +500,8 @@ public class App
         }
 
         // Connect to database
-       // a.connect();
-
-        String ANSI_BOLD1 = "\u001B[1m"; // ANSI escape code for bold
-        String ANSI_RESET1 = "\u001B[0m"; // ANSI escape code to reset formatting
-
-        //All the countries in the world organised by largest population to smallest.
-        List <Country> countryWorld = a.getCountries();
-        System.out.printf(ANSI_BOLD1 + "All the countries in the world organised by largest population to smallest\n" + ANSI_RESET1);
-        a.displayCountries(countryWorld);
-
-        //All the countries in a 'Africa' continent organised by largest population to smallest.
-        List <Country> countryContinent = a.getCountriesInAfrica();
-        System.out.println(ANSI_BOLD1 + "All the countries in a 'Africa' continent organised by largest population to smallest\n" + ANSI_RESET1);
-        a.displayCountries(countryContinent);
-
-        //All the countries in a 'Central Africa' region organised by largest population to smallest.
-        List <Country> countryRegion = a.getCountriesInCentralAfrica();
-        System.out.println(ANSI_BOLD1 + "All the countries in a 'Central Africa' region organised by largest population to smallest\n" + ANSI_RESET1);
-        a.displayCountries(countryRegion);
-
-        //All the cities in the world organised by largest population to smallest.
-        List <City> citiesWorld = a.getCitiesOrderedByPopulation();
-        System.out.println(ANSI_BOLD1 + "All the capital cities in the world organised by largest population to smallest" + ANSI_RESET1);
-        a.displayCities(citiesWorld);
-
-        //All the cities in a continent organised by largest population to smallest.
-        List <City> citiesContinent = a.getCitiesByContinentOrderedByPopulation();
-        System.out.println(ANSI_BOLD1 + "All the cities in 'Africa' continent organised by largest population to smallest" + ANSI_RESET1);
-        a.displayCities(citiesContinent);
-
-        //All the cities in a region organised by largest population to smallest.
-        List <City> citiesRegion = a.getCitiesByRegionOrderedByPopulation();
-        System.out.println(ANSI_BOLD1 + "All the cities in 'Central Africa' region organised by largest population to smallest" + ANSI_RESET1);
-        a.displayCities(citiesRegion);
-
-        //All the cities in a country organised by largest population to smallest.
-        List <City> citiesCountry = a.getCitiesInCountryOrderedByPopulation();
-        System.out.println(ANSI_BOLD1 + "All the cities in 'France' country organised by largest population to smallest" + ANSI_RESET1);
-        a.displayCities(citiesCountry);
-
-        //All the cities in a district organised by largest population to smallest.
-        List <City> citiesDistrict = a.getCitiesInDistrict();
-        System.out.println(ANSI_BOLD1 + "All the cities in 'Buenos Aires' district organised by largest population to smallest" + ANSI_RESET1);
-        a.displayCities(citiesDistrict);
-
-        //All the capital cities in the world organised by largest population to smallest.
-        List <City> capitalCitiesWorld = a.getAllCapitalCitiesByPopulation();
-        System.out.println(ANSI_BOLD1 + "All the capital cities in the world organised by largest population to smallest" + ANSI_RESET1);
-        a.displayCapitalCities(capitalCitiesWorld);
-
-        //All the capital cities in a 'Africa' continent organised by largest population to smallest.
-        List <City> capitalCitiesContinent = a.getCapitalCitiesByContinentOrderedByPopulation();
-        System.out.println(ANSI_BOLD1 + "All the capital cities in a 'Africa' continent organised by largest population to smallest" + ANSI_RESET1);
-        a.displayCapitalCities(capitalCitiesContinent);
-
-        //All the capital cities in a 'Central Africa' region organised by largest to smallest.
-        List <City> capitalCitiesRegion = a.getCapitalCitiesByRegionOrderedByPopulation();
-        System.out.println(ANSI_BOLD1 + "All the capital cities in a 'Central Africa' region organised by largest population to smallest" + ANSI_RESET1);
-        a.displayCapitalCities(capitalCitiesRegion);
-
+        // a.connect();
+        a.displayAllQuerys();
 
         // Disconnect from database
         a.disconnect();
