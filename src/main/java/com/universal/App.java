@@ -382,46 +382,62 @@ public class App
 
     /** retrieve and print all countries from Central Africa ordered by population in descending
      */
-    public void displayCountries(List <Country> list){
-        if (con == null)
-        {
+    public void displayCountries(List<Country> list) {
+        if (con == null) {
             System.out.println("No connection");
             return;
         }
+
+        System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+--------------+------------------+");
+        System.out.println("| Code  | Name                                   | Continent       | Region                        | Population   | Capital          |");
+        System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+--------------+------------------+");
+
         for (Country country : list) {
             try {
-                System.out.printf(" Country Code: %-5s Name: %-40s Continent: %-15s Region: %-27s Population: %,d Capital: %s\n",
+                System.out.printf("| %-5s | %-38s | %-15s | %-27s | %,12d | %-16s |\n",
                         country.getCode(),
                         country.getName(),
                         country.getContinent(),
                         country.getRegion(),
                         country.getPopulation(),
                         country.getCapital());
-            }catch (NullPointerException e){
-                System.out.println("There has Null value" + e.getMessage());
+            } catch (NullPointerException e) {
+                System.out.println("There is a Null value: " + e.getMessage());
             }
-
         }
+
+        System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+--------------+------------------+");
     }
 
-    public void displayCities(List <City> list){
+    public void displayCities(List<City> list) {
+        System.out.println("+-------------------------------+----------------------------------------+---------------------+--------------+");
+        System.out.println("| City Name                     | Country Name                           | District            | Population   |");
+        System.out.println("+-------------------------------+----------------------------------------+---------------------+--------------+");
+
         for (City city : list) {
-            System.out.printf("City Name: %-30s Country Name: %-40s District: %-20s Population: %,d\n",
+            System.out.printf("| %-30s | %-38s | %-19s | %,12d |\n",
                     city.getCityName(),
                     city.getCountryOfCity(),
                     city.getCityDistrict(),
                     city.getCityPopulation());
         }
+
+        System.out.println("+-------------------------------+----------------------------------------+---------------------+--------------+");
     }
 
-    public void displayCapitalCities(List <City> list) {
+    public void displayCapitalCities(List<City> list) {
+        System.out.println("+-------------------------------+----------------------------------------+--------------+");
+        System.out.println("| Capital City                  | Country Code                           | Population   |");
+        System.out.println("+-------------------------------+----------------------------------------+--------------+");
+
         for (City city : list) {
-            System.out.printf("Capital City in continent: %-25s Country Name: %-40s Population: %,d\n",
+            System.out.printf("| %-30s | %-38s | %,12d |\n",
                     city.getCityName(),
                     city.getCountryCode(),
                     city.getCityPopulation());
-
         }
+
+        System.out.println("+-------------------------------+----------------------------------------+--------------+");
     }
 
     /** retrieves and print all the countries ordered by population by descending

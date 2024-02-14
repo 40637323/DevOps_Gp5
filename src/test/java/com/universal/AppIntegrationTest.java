@@ -4,7 +4,6 @@
  * region or country or district.
  */
 
-
 package com.universal;
 
 import com.google.protobuf.AbstractMessage;
