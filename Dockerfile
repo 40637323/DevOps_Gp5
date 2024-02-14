@@ -1,4 +1,4 @@
 FROM openjdk:latest
-COPY ./target/DevOpsCW_Gp5-0.1.0.2-jar-with-dependencies.jar /tmp
+COPY ./target/DevOpsCW_Gp5.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar", "DevOpsCW_Gp5-0.1.0.2-jar-with-dependencies.jar"]
+ENTRYPOINT ["java", "-jar", "DevOpsCW_Gp5.jar", "db:3306", "30000"]
