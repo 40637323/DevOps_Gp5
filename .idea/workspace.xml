@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Retrieving top seven populated cities in the continent africa" />
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Printing top 7 populated cities in the 'Western Africa' region" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,7 +282,55 @@
       <option name="project" value="LOCAL" />
       <updated>1707983438489</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Retrieving top seven populated cities in a region 'western Africa' from the continent 'Africa'">
+      <option name="closed" value="true" />
+      <created>1707983487463</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707983487463</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Retrieving top seven populated cities in 'Nigeria' country in a region 'Central Africa' from the continent 'Africa'">
+      <option name="closed" value="true" />
+      <created>1707983570426</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707983570426</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Printing top 7 populated countries in the 'SouthEast Asia' region">
+      <option name="closed" value="true" />
+      <created>1707983654847</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707983654847</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Printing top 7 populated cities in the World">
+      <option name="closed" value="true" />
+      <created>1707983693104</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707983693104</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Printing top 7 populated cities in the 'Africa' continent">
+      <option name="closed" value="true" />
+      <created>1707983726566</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1707983726566</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Printing top 7 populated cities in the 'Western Africa' region">
+      <option name="closed" value="true" />
+      <created>1707983762209</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1707983762209</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +349,13 @@
     <MESSAGE value="Retrieving top 7 countries from the SouthEast Asia region" />
     <MESSAGE value="Retrieving top seven populated cities in the world" />
     <MESSAGE value="Retrieving top seven populated cities in the continent africa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retrieving top seven populated cities in the continent africa" />
+    <MESSAGE value="Retrieving top seven populated cities in a region 'western Africa' from the continent 'Africa'" />
+    <MESSAGE value="Retrieving top seven populated cities in 'Nigeria' country in a region 'Central Africa' from the continent 'Africa'" />
+    <MESSAGE value="Printing top 7 populated countries in the 'SouthEast Asia' region" />
+    <MESSAGE value="Printing top 7 populated cities in the World" />
+    <MESSAGE value="Printing top 7 populated cities in the 'Africa' continent" />
+    <MESSAGE value="Printing top 7 populated cities in the 'Western Africa' region" />
+    <option name="LAST_COMMIT_MESSAGE" value="Printing top 7 populated cities in the 'Western Africa' region" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1707897668955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

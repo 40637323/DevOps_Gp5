@@ -389,6 +389,11 @@ public class App
         System.out.println(ANSI_BOLD1 + "The top 7 populated cities in the 'Western Africa' region" + ANSI_RESET1);
         displayCities(topSevenCitiesInRegion);
 
+        //The top 7 populated cities in a country
+        List <City> topSevenCitiesInCountry = getTopSevenCitiesInCountryOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "The top 7 populated cities in the 'Nigeria' country" + ANSI_RESET1);
+        displayCities(topSevenCitiesInCountry);
+
     }
 
 
