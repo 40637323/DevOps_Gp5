@@ -1,5 +1,10 @@
-package com.universal;
+/**
+ * This class is the main class where the reports are generated. In this class, there are different public
+ * methods where each report is represented. There are four main type of reports in the class. They are related
+ * on country, city, capital city and population.
+ */
 
+package com.universal;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -553,3 +558,4 @@ public class App
 
     }
 }
+

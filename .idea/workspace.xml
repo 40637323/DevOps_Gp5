@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update the integration testing for Top 7 populated countries">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update the integration testing for Top 7 populated countries In Asia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +117,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AppIntegrationTest">
     <configuration name="AppIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DevOpsCW_Gp5" />
       <extension name="coverage">
@@ -127,6 +129,22 @@
       <option name="PACKAGE_NAME" value="com.universal" />
       <option name="MAIN_CLASS_NAME" value="com.universal.AppIntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppIntegrationTest.testGetBottomOfTopSevenCountriesInAsiaByPopulation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DevOpsCW_Gp5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.universal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.universal" />
+      <option name="MAIN_CLASS_NAME" value="com.universal.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetBottomOfTopSevenCountriesInAsiaByPopulation" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,19 +194,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="app" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -203,20 +208,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="JUnit.AppIntegrationTest.testGetBottomOfTopSevenCountriesInAsiaByPopulation" />
       <item itemvalue="JUnit.AppIntegrationTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="JUnit.AppIntegrationTest" />
+        <item itemvalue="JUnit.AppIntegrationTest.testGetBottomOfTopSevenCountriesInAsiaByPopulation" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -388,7 +393,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708012247455</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Update the integration testing for Top 7 populated countries In Asia">
+      <option name="closed" value="true" />
+      <created>1708012792547</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708012792547</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,10 +432,11 @@
     <MESSAGE value="changing main.yml" />
     <MESSAGE value="Update Unit Test and Integration Testing for top N" />
     <MESSAGE value="Update the integration testing for Top 7 populated countries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the integration testing for Top 7 populated countries" />
+    <MESSAGE value="Update the integration testing for Top 7 populated countries In Asia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the integration testing for Top 7 populated countries In Asia" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1708011885044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1708020228922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.universal.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/DevOps_Gp5$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1707370209890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
