@@ -82,6 +82,8 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 
 ## Requirement Evidence
 
+###25 requirements of 32 have been implemented, which is 78.13%. 
+
 | ID  | Name  | Met | Screenshot |
 | --- | ----- | --- | ---------- |
 | 1   | All the countries in the world organised by largest population to smallest. | Yes | ![image1.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image1.png)  |
