@@ -322,6 +322,33 @@ public class App
         }
         return topCitiesInOyoAndOsunDistrict;
     }
+    /**retrieves a list of top seven populated capital cities in the world
+     * @return a list of cities object.
+     */
+    public List<City> getTopSevenCapitalCitiesOrderedByPopulation() {
+        List<City> topCapitalInWorld = new ArrayList<>();
+        try (Statement stmt = con.createStatement()) {
+            String sql = "SELECT city.name, country.name, city.population\n" +
+                    "FROM city\n" +
+                    "INNER JOIN country\n" +
+                    "ON city.countryCode = country.code AND city.id = country.capital\n" +
+                    "ORDER BY city.population DESC\n" +
+                    "LIMIT 7";
+            ResultSet rs = stmt.executeQuery(sql);
+            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
+            while (rs.next()) {
+                City city = new City();
+                city.setCityName(rs.getString("city.name"));
+                city.setCountryOfCity(rs.getString("country.name"));
+                city.setCityPopulation(rs.getInt("city.Population"));
+
+                topCapitalInWorld.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return topCapitalInWorld;
+    }
 
     public void displayCountries(List<Country> list) {
         if (con == null) {
