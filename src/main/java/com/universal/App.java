@@ -465,6 +465,51 @@ public class App
 
         System.out.println("+----------------------------------------+----------------------------------------+--------------+");
     }
+    //Display Continent Population Report
+    public void printPopulationReport() {
+        if (con == null) {
+            System.out.println("No connection");
+            return;
+        }
+        String sql = "SELECT " +
+                "country.Continent, " +
+                "SUM(DISTINCT country.Population) AS TotalPopulation, " +
+                "SUM(city.Population) AS CityPopulation, " +
+                "(SUM(DISTINCT country.Population) - SUM(city.Population)) AS NonCityPopulation " +
+                "FROM country " +
+                "JOIN city ON country.Code = city.CountryCode " +
+                "GROUP BY country.Continent;";
+
+        try (Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            System.out.println("\u001B[1mPopulation Report by Continent\u001B[0m");
+            System.out.println("+----------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
+            System.out.println("| Continent            | Total Population    | City Population     | City Population %   | Non-City Population | Non-City Population %|");
+            System.out.println("+----------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
+
+            while (rs.next()) {
+                String continent = rs.getString("Continent");
+                long totalPopulation = rs.getLong("TotalPopulation");
+                long cityPopulation = rs.getLong("CityPopulation");
+                long nonCityPopulation = rs.getLong("NonCityPopulation");
+
+                double cityPopulationPercentage = (double) cityPopulation / totalPopulation * 100;
+                double nonCityPopulationPercentage = (double) nonCityPopulation / totalPopulation * 100;
+
+                System.out.printf("| %-20s | %,19d | %,19d | %,19.2f%% | %,19d | %,19.2f%% |\n",
+                        continent, totalPopulation, cityPopulation, cityPopulationPercentage, nonCityPopulation, nonCityPopulationPercentage);
+            }
+
+            System.out.println("+----------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+    }
+
+
+
+
 
 
 
@@ -547,6 +592,7 @@ public class App
         // Connect to database
         // a.connect();
         a.displayAllQuerys();
+        a.printPopulationReport();
 
 
         // Disconnect from database
