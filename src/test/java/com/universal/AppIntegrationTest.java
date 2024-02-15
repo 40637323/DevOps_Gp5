@@ -428,7 +428,7 @@
      }
 
      @Test
-     void DisplayAllQuery(){
+     void displayAllQuery(){
          assertFalse(outContent.toString().contains("All the countries in the world organised by largest population to smallest"));
      }
      //app test

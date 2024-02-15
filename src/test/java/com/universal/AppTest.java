@@ -120,6 +120,7 @@
          System.out.println("Top 7 cities in continent Report is not empty");
      }
 
+
      @Test
      public void testTop7CitiesInRegion() {
          List<City> Top7CitiesInRegion= app.getTopSevenCitiesInRegionOrderedByPopulation();
@@ -262,8 +263,12 @@
      }
 
      @Test
-     void DisplayAllQuery(){
-         assertFalse(outContent.toString().contains("All the countries in the world organised by largest population to smallest"));
+     void testDisplayAllQuery() {
+         // Call display all query
+         app.displayAllQuery();
+         // Assert that each array list is null
+         assertNotNull(app.getTopSevenCountriesInWorldByPopulation());
      }
+
  }
 

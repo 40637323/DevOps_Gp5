@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update unit testing(AppTest.java)">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update AppTest for unit testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +83,8 @@
     "Docker.test-dockerfile/Dockerfile.executor": "Run",
     "JUnit.AppIntegrationTest.executor": "Coverage",
     "JUnit.AppIntegrationTest.testGetBottomOfTopSevenCountriesInAsiaByPopulation.executor": "Run",
-    "JUnit.AppTest.executor": "Run",
+    "JUnit.AppTest.displayAllQuery.executor": "Run",
+    "JUnit.AppTest.executor": "Coverage",
     "JUnit.Unnamed.executor": "Coverage",
     "Maven.DevOpsCW_Gp5 [clean].executor": "Run",
     "Maven.DevOpsCW_Gp5 [compile].executor": "Run",
@@ -164,6 +167,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.displayAllQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DevOpsCW_Gp5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.universal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.universal" />
+      <option name="MAIN_CLASS_NAME" value="com.universal.AppTest" />
+      <option name="METHOD_NAME" value="displayAllQuery" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -193,34 +212,21 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="db" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="JUnit.AppTest" />
       <item itemvalue="JUnit.AppIntegrationTest.testGetBottomOfTopSevenCountriesInAsiaByPopulation" />
+      <item itemvalue="JUnit.AppTest.displayAllQuery" />
       <item itemvalue="JUnit.AppIntegrationTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.displayAllQuery" />
         <item itemvalue="JUnit.AppIntegrationTest" />
         <item itemvalue="JUnit.AppIntegrationTest.testGetBottomOfTopSevenCountriesInAsiaByPopulation" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -424,7 +430,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708022139916</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Update AppTest for unit testing">
+      <option name="closed" value="true" />
+      <created>1708022512241</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022512241</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +473,8 @@
     <MESSAGE value="Update the integration testing for the rest functions" />
     <MESSAGE value="Fix AppTest and add empty testing" />
     <MESSAGE value="Update unit testing(AppTest.java)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update unit testing(AppTest.java)" />
+    <MESSAGE value="Update AppTest for unit testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update AppTest for unit testing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1708020776016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -468,7 +483,7 @@
     <SUITE FILE_PATH="coverage/DevOps_Gp5$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1707370209890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.universal.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1708004316010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1708023016389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.universal.*</FILTER>
     </SUITE>
   </component>
