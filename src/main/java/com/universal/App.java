@@ -264,6 +264,36 @@ public class App
         return topCitiesInWesternAfricaRegion;
     }
 
+    /**retrieves a list of top seven populated cities in 'Nigeria' country in a region 'Central Africa' from the continent 'Africa'
+     * @return a list of cities object.
+     */
+    public List<City> getTopSevenCitiesInCountryOrderedByPopulation() {
+        List<City> topCitiesInNigeriaCountry = new ArrayList<>();
+        try (Statement stmt = con.createStatement()) {
+            String sql = "SELECT city.name, country.name, city.district, city.population\n" +
+                    "FROM city\n" +
+                    "INNER JOIN country\n" +
+                    "ON city.countryCode = country.code\n" +
+                    "WHERE country.continent = 'Africa' AND country.region = 'Western Africa' AND country.name = 'Nigeria'\n" +
+                    "ORDER BY city.population DESC\n" +
+                    "LIMIT 7";
+            ResultSet rs = stmt.executeQuery(sql);
+            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
+            while (rs.next()) {
+                City city = new City();
+                city.setCityName(rs.getString("city.name"));
+                city.setCountryOfCity(rs.getString("country.name"));
+                city.setCityDistrict(rs.getString("city.district"));
+                city.setCityPopulation(rs.getInt("city.population"));
+
+                topCitiesInNigeriaCountry.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return topCitiesInNigeriaCountry;
+    }
+
     public void displayCountries(List<Country> list) {
         if (con == null) {
             System.out.println("No connection");
