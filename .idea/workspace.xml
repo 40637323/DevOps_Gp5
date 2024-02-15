@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update the App.java and testing files">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Updating top 7 countries in the Asia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
     </list>
@@ -24,6 +24,11 @@
     <option name="BRANCH" value="origin/devlop" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="WaiYan083 &lt;157358890+waiyan083@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="feature/all-view" />
@@ -205,7 +210,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707897794690</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updating top 7 countries in the world">
+      <option name="closed" value="true" />
+      <created>1707981226897</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707981226897</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updating top 7 countries in the Asia">
+      <option name="closed" value="true" />
+      <created>1707981298293</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707981298293</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +237,9 @@
     <MESSAGE value="Added App.java file" />
     <MESSAGE value="attempt to merge into dev" />
     <MESSAGE value="Update the App.java and testing files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the App.java and testing files" />
+    <MESSAGE value="Updating top 7 countries in the world" />
+    <MESSAGE value="Updating top 7 countries in the Asia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating top 7 countries in the Asia" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1707897668955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

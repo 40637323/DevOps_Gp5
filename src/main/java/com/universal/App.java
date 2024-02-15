@@ -199,6 +199,11 @@ public class App
         String ANSI_BOLD1 = "\u001B[1m"; // ANSI escape code for bold
         String ANSI_RESET1 = "\u001B[0m"; // ANSI escape code to reset formatting
 
+        //The top 7 populated countries in the world
+        List <Country> topSevenCountriesWorld = getTopSevenCountriesInWorldByPopulation();
+        System.out.println(ANSI_BOLD1 + "The top 7 populated countries in the world" + ANSI_RESET1);
+        displayCountries(topSevenCountriesWorld);
+
 
 
 
