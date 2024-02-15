@@ -530,8 +530,6 @@ public class App
         System.out.println(ANSI_BOLD1 + "The top 7 populated capital cities in the 'Central Africa' region" + ANSI_RESET1);
         displayCapitalCities(topSevenCapitalCitiesInRegion);
 
-
-
     }
 
 
