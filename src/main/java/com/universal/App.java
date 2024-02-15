@@ -506,12 +506,47 @@ public class App
             System.out.println("Error executing query: " + e.getMessage());
         }
     }
+    //Region Population Report
+    public void printRegionPopulationReport() {
+        if (con == null) {
+            System.out.println("No connection");
+            return;
+        }
+        String sql = "SELECT " +
+                "country.Region, " +
+                "SUM(country.Population) AS TotalRegionPopulation, " +
+                "SUM(city.Population) AS CityPopulation, " +
+                "(SUM(country.Population) - SUM(city.Population)) AS NonCityPopulation " +
+                "FROM country " +
+                "JOIN city ON country.Code = city.CountryCode " +
+                "GROUP BY country.Region;";
 
+        try (Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
 
+            System.out.println("\u001B[1mRegion Population Report\u001B[0m");
+            System.out.println("+---------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
+            System.out.println("| Region                    | Total Population    | City Population     | City Pop. %         | Non-City Population | Non-City Pop. %     |");
+            System.out.println("+---------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
 
+            while (rs.next()) {
+                String region = rs.getString("Region");
+                long totalRegionPopulation = rs.getLong("TotalRegionPopulation");
+                long cityPopulation = rs.getLong("CityPopulation");
+                long nonCityPopulation = rs.getLong("NonCityPopulation");
 
+                double cityPopulationPercentage = (double) cityPopulation / totalRegionPopulation * 100;
+                double nonCityPopulationPercentage = (double) nonCityPopulation / totalRegionPopulation * 100;
 
+                System.out.printf("| %-25s | %,19d | %,19d | %,19.2f%% | %,19d | %,19.2f%% |\n",
+                        region, totalRegionPopulation, cityPopulation, cityPopulationPercentage, nonCityPopulation, nonCityPopulationPercentage);
+            }
 
+            System.out.println("+---------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+    }
 
     /** retrieves and print all the countries ordered by population by descending
      */
@@ -593,6 +628,7 @@ public class App
         // a.connect();
         a.displayAllQuerys();
         a.printPopulationReport();
+        a.printRegionPopulationReport();
 
 
         // Disconnect from database
