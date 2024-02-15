@@ -204,6 +204,11 @@ public class App
         System.out.println(ANSI_BOLD1 + "The top 7 populated countries in the world" + ANSI_RESET1);
         displayCountries(topSevenCountriesWorld);
 
+        //The top 7 populated countries in a continent
+        List <Country> topSevenCountriesContinent = getTopSevenCountriesInAsiaByPopulation();
+        System.out.println(ANSI_BOLD1 + "The top 7 populated countries in the 'Asia' continent" + ANSI_RESET1);
+        displayCountries(topSevenCountriesContinent);
+
 
 
 
