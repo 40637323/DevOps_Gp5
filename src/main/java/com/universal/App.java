@@ -388,7 +388,7 @@ public class App
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
                     "INNER JOIN country\n" +
-                    "ON city.countryCode = country.code AND city.id = country.capita\n" +
+                    "ON city.countryCode = country.code AND city.id = country.capital\n" +
                     "WHERE country.continent = 'Africa' AND country.region = 'Central Africa'\n" +
                     "ORDER BY city.population DESC\n" +
                     "LIMIT 7";
