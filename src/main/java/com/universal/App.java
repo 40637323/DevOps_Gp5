@@ -102,6 +102,10 @@ public class App
      * Retrieves a list of countries from the African continent and orders them by population.
      * @return a List of Country objects representing countries in Africa.
      */
+    /**
+     * Retrieves a list of countries from the African continent and orders them by population.
+     * @return a List of Country objects representing countries in Africa.
+     */
     public List<Country> getCountriesInAfrica() {
         List<Country> countries = new ArrayList<>();
         if (con == null)
@@ -110,17 +114,22 @@ public class App
             return countries;
         }
         try (Statement stmt = con.createStatement()) {
-            String sql = "SELECT code, name, continent, region, population, capital FROM country WHERE continent = 'Africa' ORDER BY population DESC";
+            String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
+                    "FROM city\n" +
+                    "INNER JOIN country\n" +
+                    "ON city.id = country.capital\n" +
+                    "WHERE country.continent = 'Asia'\n" +
+                    "ORDER BY country.population DESC";
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
                 Country country = new Country();
-                country.setCode(rs.getString("code"));
-                country.setName(rs.getString("name"));
-                country.setContinent(rs.getString("continent"));
-                country.setRegion(rs.getString("region"));
-                country.setPopulation(rs.getLong("population"));
-                country.setCapital(rs.getString("capital"));
+                country.setCode(rs.getString("country.code"));
+                country.setName(rs.getString("country.name"));
+                country.setContinent(rs.getString("country.continent"));
+                country.setRegion(rs.getString("country.region"));
+                country.setPopulation(rs.getLong("country.population"));
+                country.setCapital(rs.getString("city.name"));
                 // Set other attributes as necessary
 
                 countries.add(country);
