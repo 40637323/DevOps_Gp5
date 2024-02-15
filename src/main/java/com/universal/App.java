@@ -148,7 +148,7 @@ public class App
         }
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
-                    "FROM cit\n" +
+                    "FROM city\n" +
                     "INNER JOIN country\n" +
                     "ON city.id = country.capital\n" +
                     "WHERE country.continent = 'Asia' AND country.region = 'Southeast Asia'\n" +

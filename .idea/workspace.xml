@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Printing top 7 populated cities in the 'Western Africa' region" />
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Printing top 7 populated cities in the 'Nigeria' country">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -330,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707983762209</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Printing top 7 populated cities in the 'Nigeria' country">
+      <option name="closed" value="true" />
+      <created>1707983827473</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707983827473</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +365,8 @@
     <MESSAGE value="Printing top 7 populated cities in the World" />
     <MESSAGE value="Printing top 7 populated cities in the 'Africa' continent" />
     <MESSAGE value="Printing top 7 populated cities in the 'Western Africa' region" />
-    <option name="LAST_COMMIT_MESSAGE" value="Printing top 7 populated cities in the 'Western Africa' region" />
+    <MESSAGE value="Printing top 7 populated cities in the 'Nigeria' country" />
+    <option name="LAST_COMMIT_MESSAGE" value="Printing top 7 populated cities in the 'Nigeria' country" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1707897668955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
