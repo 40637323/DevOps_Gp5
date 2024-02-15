@@ -590,6 +590,45 @@ public class App
         }
     }
 
+    //Display the select Language
+    public void printSelectedLanguageSpeakers() {
+        if (con == null) {
+            System.out.println("No connection");
+            return;
+        }
+        String sql = "SELECT " +
+                "cl.Language, " +
+                "SUM((cl.Percentage / 100) * c.Population) AS NumberOfSpeakers, " +
+                "(SUM((cl.Percentage / 100) * c.Population) / (SELECT SUM(Population) FROM country) * 100) AS WorldPopulationPercentage " +
+                "FROM countrylanguage cl " +
+                "JOIN country c ON cl.CountryCode = c.Code " +
+                "WHERE cl.Language IN ('Chinese', 'English', 'Hindi', 'Spanish', 'Arabic') " +
+                "GROUP BY cl.Language " +
+                "ORDER BY NumberOfSpeakers DESC;";
+
+        try (Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            System.out.println("\u001B[1mSelected Language Speakers Report\u001B[0m");
+            System.out.println("+-------------+------------------------+-------------------------------+");
+            System.out.println("| Language    | Number of Speakers     | World Population Percentage   |");
+            System.out.println("+-------------+------------------------+-------------------------------+");
+
+            while (rs.next()) {
+                String language = rs.getString("Language");
+                long numberOfSpeakers = rs.getLong("NumberOfSpeakers");
+                double worldPopulationPercentage = rs.getDouble("WorldPopulationPercentage");
+
+                System.out.printf("| %-11s | %,22d | %,29.2f%% |\n",
+                        language, numberOfSpeakers, worldPopulationPercentage);
+            }
+
+            System.out.println("+-------------+------------------------+-------------------------------+");
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+    }
+
 
     /** retrieves and print all the countries ordered by population by descending
      */
@@ -673,6 +712,7 @@ public class App
         a.printPopulationReport();
         a.printRegionPopulationReport();
         a.printCountryPopulationReport();
+        a.printSelectedLanguageSpeakers();
 
 
         // Disconnect from database

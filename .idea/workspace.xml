@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Merge, create new class for Population Report">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="The population of people, people living in cities, and people not living in cities in each country.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +25,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Hein Htet Naing &lt;135005782+heinhn@users.noreply.github.com&gt;" />
         <option value="40637323 &lt;40637323@live.napier.ac.uk&gt;" />
       </list>
     </option>
@@ -395,7 +396,31 @@
       <option name="project" value="LOCAL" />
       <updated>1708021406597</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="The population of people, people living in cities, and people not living in cities in each continent.">
+      <option name="closed" value="true" />
+      <created>1708021583649</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1708021583649</updated>
+    </task>
+    <task id="LOCAL-00021" summary="The population of people, people living in cities, and people not living in cities in each region.">
+      <option name="closed" value="true" />
+      <created>1708021658123</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1708021658123</updated>
+    </task>
+    <task id="LOCAL-00022" summary="The population of people, people living in cities, and people not living in cities in each country.">
+      <option name="closed" value="true" />
+      <created>1708021761724</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1708021761724</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +452,10 @@
     <MESSAGE value="Update Unit Test and Integration Testing for top N" />
     <MESSAGE value="Update the integration testing for Top 7 populated countries" />
     <MESSAGE value="Merge, create new class for Population Report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge, create new class for Population Report" />
+    <MESSAGE value="The population of people, people living in cities, and people not living in cities in each continent." />
+    <MESSAGE value="The population of people, people living in cities, and people not living in cities in each region." />
+    <MESSAGE value="The population of people, people living in cities, and people not living in cities in each country." />
+    <option name="LAST_COMMIT_MESSAGE" value="The population of people, people living in cities, and people not living in cities in each country." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1708011885044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
