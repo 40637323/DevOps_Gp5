@@ -548,6 +548,7 @@ public class App
         // a.connect();
         a.displayAllQuerys();
 
+
         // Disconnect from database
         a.disconnect();
 
