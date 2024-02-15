@@ -739,6 +739,35 @@ public class App
         }
     }
 
+    //District Population
+    public void printDistrictPopulation() {
+        if (con == null) {
+            System.out.println("No connection");
+            return;
+        }
+        String sql = "SELECT District, SUM(Population) AS DistrictPopulation FROM city GROUP BY District ORDER BY District;";
+
+        try (Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            System.out.println("\u001B[1mDistrict Population Report\u001B[0m");
+            System.out.println("+--------------------------------+---------------------+");
+            System.out.println("| District                       | Population          |");
+            System.out.println("+--------------------------------+---------------------+");
+
+            while (rs.next()) {
+                String district = rs.getString("District");
+                long districtPopulation = rs.getLong("DistrictPopulation");
+                System.out.printf("| %-30s | %,19d |\n", district, districtPopulation);
+            }
+
+            System.out.println("+--------------------------------+---------------------+");
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+    }
+
+
 
 
     /** retrieves and print all the countries ordered by population by descending
@@ -828,6 +857,7 @@ public class App
         a.printContinentPopulation();
         a.printRegionPopulation();
         a.printCountryPopulation();
+        a.printDistrictPopulation();
 
 
         // Disconnect from database
