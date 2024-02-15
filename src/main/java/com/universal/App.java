@@ -510,6 +510,12 @@ public class App
         System.out.println(ANSI_BOLD1 + "The top 7 populated cities in the 'Nigeria' country" + ANSI_RESET1);
         displayCities(topSevenCitiesInCountry);
 
+        //The top 7 populated cities in a district
+        List <City> topSevenCitiesInDistrict = getTopSevenCitiesInDistrictOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "The top 7 populated cities in the 'Oyo & Osun' District from 'Nigeria' country" + ANSI_RESET1);
+        displayCities(topSevenCitiesInDistrict);
+
+
     }
 
 
