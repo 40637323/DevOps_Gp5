@@ -30,17 +30,10 @@ body:
       label: Steps required to reproduce the bug
       description: A clear and concise steps to reproduce the bug.
       placeholder: Tell us what are the steps to reproduce the bug!
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: Steps To Reproduce
-    description: Steps to reproduce the behavior.
-    placeholder: |
-      1. In this environment...
-      1. With this config...
-      1. Run '...'
-      1. See error...
+        1. In this environment...
+         1. With this config...
+        1. Run '...'
+        1. See error...
   validations:
     required: false
 - type: textarea
