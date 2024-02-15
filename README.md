@@ -74,8 +74,8 @@ Master Build Status ![workflow](https://github.com/40637323/DevOps_Gp5/actions/w
 
 Develop Build Status ![workflow](https://img.shields.io/github/actions/workflow/status/40637323/sem/.github%2Fworkflows%2Fmain.yml?)
 
+Code Cov [![codecov](https://codecov.io/gh/40637323/DevOps_Gp5/graph/badge.svg?token=W4ZP8XRJ8I)](https://codecov.io/gh/40637323/DevOps_Gp5)
+
 License [![LICENSE](https://img.shields.io/github/license/40637323/sem.svg?style=flat-square)](https://github.com/40637323/DevOps_Gp5/blob/master/LICENSE)
 
 Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/all.svg?style=flat-square)](https://github.com/40637323/DevOps_Gp5/releases)
-
-Code Cov [![codecov](https://codecov.io/gh/40637323/DevOps_Gp5/graph/badge.svg?token=W4ZP8XRJ8I)](https://codecov.io/gh/40637323/DevOps_Gp5)
