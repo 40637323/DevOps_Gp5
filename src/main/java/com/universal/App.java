@@ -97,7 +97,43 @@ public class App
         }
         return topCountries;
     }
+    /**
+     * Retrieves a list of Top 7 Countries form 'Asia' continent, ordered by population in descending order.
+     */
+    public List<Country> getTopSevenCountriesInAsiaByPopulation() {
+        List<Country> topCountriesContinent = new ArrayList<>();
+        if (con == null)
+        {
+            System.out.println("No connection");
+            return topCountriesContinent;
+        }
+        try (Statement stmt = con.createStatement()) {
+            String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
+                    "FROM cit\n" +
+                    "INNER JOIN country\n" +
+                    "ON city.id = country.capital\n" +
+                    "WHERE country.continent = 'Asia'\n" +
+                    "ORDER BY country.population DESC\n" +
+                    "LIMIT 7";
+            ResultSet rs = stmt.executeQuery(sql);
 
+            while (rs.next()) {
+                Country country = new Country();
+                country.setCode(rs.getString("country.code"));
+                country.setName(rs.getString("country.name"));
+                country.setContinent(rs.getString("country.continent"));
+                country.setRegion(rs.getString("country.region"));
+                country.setPopulation(rs.getLong("country.population"));
+                country.setCapital(rs.getString("city.name"));
+                // Set other attributes as necessary
+
+                topCountriesContinent.add(country);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return topCountriesContinent;
+    }
     public void displayCountries(List<Country> list) {
         if (con == null) {
             System.out.println("No connection");
