@@ -779,18 +779,20 @@ public class App
              ResultSet rs = stmt.executeQuery(sql)) {
 
             System.out.println("\u001B[1mCity Population Report\u001B[0m");
+            System.out.println("+--------------------------------+---------------------+");
+            System.out.println("| City                           | Population          |");
+            System.out.println("+--------------------------------+---------------------+");
+
             while (rs.next()) {
                 String cityName = rs.getString("Name");
                 long population = rs.getLong("Population");
-                System.out.printf("City: %-30s | Population: %,d\n", cityName, population);
+                System.out.printf("| %-30s | %,19d |\n", cityName, population);
             }
+            System.out.println("+--------------------------------+---------------------+");
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
     }
-
-
-
 
 
     /** retrieves and print all the countries ordered by population by descending
@@ -856,7 +858,6 @@ public class App
         displayCapitalCities(topSevenCapitalCitiesInRegion);
 
     }
-
 
     public static void main(String[] args)
     {
