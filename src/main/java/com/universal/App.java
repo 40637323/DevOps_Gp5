@@ -78,7 +78,7 @@ public class App
                     "FROM city\n" +
                     "INNER JOIN country\n" +
                     "ON city.id = country.capital\n" +
-                    "ORDER BY city.population DESC");
+                    "ORDER BY country.population DESC");
 
             while (rs.next()) {
                 Country country = new Country();
@@ -366,7 +366,7 @@ public class App
                     "INNER JOIN country\n" +
                     "ON city.countryCode = country.code AND city.id = country.capital\n" +
                     "WHERE country.continent = 'Africa' AND country.region = 'Central Africa'\n" +
-                    "ORDER BY city.population DESC\n";
+                    "ORDER BY city.population DESC";
             ResultSet rs = stmt.executeQuery(sql);
             //executeQuery(): It returns an instance of ResultSet when a select query is executed.
             while (rs.next()) {
@@ -414,34 +414,34 @@ public class App
     }
 
     public void displayCities(List<City> list) {
-        System.out.println("+-------------------------------+----------------------------------------+---------------------+--------------+");
-        System.out.println("| City Name                     | Country Name                           | District            | Population   |");
-        System.out.println("+-------------------------------+----------------------------------------+---------------------+--------------+");
+        System.out.println("+----------------------------------------+----------------------------------------+----------------------------------------+------------------+");
+        System.out.println("| City Name                              | Country Name                           | District                               | Population       |");
+        System.out.println("+----------------------------------------+----------------------------------------+----------------------------------------+------------------+");
 
         for (City city : list) {
-            System.out.printf("| %-30s | %-38s | %-19s | %,12d |\n",
+            System.out.printf("| %-38s | %-38s | %-38s | %,15d |\n",
                     city.getCityName(),
                     city.getCountryOfCity(),
                     city.getCityDistrict(),
                     city.getCityPopulation());
         }
 
-        System.out.println("+-------------------------------+----------------------------------------+---------------------+-------------+");
+        System.out.println("+----------------------------------------+----------------------------------------+----------------------------------------+------------------+");
     }
 
     public void displayCapitalCities(List<City> list) {
-        System.out.println("+-------------------------------+----------------------------------------+--------------+");
-        System.out.println("| Capital City                  | Country Code                           | Population   |");
-        System.out.println("+-------------------------------+----------------------------------------+--------------+");
+        System.out.println("+----------------------------------------+----------------------------------------+--------------+");
+        System.out.println("| Capital City                           | Country Name                           | Population   |");
+        System.out.println("+----------------------------------------+----------------------------------------+--------------+");
 
         for (City city : list) {
-            System.out.printf("| %-30s | %-38s | %,12d |\n",
+            System.out.printf("| %-38s | %-38s | %,12d |\n",
                     city.getCityName(),
                     city.getCountryCode(),
                     city.getCityPopulation());
         }
 
-        System.out.println("+-------------------------------+----------------------------------------+--------------+");
+        System.out.println("+----------------------------------------+----------------------------------------+--------------+");
     }
 
     /** retrieves and print all the countries ordered by population by descending
