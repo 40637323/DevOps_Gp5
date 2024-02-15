@@ -95,9 +95,9 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 | 9   | All the cities in a region organised by largest population to smallest.   | Yes | ![image9.jpg](https://github.com/40637323/DevOps_Gp5/blob/master/images/image9.jpg) |
 | 10   | All the cities in a country organised by largest population to smallest.   | Yes | ![image10.jpg](https://github.com/40637323/DevOps_Gp5/blob/master/images/image10.jpg) |
 | 11   | All the cities in a district organised by largest population to smallest.   | Yes | ![image11.jpg](https://github.com/40637323/DevOps_Gp5/blob/master/images/image11.jpg) |
-| 12   |The top 7 populated cities in the world where 7 is provided by the user.   | Yes | ![Screenshot](image12.png) |
+| 12   |The top 7 populated cities in the world where 7 is provided by the user.   | Yes | ![image12.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image12.png)  |
 | 13   |The top 7 populated cities in a continent where 7 is provided by the user.   | Yes | ![Screenshot](image13.png) |
-| 14   |The top 7 populated cities in a region where 7 is provided by the user.   | Yes | ![Screenshot](image14.png) |
+| 14   |The top 7 populated cities in a region where 7 is provided by the user.   | Yes | ![image14.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image14.png)  |
 | 15   |The top 7 populated cities in a country where 7 is provided by the user.   | Yes | ![Screenshot](image15.png) |
 | 16   |The top 7 populated cities in a district where 7 is provided by the user.   | Yes | ![Screenshot](image16.png) |
 | 17   |All the capital cities in the world organised by largest population to smallest.   | Yes | ![Screenshot](image17.png) |
