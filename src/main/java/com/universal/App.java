@@ -683,10 +683,33 @@ public class App
         }
     }
 
+    //Display Region Population
+    public void printRegionPopulation() {
+        if (con == null) {
+            System.out.println("No connection");
+            return;
+        }
+        String sql = "SELECT Region, SUM(Population) AS RegionPopulation FROM country GROUP BY Region;";
 
+        try (Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
 
+            System.out.println("\u001B[1mRegion Population Report\u001B[0m");
+            System.out.println("+----------------------+---------------------+");
+            System.out.println("| Region               | Population          |");
+            System.out.println("+----------------------+---------------------+");
 
+            while (rs.next()) {
+                String region = rs.getString("Region");
+                long regionPopulation = rs.getLong("RegionPopulation");
+                System.out.printf("| %-20s | %,19d |\n", region, regionPopulation);
+            }
 
+            System.out.println("+----------------------+---------------------+");
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+    }
 
 
     /** retrieves and print all the countries ordered by population by descending
@@ -774,6 +797,7 @@ public class App
         a.printSelectedLanguageSpeakers();
         a.printWorldPopulation();
         a.printContinentPopulation();
+        a.printRegionPopulation();
 
 
         // Disconnect from database

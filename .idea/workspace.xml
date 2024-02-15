@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Languages from greatest number to smallest, including the percentage of the world population for Chinese,English,Hindi,Spanish and Arabic.">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="The population of a continent.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -428,7 +428,31 @@
       <option name="project" value="LOCAL" />
       <updated>1708021916440</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="The population of the world.">
+      <option name="closed" value="true" />
+      <created>1708022149246</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022149246</updated>
+    </task>
+    <task id="LOCAL-00025" summary="The population of the world fix the place">
+      <option name="closed" value="true" />
+      <created>1708022267933</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022267933</updated>
+    </task>
+    <task id="LOCAL-00026" summary="The population of a continent.">
+      <option name="closed" value="true" />
+      <created>1708022345118</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022345118</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +488,10 @@
     <MESSAGE value="The population of people, people living in cities, and people not living in cities in each region." />
     <MESSAGE value="The population of people, people living in cities, and people not living in cities in each country." />
     <MESSAGE value="Languages from greatest number to smallest, including the percentage of the world population for Chinese,English,Hindi,Spanish and Arabic." />
-    <option name="LAST_COMMIT_MESSAGE" value="Languages from greatest number to smallest, including the percentage of the world population for Chinese,English,Hindi,Spanish and Arabic." />
+    <MESSAGE value="The population of the world." />
+    <MESSAGE value="The population of the world fix the place" />
+    <MESSAGE value="The population of a continent." />
+    <option name="LAST_COMMIT_MESSAGE" value="The population of a continent." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1708011885044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
