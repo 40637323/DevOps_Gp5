@@ -520,6 +520,11 @@ public class App
         System.out.println(ANSI_BOLD1 + "The top 7 populated capital cities in the world" + ANSI_RESET1);
         displayCapitalCities(topSevenCapitalCitiesInWorld);
 
+        //The top 7 populated capital cities in a continent
+        List <City> topSevenCapitalCitiesInContinent = getTopSevenCapitalCitiesByContinentOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "The top 7 populated capital cities in the 'Africa' continent" + ANSI_RESET1);
+        displayCapitalCities(topSevenCapitalCitiesInContinent);
+
 
 
     }
