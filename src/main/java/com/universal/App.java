@@ -711,6 +711,35 @@ public class App
         }
     }
 
+    //Display Country Population
+    public void printCountryPopulation() {
+        if (con == null) {
+            System.out.println("No connection");
+            return;
+        }
+        String sql = "SELECT Name, Population FROM country ORDER BY Name;";
+
+        try (Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            System.out.println("\u001B[1mCountry Population Report\u001B[0m");
+            System.out.println("+----------------------------------------------------+---------------------+");
+            System.out.println("| Country                                            | Population          |");
+            System.out.println("+----------------------------------------------------+---------------------+");
+
+            while (rs.next()) {
+                String countryName = rs.getString("Name");
+                long population = rs.getLong("Population");
+                System.out.printf("| %-50s | %,19d |\n", countryName, population);
+            }
+
+            System.out.println("+----------------------------------------------------+---------------------+");
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+    }
+
+
 
     /** retrieves and print all the countries ordered by population by descending
      */
@@ -798,6 +827,7 @@ public class App
         a.printWorldPopulation();
         a.printContinentPopulation();
         a.printRegionPopulation();
+        a.printCountryPopulation();
 
 
         // Disconnect from database
