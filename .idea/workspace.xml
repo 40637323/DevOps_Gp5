@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="list of top seven populated capital cities in the continent 'Africa'">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="print top 7 cities in a district">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -349,7 +349,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707985808770</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="list of top seven populated capital cities in the 'Central Africa' Region">
+      <option name="closed" value="true" />
+      <created>1707986189222</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1707986189222</updated>
+    </task>
+    <task id="LOCAL-00023" summary="print top 7 cities in a district">
+      <option name="closed" value="true" />
+      <created>1707986370715</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1707986370715</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +392,9 @@
     <MESSAGE value="Printing top 7 populated cities in the 'Western Africa' region" />
     <MESSAGE value="Printing top 7 populated cities in the 'Nigeria' country" />
     <MESSAGE value="list of top seven populated capital cities in the continent 'Africa'" />
-    <option name="LAST_COMMIT_MESSAGE" value="list of top seven populated capital cities in the continent 'Africa'" />
+    <MESSAGE value="list of top seven populated capital cities in the 'Central Africa' Region" />
+    <MESSAGE value="print top 7 cities in a district" />
+    <option name="LAST_COMMIT_MESSAGE" value="print top 7 cities in a district" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1707897668955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

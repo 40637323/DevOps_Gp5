@@ -515,6 +515,12 @@ public class App
         System.out.println(ANSI_BOLD1 + "The top 7 populated cities in the 'Oyo & Osun' District from 'Nigeria' country" + ANSI_RESET1);
         displayCities(topSevenCitiesInDistrict);
 
+        //The top 7 populated capital cities in the world
+        List <City> topSevenCapitalCitiesInWorld = getTopSevenCapitalCitiesOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "The top 7 populated capital cities in the world" + ANSI_RESET1);
+        displayCapitalCities(topSevenCapitalCitiesInWorld);
+
+
 
     }
 
