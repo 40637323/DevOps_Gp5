@@ -470,10 +470,10 @@ public class App
         System.out.println(ANSI_BOLD1 + "All the countries in a 'Asia' continent organised by largest population to smallest\n" + ANSI_RESET1);
         displayCountries(countryContinent);
 
-        //All the countries in a 'Central Africa' region organised by largest population to smallest.
-        /**List <Country> countryRegion = getCountriesInCentralAfrica();
-        System.out.println(ANSI_BOLD1 + "All the countries in a 'Central Africa' region organised by largest population to smallest\n" + ANSI_RESET1);
-        displayCountries(countryRegion);*/
+        //All the countries in a 'SouthEast Asia' region organised by largest population to smallest.
+        List <Country> countryRegion = getCountriesInSouthEastAsia();
+        System.out.println(ANSI_BOLD1 + "All the countries in a 'South East Asia' region organised by largest population to smallest\n" + ANSI_RESET1);
+        displayCountries(countryRegion);
 
         //All the cities in the world organised by largest population to smallest.
         List <City> citiesWorld = getCitiesOrderedByPopulation();
