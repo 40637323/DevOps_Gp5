@@ -339,7 +339,7 @@ public class App
             while (rs.next()) {
                 City city = new City();
                 city.setCityName(rs.getString("city.name"));
-                city.setCountryOfCity(rs.getString("country.name"));
+                city.setCountryCode(rs.getString("country.name"));
                 city.setCityPopulation(rs.getInt("city.Population"));
 
                 topCapitalInWorld.add(city);
@@ -368,7 +368,7 @@ public class App
             while (rs.next()) {
                 City city = new City();
                 city.setCityName(rs.getString("city.name"));
-                city.setCountryOfCity(rs.getString("country.name"));
+                city.setCountryCode(rs.getString("country.name"));
                 city.setCityPopulation(rs.getInt("city.Population"));
 
                 topCapitalInContinent.add(city);
@@ -379,6 +379,34 @@ public class App
         return topCapitalInContinent;
     }
 
+    /**retrieves a list of top seven populated capital cities in the 'Central Africa' Region
+     * @return a list of cities object.
+     */
+    public List<City> getTopSevenCapitalCitiesByRegionOrderedByPopulation() {
+        List<City> topCapitalInRegion= new ArrayList<>();
+        try (Statement stmt = con.createStatement()) {
+            String sql = "SELECT city.name, country.name, city.population\n" +
+                    "FROM city\n" +
+                    "INNER JOIN country\n" +
+                    "ON city.countryCode = country.code AND city.id = country.capita\n" +
+                    "WHERE country.continent = 'Africa' AND country.region = 'Central Africa'\n" +
+                    "ORDER BY city.population DESC\n" +
+                    "LIMIT 7";
+            ResultSet rs = stmt.executeQuery(sql);
+            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
+            while (rs.next()) {
+                City city = new City();
+                city.setCityName(rs.getString("city.name"));
+                city.setCountryCode(rs.getString("country.name"));
+                city.setCityPopulation(rs.getInt("city.Population"));
+
+                topCapitalInRegion.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return topCapitalInRegion;
+    }
 
     public void displayCountries(List<Country> list) {
         if (con == null) {
