@@ -392,13 +392,13 @@ public class App
             return;
         }
 
-        System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+--------------+------------------+");
-        System.out.println("| Code  | Name                                   | Continent       | Region                        | Population   | Capital          |");
-        System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+--------------+------------------+");
+        System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+----------------+--------------------------------------+");
+        System.out.println("| Code  | Name                                   | Continent       | Region                        | Population     | Capital                              |");
+        System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+----------------+--------------------------------------+");
 
         for (Country country : list) {
             try {
-                System.out.printf("| %-5s | %-38s | %-15s | %-27s | %,12d | %-16s |\n",
+                System.out.printf("| %-5s | %-38s | %-15s | %-29s | %,14d | %-36s |\n",
                         country.getCode(),
                         country.getName(),
                         country.getContinent(),
@@ -410,7 +410,7 @@ public class App
             }
         }
 
-        System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+--------------+------------------+");
+        System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+----------------+---------------------------------------+");
     }
 
     public void displayCities(List<City> list) {
@@ -426,7 +426,7 @@ public class App
                     city.getCityPopulation());
         }
 
-        System.out.println("+-------------------------------+----------------------------------------+---------------------+--------------+");
+        System.out.println("+-------------------------------+----------------------------------------+---------------------+-------------+");
     }
 
     public void displayCapitalCities(List<City> list) {
@@ -452,19 +452,19 @@ public class App
         String ANSI_RESET1 = "\u001B[0m"; // ANSI escape code to reset formatting
 
         //All the countries in the world organised by largest population to smallest.
-        List <Country> countryWorld = getCountries();
+        /**List <Country> countryWorld = getCountries();
         System.out.printf(ANSI_BOLD1 + "All the countries in the world organised by largest population to smallest\n" + ANSI_RESET1);
-        displayCountries(countryWorld);
+        displayCountries(countryWorld);*/
 
         //All the countries in a 'Africa' continent organised by largest population to smallest.
-        List <Country> countryContinent = getCountriesInAfrica();
+        /**List <Country> countryContinent = getCountriesInAfrica();
         System.out.println(ANSI_BOLD1 + "All the countries in a 'Africa' continent organised by largest population to smallest\n" + ANSI_RESET1);
-        displayCountries(countryContinent);
+        displayCountries(countryContinent);*/
 
         //All the countries in a 'Central Africa' region organised by largest population to smallest.
-        List <Country> countryRegion = getCountriesInCentralAfrica();
+        /**List <Country> countryRegion = getCountriesInCentralAfrica();
         System.out.println(ANSI_BOLD1 + "All the countries in a 'Central Africa' region organised by largest population to smallest\n" + ANSI_RESET1);
-        displayCountries(countryRegion);
+        displayCountries(countryRegion);*/
 
         //All the cities in the world organised by largest population to smallest.
         List <City> citiesWorld = getCitiesOrderedByPopulation();
@@ -505,6 +505,7 @@ public class App
         List <City> capitalCitiesRegion = getCapitalCitiesByRegionOrderedByPopulation();
         System.out.println(ANSI_BOLD1 + "All the capital cities in a 'Central Africa' region organised by largest population to smallest" + ANSI_RESET1);
         displayCapitalCities(capitalCitiesRegion);
+
 
     }
 
