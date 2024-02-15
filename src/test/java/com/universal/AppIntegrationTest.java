@@ -58,50 +58,50 @@ public class AppIntegrationTest
     }
 
     @Test
-    void testTopGetCountriesInAfrica()
+    void testTopGetCountriesInAsia()
     {
-        List<Country> countryinAfrica = app.getCountriesInAfrica();
-        Country topCountryinAfrica = countryinAfrica.get(0);
-        assertEquals("Nigeria",topCountryinAfrica.getName());
-        assertEquals("Africa",topCountryinAfrica.getContinent());
-        assertEquals("Western Africa",topCountryinAfrica.getRegion());
-        assertEquals(Long.valueOf(111506000),topCountryinAfrica.getPopulation());
+        List<Country> countryinAsia = app.getCountriesInAsia();
+        Country topCountryinAsia = countryinAsia.get(0);
+        assertEquals("China",topCountryinAsia.getName());
+        assertEquals("Asia",topCountryinAsia.getContinent());
+        assertEquals("Eastern Asia",topCountryinAsia.getRegion());
+        assertEquals(Long.valueOf(1277558000),topCountryinAsia.getPopulation());
     }
 
     @Test
-    void testBottomGetCountriesInAfrica()
+    void testBottomGetCountriesInAsia()
     {
-        List<Country> bottomcountryinAfrica = app.getCountriesInAfrica();
-        Country bottomCountryinAfrica = bottomcountryinAfrica.get(bottomcountryinAfrica.size()-1);
+        List<Country> bottomcountryinAsia = app.getCountriesInAsia();
+        Country bottomCountryinAsia = bottomcountryinAsia.get(bottomcountryinAsia.size()-1);
 
-        assertEquals("British Indian Ocean Territory",bottomCountryinAfrica.getName());
-        assertEquals("Africa",bottomCountryinAfrica.getContinent());
-        assertEquals("Eastern Africa",bottomCountryinAfrica.getRegion());
-        assertEquals(Long.valueOf(0),bottomCountryinAfrica.getPopulation());
+        assertEquals("Maldives",bottomCountryinAsia.getName());
+        assertEquals("Asia",bottomCountryinAsia.getContinent());
+        assertEquals("Southern and Central Asia",bottomCountryinAsia.getRegion());
+        assertEquals(Long.valueOf(286000),bottomCountryinAsia.getPopulation());
     }
 
     @Test
-    void testTopGetCountriesInCentralAfrica()
+    void testTopGetCountriesInSouthEastAsia()
     {
-        List<Country> countryinCentralAfrica = app.getCountriesInCentralAfrica();
-        Country topCountryinCentralAfrica = countryinCentralAfrica.get(0);
+        List<Country> countryinSouthEastAsia = app.getCountriesInSouthEastAsia();
+        Country topCountryinSouthEastAsia = countryinSouthEastAsia.get(0);
 
-        assertEquals("Congo, The Democratic Republic of the",topCountryinCentralAfrica.getName());
-        assertEquals("Africa",topCountryinCentralAfrica.getContinent());
-        assertEquals("Central Africa",topCountryinCentralAfrica.getRegion());
-        assertEquals(Long.valueOf(51654000),topCountryinCentralAfrica.getPopulation());
+        assertEquals("Indonesia",topCountryinSouthEastAsia.getName());
+        assertEquals("Asia",topCountryinSouthEastAsia.getContinent());
+        assertEquals("Southeast Asia",topCountryinSouthEastAsia.getRegion());
+        assertEquals(Long.valueOf(212107000),topCountryinSouthEastAsia.getPopulation());
     }
 
     @Test
-    void testBottomGetCountriesInCentralAfrica()
+    void testBottomGetCountriesInSouthEastAsia()
     {
-        List<Country> bottomCountryInCentralAfrica = app.getCountriesInCentralAfrica();
-        Country BottomCountryInCentralAfrica = bottomCountryInCentralAfrica.get(bottomCountryInCentralAfrica.size()-1);
+        List<Country> bottomCountryInSouthEastAsia = app.getCountriesInSouthEastAsia();
+        Country BottomCountryInSouthEastAsia = bottomCountryInSouthEastAsia.get(bottomCountryInSouthEastAsia.size()-1);
 
-        assertEquals("Sao Tome and Principe",BottomCountryInCentralAfrica.getName());
-        assertEquals("Africa",BottomCountryInCentralAfrica.getContinent());
-        assertEquals("Central Africa",BottomCountryInCentralAfrica.getRegion());
-        assertEquals(Long.valueOf(147000),BottomCountryInCentralAfrica.getPopulation() );
+        assertEquals("Brunei",BottomCountryInSouthEastAsia.getName());
+        assertEquals("Asia",BottomCountryInSouthEastAsia.getContinent());
+        assertEquals("Southeast Asia",BottomCountryInSouthEastAsia.getRegion());
+        assertEquals(Long.valueOf(328000),BottomCountryInSouthEastAsia.getPopulation() );
     }
 
     @Test
