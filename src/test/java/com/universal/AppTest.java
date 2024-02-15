@@ -94,6 +94,16 @@
      }
 
      @Test
+     public void testTop7CitiesInWorldIsEmpty() {
+         List<City> topCitiesInWorld = app.getTopSevenCitiesInWorldOrderedByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCitiesInWorld);
+         assertFalse(topCitiesInWorld.isEmpty());
+         System.out.println("Top 7 cities in world Report is not empty");
+     }
+
+     @Test
      public void testTop7CitiesInContinent() {
          List<City> Top7CitiesInContinent= app.getTopSevenCitiesInContinentOrderedByPopulation();
          assertNotNull(Top7CitiesInContinent);
@@ -101,10 +111,30 @@
      }
 
      @Test
+     public void testTop7CitiesInContinentIsEmpty() {
+         List<City> topCitiesInContinent = app.getTopSevenCitiesInContinentOrderedByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCitiesInContinent);
+         assertFalse(topCitiesInContinent.isEmpty());
+         System.out.println("Top 7 cities in continent Report is not empty");
+     }
+
+     @Test
      public void testTop7CitiesInRegion() {
          List<City> Top7CitiesInRegion= app.getTopSevenCitiesInRegionOrderedByPopulation();
          assertNotNull(Top7CitiesInRegion);
          System.out.println("Top 7 Cities in Region Organized by largest to smallest is not null");
+     }
+
+     @Test
+     public void testTop7CitiesInRegionIsEmpty() {
+         List<City> topCitiesInRegion = app.getTopSevenCitiesInRegionOrderedByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCitiesInRegion);
+         assertFalse(topCitiesInRegion.isEmpty());
+         System.out.println("Top 7 cities in region Report is not empty");
      }
 
      @Test
