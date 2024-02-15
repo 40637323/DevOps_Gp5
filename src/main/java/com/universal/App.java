@@ -525,6 +525,11 @@ public class App
         System.out.println(ANSI_BOLD1 + "The top 7 populated capital cities in the 'Africa' continent" + ANSI_RESET1);
         displayCapitalCities(topSevenCapitalCitiesInContinent);
 
+        //The top 7 populated capital cities in a region
+        List <City> topSevenCapitalCitiesInRegion = getTopSevenCapitalCitiesByRegionOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "The top 7 populated capital cities in the 'Central Africa' region" + ANSI_RESET1);
+        displayCapitalCities(topSevenCapitalCitiesInRegion);
+
 
 
     }
