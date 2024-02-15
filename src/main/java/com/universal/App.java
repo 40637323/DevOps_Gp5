@@ -99,12 +99,8 @@ public class App
         return countries;
     }
     /**
-     * Retrieves a list of countries from the African continent and orders them by population.
-     * @return a List of Country objects representing countries in Africa.
-     */
-    /**
-     * Retrieves a list of countries from the African continent and orders them by population.
-     * @return a List of Country objects representing countries in Africa.
+     * Retrieves a list of countries from the Asian continent and orders them by population.
+     * @return a List of Country objects representing countries in Asia.
      */
     public List<Country> getCountriesInAsia() {
         List<Country> countries = new ArrayList<>();
@@ -139,12 +135,8 @@ public class App
         }
         return countries;
     }
-    /**
-     * Retrieves a list of countries from the Central Africa region and orders them by population.
-     * @return a List of Country for representing countries in Central Africa.
-     */
-    /**
-     * Retrieves a list of countries from the South East Asia region and orders them by population.
+
+     /** Retrieves a list of countries from the South East Asia region and orders them by population.
      * @return a List of Country for representing countries in South East Asia.
      */
     public List<Country> getCountriesInSouthEastAsia() {
@@ -469,9 +461,9 @@ public class App
         String ANSI_RESET1 = "\u001B[0m"; // ANSI escape code to reset formatting
 
         //All the countries in the world organised by largest population to smallest.
-        /**List <Country> countryWorld = getCountries();
+        List <Country> countryWorld = getCountries();
         System.out.printf(ANSI_BOLD1 + "All the countries in the world organised by largest population to smallest\n" + ANSI_RESET1);
-        displayCountries(countryWorld);*/
+        displayCountries(countryWorld);
 
         //All the countries in a 'Africa' continent organised by largest population to smallest.
         /**List <Country> countryContinent = getCountriesInAfrica();
