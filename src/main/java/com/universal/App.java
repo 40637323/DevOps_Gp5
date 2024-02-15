@@ -589,36 +589,6 @@ public class App
             System.out.println("Error executing query: " + e.getMessage());
         }
     }
-    //Display World Population
-    public void printWorldPopulation() {
-        if (con == null) {
-            System.out.println("No connection");
-            return;
-        }
-        String sql = "SELECT SUM(Population) AS WorldPopulation FROM country;";
-
-        try (Statement stmt = con.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-
-            System.out.println("\u001B[1mWorld Population Report\u001B[0m");
-            System.out.println("+------------------+");
-            System.out.println("| World Population |");
-            System.out.println("+------------------+");
-
-            if (rs.next()) {
-                long worldPopulation = rs.getLong("WorldPopulation");
-                System.out.printf("| %,16d |\n", worldPopulation);
-            }
-
-            System.out.println("+------------------+");
-        } catch (SQLException e) {
-            System.out.println("Error executing query: " + e.getMessage());
-        }
-    }
-
-
-
-
     //Display the select Language
     public void printSelectedLanguageSpeakers() {
         if (con == null) {
@@ -657,6 +627,36 @@ public class App
             System.out.println("Error executing query: " + e.getMessage());
         }
     }
+
+    //Display World Population
+    public void printWorldPopulation() {
+        if (con == null) {
+            System.out.println("No connection");
+            return;
+        }
+        String sql = "SELECT SUM(Population) AS WorldPopulation FROM country;";
+
+        try (Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            System.out.println("\u001B[1mWorld Population Report\u001B[0m");
+            System.out.println("+------------------+");
+            System.out.println("| World Population |");
+            System.out.println("+------------------+");
+
+            if (rs.next()) {
+                long worldPopulation = rs.getLong("WorldPopulation");
+                System.out.printf("| %,16d |\n", worldPopulation);
+            }
+
+            System.out.println("+------------------+");
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+    }
+
+
+
 
 
     /** retrieves and print all the countries ordered by population by descending
