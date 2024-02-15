@@ -39,7 +39,7 @@ public class AppIntegrationTest
         List<Country> country = app.getCountries();
         Country topCountry = country.get(0);
 
-        assertEquals("China",topCountry.getName() );
+        assertEquals("South Korea",topCountry.getName() );
         assertEquals("Asia", topCountry.getContinent());
         assertEquals("Eastern Asia", topCountry.getRegion());
         assertEquals(Long.valueOf(1277558000),topCountry.getPopulation());
@@ -51,7 +51,7 @@ public class AppIntegrationTest
         List<Country> country = app.getCountries();
         Country bottomCountry = country.get(country.size()-1);
 
-        assertEquals("United States Minor Outlying Islands",bottomCountry.getName() );
+        assertEquals("Pitcairn",bottomCountry.getName() );
         assertEquals("Oceania",bottomCountry.getContinent() );
         assertEquals("Micronesia/Caribbean",bottomCountry.getRegion());
         assertEquals(Long.valueOf(0),bottomCountry.getPopulation());
