@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - feature/top_n_population
+      - feature/view-population
 jobs:
   UnitTests:
     name: Unit Tests
