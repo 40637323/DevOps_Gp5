@@ -145,10 +145,30 @@
      }
 
      @Test
+     public void testTop7CitiesInCountryIsEmpty() {
+         List<City> topCitiesInCountry = app.getTopSevenCitiesInCountryOrderedByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCitiesInCountry);
+         assertFalse(topCitiesInCountry.isEmpty());
+         System.out.println("Top 7 cities in country Report is not empty");
+     }
+
+     @Test
      public void testTop7CitiesInDistrict() {
          List<City> Top7CitiesInDistrict= app.getTopSevenCitiesInDistrictOrderedByPopulation();
          assertNotNull(Top7CitiesInDistrict);
          System.out.println("Top 7 Cities in District Organized by largest to smallest is not null");
+     }
+
+     @Test
+     public void testTop7CitiesInDistrictIsEmpty() {
+         List<City> topCitiesInDistrict = app.getTopSevenCitiesInDistrictOrderedByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCitiesInDistrict);
+         assertFalse(topCitiesInDistrict.isEmpty());
+         System.out.println("Top 7 cities in district Report is not empty");
      }
 
      @Test
@@ -159,6 +179,16 @@
      }
 
      @Test
+     public void testTop7CapitalCitiesIsEmpty() {
+         List<City> topCapitalCities = app.getTopSevenCapitalCitiesOrderedByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCapitalCities);
+         assertFalse(topCapitalCities.isEmpty());
+         System.out.println("Top 7 capital cities in world Report is not empty");
+     }
+
+     @Test
      public void testTop7CapitalCitiesInContinent() {
          List<City> Top7CapitalCitiesInContinent= app.getTopSevenCapitalCitiesByContinentOrderedByPopulation();
          assertNotNull(Top7CapitalCitiesInContinent);
@@ -166,10 +196,30 @@
      }
 
      @Test
+     public void testTop7CapitalCitiesInContinentIsEmpty() {
+         List<City> topCapitalCitiesInContinent = app.getTopSevenCapitalCitiesByContinentOrderedByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCapitalCitiesInContinent);
+         assertFalse(topCapitalCitiesInContinent.isEmpty());
+         System.out.println("Top 7 capital cities in continent Report is not empty");
+     }
+
+     @Test
      public void testTop7CapitalCitiesInRegion() {
          List<City> Top7CapitalCitiesInRegion= app.getTopSevenCapitalCitiesByRegionOrderedByPopulation();
          assertNotNull(Top7CapitalCitiesInRegion);
          System.out.println("Top 7 Capital Cities in Region Organized by largest to smallest is not null");
+     }
+
+     @Test
+     public void testTop7CapitalCitiesInRegionIsEmpty() {
+         List<City> topCapitalCitiesInRegion = app.getTopSevenCapitalCitiesByRegionOrderedByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCapitalCitiesInRegion);
+         assertFalse(topCapitalCitiesInRegion.isEmpty());
+         System.out.println("Top 7 capital cities in Region Report is not empty");
      }
 
      @Test
