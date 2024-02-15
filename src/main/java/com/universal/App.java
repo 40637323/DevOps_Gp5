@@ -350,6 +350,36 @@ public class App
         return topCapitalInWorld;
     }
 
+    /**retrieves a list of top seven populated capital cities in the continent 'Africa'
+     * @return a list of cities object.
+     */
+    public List<City> getTopSevenCapitalCitiesByContinentOrderedByPopulation() {
+        List<City> topCapitalInContinent = new ArrayList<>();
+        try (Statement stmt = con.createStatement()) {
+            String sql = "SELECT city.name, country.name, city.population\n" +
+                    "FROM city\n" +
+                    "INNER JOIN country\n" +
+                    "ON city.countryCode = country.code AND city.id = country.capital\n" +
+                    "WHERE country.continent = 'Africa'\n" +
+                    "ORDER BY city.population DESC\n" +
+                    "LIMIT 7";
+            ResultSet rs = stmt.executeQuery(sql);
+            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
+            while (rs.next()) {
+                City city = new City();
+                city.setCityName(rs.getString("city.name"));
+                city.setCountryOfCity(rs.getString("country.name"));
+                city.setCityPopulation(rs.getInt("city.Population"));
+
+                topCapitalInContinent.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+        return topCapitalInContinent;
+    }
+
+
     public void displayCountries(List<Country> list) {
         if (con == null) {
             System.out.println("No connection");
