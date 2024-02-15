@@ -85,7 +85,7 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 | ID  | Name  | Met | Screenshot |
 | --- | ----- | --- | ---------- |
 | 1   | All the countries in the world organised by largest population to smallest. | Yes | ![Screenshot](image1.png) |
-| 2   | All the countries in a continent organised by largest population to smallest. | Yes | ! [Screenshot](image2.png)
+| 2   | All the countries in a continent organised by largest population to smallest. | Yes | ![Screenshot](image2.png)
 | 3   | All the countries in a region organised by largest population to smallest.   | Yes | ![Screenshot](image3.png) |
 | 4   | The top 7 populated countires in the world where 7 is provided by the user.   | Yes | ![image4.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image4.png) |
 | 5   | The top 7 populated countries in the continent where 7 is provided by the user.   | Yes | ![image5.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image5.png) |
