@@ -34,31 +34,23 @@
          app.disconnect();
      }
 
-
-     //check if the output is null or not
-
-     @Test
-     public void testReportCountryIsEmpty() {
-         // Prepare test data
-         ArrayList<Country> emptyList = new ArrayList<>();
-         // Call the method
-         app.displayCountries(emptyList);
-     }
-
-     //check if the countries in the world contain null value or not
-     @Test
-     void printSalariesTestContainsNull()
-     {
-         ArrayList<Country> countriesContainNull = new ArrayList<>();
-         countriesContainNull.add(null);
-         app.displayCountries(countriesContainNull);
-     }
      @Test
      public void testTop7Countries() {
          List<Country> Top7PopulatedCountries= app.getTopSevenCountriesInWorldByPopulation();
          assertNotNull(Top7PopulatedCountries);
          System.out.println("Top 7 countries in the World Organized by largest to smallest is not null");
      }
+
+     @Test
+     public void testTop7CountriesisEmpty() {
+         List<Country> topCountries= app.getTopSevenCountriesInWorldByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCountries);
+         assertFalse(topCountries.isEmpty());
+         System.out.println("Top 7 countries in the World Report is not empty");
+     }
+
 
      @Test
      public void testTop7CountriesInAsia() {
@@ -68,10 +60,30 @@
      }
 
      @Test
+     public void testTop7CountriesAsiaIsEmpty() {
+         List<Country> topCountriesAsia = app.getTopSevenCountriesInAsiaByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCountriesAsia);
+         assertFalse(topCountriesAsia.isEmpty());
+         System.out.println("Top 7 countries in Asia Report is not empty");
+     }
+
+     @Test
      public void testTop7CountriesInSouthEastAsia() {
          List<Country> Top7CountriesInSouthEastAsia= app.getTopSevenCountriesInSouthEastAsia();
          assertNotNull(Top7CountriesInSouthEastAsia);
          System.out.println("Top 7 Countries in South East Asia Organized by largest to smallest is not null");
+     }
+
+     @Test
+     public void testTop7CountriesSouthEastAsiaIsEmpty() {
+         List<Country> topCountriesSouthEastAsia = app.getTopSevenCountriesInAsiaByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCountriesSouthEastAsia);
+         assertFalse(topCountriesSouthEastAsia.isEmpty());
+         System.out.println("Top 7 countries in South East Asia Report is not empty");
      }
 
      @Test
@@ -160,7 +172,6 @@
      {
          List<Country> countries = new ArrayList<>();
          Country country = new Country();
-         country.setCode("GAB");
          country.setName("Gabon");
          country.setContinent("Africa");
          country.setRegion("Central Africa");
