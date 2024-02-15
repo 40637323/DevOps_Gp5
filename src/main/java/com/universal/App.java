@@ -655,6 +655,36 @@ public class App
         }
     }
 
+    //Display Continent Population
+    public void printContinentPopulation() {
+        if (con == null) {
+            System.out.println("No connection");
+            return;
+        }
+        String sql = "SELECT Continent, SUM(Population) AS ContinentPopulation FROM country GROUP BY Continent;";
+
+        try (Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            System.out.println("\u001B[1mContinent Population Report\u001B[0m");
+            System.out.println("+-------------------+---------------------+");
+            System.out.println("| Continent         | Population          |");
+            System.out.println("+-------------------+---------------------+");
+
+            while (rs.next()) {
+                String continent = rs.getString("Continent");
+                long continentPopulation = rs.getLong("ContinentPopulation");
+                System.out.printf("| %-17s | %,19d |\n", continent, continentPopulation);
+            }
+
+            System.out.println("+-------------------+---------------------+");
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+    }
+
+
+
 
 
 
@@ -743,6 +773,7 @@ public class App
         a.printCountryPopulationReport();
         a.printSelectedLanguageSpeakers();
         a.printWorldPopulation();
+        a.printContinentPopulation();
 
 
         // Disconnect from database
