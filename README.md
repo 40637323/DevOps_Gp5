@@ -82,7 +82,7 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 
 ## Requirement Evidence
 
-###25 requirements of 32 have been implemented, which is 78.13%. 
+### 25 requirements of 32 have been implemented, which is 78.13%. 
 
 | ID  | Name  | Met | Screenshot |
 | --- | ----- | --- | ---------- |
