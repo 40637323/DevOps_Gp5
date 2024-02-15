@@ -96,17 +96,17 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 | 10   | All the cities in a country organised by largest population to smallest.   | Yes | ![image10.jpg](https://github.com/40637323/DevOps_Gp5/blob/master/images/image10.jpg) |
 | 11   | All the cities in a district organised by largest population to smallest.   | Yes | ![image11.jpg](https://github.com/40637323/DevOps_Gp5/blob/master/images/image11.jpg) |
 | 12   |The top 7 populated cities in the world where 7 is provided by the user.   | Yes | ![image12.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image12.png)  |
-| 13   |The top 7 populated cities in a continent where 7 is provided by the user.   | Yes | ![Screenshot](image13.png) |
+| 13   |The top 7 populated cities in a continent where 7 is provided by the user.   | Yes | ![image13.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image13.png) |
 | 14   |The top 7 populated cities in a region where 7 is provided by the user.   | Yes | ![image14.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image14.png)  |
-| 15   |The top 7 populated cities in a country where 7 is provided by the user.   | Yes | ![Screenshot](image15.png) |
-| 16   |The top 7 populated cities in a district where 7 is provided by the user.   | Yes | ![Screenshot](image16.png) |
-| 17   |All the capital cities in the world organised by largest population to smallest.   | Yes | ![Screenshot](image17.png) |
-| 18   |All the capital cities in a continent organised by largest population to smallest.   | Yes | ![Screenshot](image18.png) |
-| 19   |All the capital cities in a region organised by largest to smallest.   | Yes | ![Screenshot](image19.png) |
-| 20   |The top 7 populated capital cities in the world where 7 is provided by the user.   | Yes | ![Screenshot](image20.png) |
-| 21   |The top 7 populated capital cities in a continent where 7 is provided by the user.   | Yes | ![Screenshot](image21.png) |
-| 22   |The top 7 populated capital cities in a region where 7 is provided by the user.   | Yes | ![Screenshot](image22.png) |
-| 23   |The population of people, people living in cities, and people not living in cities in each continent.   | Yes | ![Screenshot](image23.png) |
-| 24   |The population of people, people living in cities, and people not living in cities in each region.   | Yes | ![Screenshot](image24.png) |
-| 25   |The population of people, people living in cities, and people not living in cities in each country.   | Yes | ![Screenshot](image25.png) |
+| 15   |The top 7 populated cities in a country where 7 is provided by the user.   | Yes | ![image15.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image15.png) |
+| 16   |The top 7 populated cities in a district where 7 is provided by the user.   | Yes | ![image16.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image16.png) |
+| 17   |All the capital cities in the world organised by largest population to smallest.   | Yes | ![image17.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image17.png) |
+| 18   |All the capital cities in a continent organised by largest population to smallest.   | Yes | ![image18.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image18.png) |
+| 19   |All the capital cities in a region organised by largest to smallest.   | Yes | ![image19.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image19.png) |
+| 20   |The top 7 populated capital cities in the world where 7 is provided by the user.   | Yes | ![image20.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image20.png) |
+| 21   |The top 7 populated capital cities in a continent where 7 is provided by the user.   | Yes | ![image21.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image21.png) |
+| 22   |The top 7 populated capital cities in a region where 7 is provided by the user.   | Yes | ![image22.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image22.png) |
+| 23   |The population of people, people living in cities, and people not living in cities in each continent.   | Yes | ![image23.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image23.png) |
+| 24   |The population of people, people living in cities, and people not living in cities in each region.   | Yes | ![image24.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image24.png) |
+| 25   |The population of people, people living in cities, and people not living in cities in each country.   | Yes | ![image25.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image25.png) |
 | ... | ...   | ... | ...        |
