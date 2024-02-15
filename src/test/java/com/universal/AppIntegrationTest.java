@@ -57,6 +57,7 @@ public class AppIntegrationTest
         assertEquals(Long.valueOf(0),bottomCountry.getPopulation());
     }
 
+
     @Test
     void testTopGetCountriesInAfrica()
     {
