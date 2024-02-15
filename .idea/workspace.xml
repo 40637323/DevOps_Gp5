@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="The population of people, people living in cities, and people not living in cities in each country.">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Languages from greatest number to smallest, including the percentage of the world population for Chinese,English,Hindi,Spanish and Arabic.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -420,7 +420,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708021761724</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Languages from greatest number to smallest, including the percentage of the world population for Chinese,English,Hindi,Spanish and Arabic.">
+      <option name="closed" value="true" />
+      <created>1708021916440</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708021916440</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +463,8 @@
     <MESSAGE value="The population of people, people living in cities, and people not living in cities in each continent." />
     <MESSAGE value="The population of people, people living in cities, and people not living in cities in each region." />
     <MESSAGE value="The population of people, people living in cities, and people not living in cities in each country." />
-    <option name="LAST_COMMIT_MESSAGE" value="The population of people, people living in cities, and people not living in cities in each country." />
+    <MESSAGE value="Languages from greatest number to smallest, including the percentage of the world population for Chinese,English,Hindi,Spanish and Arabic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Languages from greatest number to smallest, including the percentage of the world population for Chinese,English,Hindi,Spanish and Arabic." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1708011885044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
