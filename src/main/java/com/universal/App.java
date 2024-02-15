@@ -369,10 +369,13 @@ public class App
         System.out.println(ANSI_BOLD1 + "The top 7 populated countries in the 'Asia' continent" + ANSI_RESET1);
         displayCountries(topSevenCountriesContinent);
 
-
-
+        //The top 7 populated countries in a region
+        List <Country> topSevenCountriesRegion = getTopSevenCountriesInSouthEastAsia();
+        System.out.println(ANSI_BOLD1 + "The top 7 populated countries in the 'SouthEast Asia' region" + ANSI_RESET1);
+        displayCountries(topSevenCountriesRegion);
 
     }
+
 
     public static void main(String[] args)
     {
