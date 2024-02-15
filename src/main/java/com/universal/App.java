@@ -374,6 +374,11 @@ public class App
         System.out.println(ANSI_BOLD1 + "The top 7 populated countries in the 'SouthEast Asia' region" + ANSI_RESET1);
         displayCountries(topSevenCountriesRegion);
 
+        //The top 7 populated cities in the world
+        List <City> topSevenCitiesWorld= getTopSevenCitiesInWorldOrderedByPopulation();
+        System.out.println(ANSI_BOLD1 + "The top 7 populated cities in the World" + ANSI_RESET1);
+        displayCities(topSevenCitiesWorld);
+
     }
 
 
