@@ -796,7 +796,7 @@ public class App
     /** retrieves and print all the countries ordered by population by descending
      */
 
-    public void displayAllQuerys() {
+    public void displayAllQuery() {
         String ANSI_BOLD1 = "\u001B[1m"; // ANSI escape code for bold
         String ANSI_RESET1 = "\u001B[0m"; // ANSI escape code to reset formatting
 
@@ -871,7 +871,7 @@ public class App
 
         // Connect to database
         // a.connect();
-        a.displayAllQuerys();
+        a.displayAllQuery();
         a.printPopulationReport();
         a.printRegionPopulationReport();
         a.printCountryPopulationReport();
