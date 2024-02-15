@@ -32,15 +32,40 @@
 
      }
      // Test if the top Country in the world is suitable with actual result
-//     @Test
-//     void testTop7PopulatedCountriesInWorld() {
-//         List<Country> Top7CountriesInWorld = app.getTopSevenCountriesInWorldByPopulation();
-//         Country top7CountriesInWorld = Top7CountriesInWorld.get(Top7CountriesInWorld.size()-1);
-//         assertEquals("China",top7CountriesInWorld.getName());
-//         assertEquals("Asia", top7CountriesInWorld.getContinent());
-//         assertEquals("Eastern Asia", top7CountriesInWorld.getRegion());
-//         assertEquals(Long.valueOf(1277558000),top7CountriesInWorld.getPopulation());
-//     }
+     @Test
+     public void testGetTopSevenCountriesInWorldByPopulation() {
+         //Country countryPopulation = new Country(); // Assuming the class containing the method is named CountryPopulation
+         List<Country> topCountries = app.getTopSevenCountriesInWorldByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCountries);
+         assertFalse(topCountries.isEmpty());
+
+         // Extracting the first line of output
+         Country firstCountry = topCountries.get(0);
+         assertEquals("China",firstCountry.getName());
+         assertEquals("Asia",firstCountry.getContinent());
+         assertEquals("Eastern Asia",firstCountry.getRegion());
+         assertEquals(Long.valueOf(1277558000),firstCountry.getPopulation());
+         assertEquals("Peking",firstCountry.getCapital());
+     }
+
+     @Test
+     public void testGetBottomOfTopSevenCountriesInWorldByPopulation() {
+         List<Country> topCountriesBottom = app.getTopSevenCountriesInWorldByPopulation();
+
+         // Check if the list is not null and has at least one element
+         assertNotNull(topCountriesBottom);
+         assertFalse(topCountriesBottom.isEmpty());
+
+         // Extracting the first line of output
+         Country firstCountry = topCountriesBottom.get(topCountriesBottom.size()-1);
+         assertEquals("Russian Federation",firstCountry.getName());
+         assertEquals("Europe",firstCountry.getContinent());
+         assertEquals("Eastern Europe",firstCountry.getRegion());
+         assertEquals(Long.valueOf(146934000),firstCountry.getPopulation());
+         assertEquals("Moscow",firstCountry.getCapital());
+     }
 
      @Test
      void displayCities()
