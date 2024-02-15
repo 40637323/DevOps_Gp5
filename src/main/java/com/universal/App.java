@@ -767,6 +767,29 @@ public class App
         }
     }
 
+    //Display City Population
+    public void printCityPopulation() {
+        if (con == null) {
+            System.out.println("No connection");
+            return;
+        }
+        String sql = "SELECT Name, Population FROM city ORDER BY Name;";
+
+        try (Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            System.out.println("\u001B[1mCity Population Report\u001B[0m");
+            while (rs.next()) {
+                String cityName = rs.getString("Name");
+                long population = rs.getLong("Population");
+                System.out.printf("City: %-30s | Population: %,d\n", cityName, population);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+    }
+
+
 
 
 
@@ -858,6 +881,7 @@ public class App
         a.printRegionPopulation();
         a.printCountryPopulation();
         a.printDistrictPopulation();
+        a.printCityPopulation();
 
 
         // Disconnect from database
