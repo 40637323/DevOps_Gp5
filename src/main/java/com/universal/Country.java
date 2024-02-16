@@ -74,17 +74,6 @@ public class Country
     }
 
     /**
-     * The following is getter setter method related to code2.
-     */
-    public int getCode2() {
-        return Code2;
-    }
-
-    public void setCode2(int code2) {
-        Code2 = code2;
-    }
-
-    /**
      * The following is getter setter method related to continent.
      */
     public String getContinent() {
