@@ -111,5 +111,8 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 | 23   |The population of people, people living in cities, and people not living in cities in each continent.   | Yes | ![image23.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image23.png) |
 | 24   |The population of people, people living in cities, and people not living in cities in each region.   | Yes | ![image24.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image24.png) |
 | 25   |The population of people, people living in cities, and people not living in cities in each country.   | Yes | ![image25.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image25.png) |
+| 26   |The population of the world.   | Yes | ![image26.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image26.png) |
+| 27   |The population of a continent.   | Yes | ![image27.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image27.png) |
+| 28   |The population of a region.   | Yes | ![image28.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image28.png) |
 | ... | ...   | ... | ...        |
 
