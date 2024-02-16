@@ -82,7 +82,7 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 
 ## Requirement Evidence
 
-### 25 requirements of 32 have been implemented, which is 78.13%. 
+### 32 requirements of 32 have been implemented, which is 100%. 
 
 | ID  | Name  | Met | Screenshot |
 | --- | ----- | --- | ---------- |
@@ -114,5 +114,9 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 | 26   |The population of the world.   | Yes | ![image26.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image26.png) |
 | 27   |The population of a continent.   | Yes | ![image27.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image27.png) |
 | 28   |The population of a region.   | Yes | ![image28.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image28.png) |
+| 29   |The population of a country.   | Yes | ![image29.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image29.png) |
+| 30   |The population of a district.   | Yes | ![image30.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image30.png) |
+| 31   |The population of a city.   | Yes | ![image31.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image31.png) |
+| 32   |Language Speakers Report.   | Yes | ![image32.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image32.png) |
 | ... | ...   | ... | ...        |
 
