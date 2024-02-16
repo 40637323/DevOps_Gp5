@@ -51,10 +51,10 @@ public class AppIntegrationTest
         List<Country> country = app.getCountries();
         Country bottomCountry = country.get(country.size()-1);
 
-        assertEquals("United States Minor Outlying Islands",bottomCountry.getName() );
+        assertEquals("Pitcairn",bottomCountry.getName() );
         assertEquals("Oceania",bottomCountry.getContinent() );
-        assertEquals("Micronesia/Caribbean",bottomCountry.getRegion());
-        assertEquals(Long.valueOf(0),bottomCountry.getPopulation());
+        assertEquals("Polynesia",bottomCountry.getRegion());
+        assertEquals(Long.valueOf(50),bottomCountry.getPopulation());
     }
 
     @Test
@@ -346,4 +346,3 @@ public class AppIntegrationTest
         assertNotNull(app);
     }
 }
-
