@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.AfterAll;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class AppTest {
@@ -39,47 +40,65 @@ public class AppTest {
         }
 
     // check if the countries in the world is Empty or not
-    @Test
-    public void testReportCountryIsEmpty() {
-        // Prepare test data
-        ArrayList<Country> emptyList = new ArrayList<>();
-        // Call the method
-        app.displayCountries(emptyList);
-    }
-
-    //check if the countries in the world contain null value or not
-    @Test
-    void printSalariesTestContainsNull()
-    {
-        ArrayList<Country> countriesContainNull = new ArrayList<>();
-        countriesContainNull.add(null);
-        app.displayCountries(countriesContainNull);
-    }
-    @Test
-    public void testGetCountriesInAfrica() {
-        List<Country> africanCountries = app.getCountriesInAfrica();
-        assertNotNull(africanCountries);
-        System.out.println("Get Country In Africa Function's output is not null");
-       }
 
     @Test
-    public void testGetCountriesInCentralAfrica() {
-        List<Country> centralAfricanCountries = app.getCountriesInCentralAfrica();
-        assertNotNull(centralAfricanCountries);
-        System.out.println("Get Country In Central Africa Function's output is not null");
-    }
-//
-//    @Test
-//    void displayisNull() {
-//        List<Country> countries = new ArrayList<>();
-//        app.displayCountriesOrderedByPopulation(countries);
-//    }
+    public void testGetCountryisEmpty() {
+        List<Country> EmptyCountries= app.getCountries();
 
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCountries);
+        assertFalse(EmptyCountries.isEmpty());
+        System.out.println("Countries in World is not Empty");
+    }
+
+    @Test
+    public void testGetCountriesInAsia() {
+        List<Country> asianCountries = app.getCountriesInAsia();
+        assertNotNull(asianCountries);
+        System.out.println("Get Country In Asia Function's output is not null");
+    }
+
+    @Test
+    public void testGetCountryInAsiaIsEmpty() {
+        List<Country> EmptyCountriesAsia= app.getCountriesInAsia();
+
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCountriesAsia);
+        assertFalse(EmptyCountriesAsia.isEmpty());
+        System.out.println("Countries in Asia is not Empty");
+    }
+
+    @Test
+    public void testGetCountriesInSouthEastAsia() {
+        List<Country> SouthEastAsiaCountries = app.getCountriesInSouthEastAsia();
+        assertNotNull(SouthEastAsiaCountries);
+        System.out.println("Get Country In South East Asia Function's output is not null");
+    }
+
+    @Test
+    public void testGetCountryInSouthEastAsiaIsEmpty() {
+        List<Country> EmptyCountriesSouthEastAsia= app.getCountriesInAsia();
+
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCountriesSouthEastAsia);
+        assertFalse(EmptyCountriesSouthEastAsia.isEmpty());
+        System.out.println("Countries in SouthEast Asia is not Empty");
+    }
     @Test
     public void testGetCitiesOrderByPopulation() {
         List<City> cityWorld = app.getCitiesOrderedByPopulation();
         assertNotNull(cityWorld);
         System.out.println("Get Cities ordered by population Function's output is not null");
+    }
+
+    @Test
+    public void testGetCitiesIsEmpty() {
+        List<City> EmptyCities= app.getCitiesOrderedByPopulation();
+
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCities);
+        assertFalse(EmptyCities.isEmpty());
+        System.out.println("Cities in World is not empty");
     }
 
     @Test
@@ -91,6 +110,16 @@ public class AppTest {
     }
 
     @Test
+    public void testGetCitiesByContinentIsEmpty() {
+        List<City> EmptyCitiesByContinent= app.getCitiesByContinentOrderedByPopulation();
+
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCitiesByContinent);
+        assertFalse(EmptyCitiesByContinent.isEmpty());
+        System.out.println("Cities in Continent is not empty");
+    }
+
+    @Test
     public void testGetCitiesByRegionOrderByPopulation() {
         List<City> cityRegion = app.getCitiesByRegionOrderedByPopulation();
         assertNotNull(cityRegion);
@@ -98,17 +127,47 @@ public class AppTest {
         }
 
     @Test
+    public void testGetCitiesByRegionIsEmpty() {
+        List<City> EmptyCitiesByRegion= app.getCitiesByRegionOrderedByPopulation();
+
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCitiesByRegion);
+        assertFalse(EmptyCitiesByRegion.isEmpty());
+        System.out.println("Cities in Region is not empty");
+    }
+
+    @Test
     public void testGetCitiesInCountryOrderByPopulation() {
         List<City> cityCountry = app.getCitiesInCountryOrderedByPopulation();
         assertNotNull(cityCountry);
         System.out.println("Get Cities in Country Function's output is not null");
-        }
+    }
+
+    @Test
+    public void testGetCitiesByCountryIsEmpty() {
+        List<City> EmptyCitiesByCountry= app.getCitiesInCountryOrderedByPopulation();
+
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCitiesByCountry);
+        assertFalse(EmptyCitiesByCountry.isEmpty());
+        System.out.println("Cities in Country is not empty");
+    }
 
     @Test
     public void testGetCitiesInDistinct() {
         List<City> cityDiscrict = app.getCitiesInDistrict();
         assertNotNull(cityDiscrict);
         System.out.println("Get Cities in Distinct Function's output is not null");
+    }
+
+    @Test
+    public void testGetCitiesByDistrictIsEmpty() {
+        List<City> EmptyCitiesByDistrict= app.getCitiesInDistrict();
+
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCitiesByDistrict);
+        assertFalse(EmptyCitiesByDistrict.isEmpty());
+        System.out.println("Cities in District is not empty");
     }
 
     @Test
@@ -119,10 +178,30 @@ public class AppTest {
     }
 
     @Test
+    public void testGetCapitalCitiesIsEmpty() {
+        List<City> EmptyCapitalCities = app.getAllCapitalCitiesByPopulation();
+
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCapitalCities);
+        assertFalse(EmptyCapitalCities.isEmpty());
+        System.out.println("Capital Cities in World is not empty");
+    }
+
+    @Test
     public void testCapitalInContinent() {
         List<City> CapitalContinent = app.getCapitalCitiesByContinentOrderedByPopulation();
         assertNotNull(CapitalContinent);
         System.out.println("Get Capital Cities by Continent Function's output is not null");
+    }
+
+    @Test
+    public void testGetCapitalCitiesInContinentIsEmpty() {
+        List<City> EmptyCapitalCitiesIncontinent = app.getCapitalCitiesByContinentOrderedByPopulation();
+
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCapitalCitiesIncontinent);
+        assertFalse(EmptyCapitalCitiesIncontinent.isEmpty());
+        System.out.println("Capital Cities in Continent is not empty");
     }
 
     @Test
@@ -132,6 +211,15 @@ public class AppTest {
         System.out.println("Get Capital Cities by Region Function's output is not null");
     }
 
+    @Test
+    public void testGetCapitalCitiesInRegionIsEmpty() {
+        List<City> EmptyCapitalCitiesInRegion = app.getCapitalCitiesByRegionOrderedByPopulation();
+
+        // Check if the list is not null and has at least one element
+        assertNotNull(EmptyCapitalCitiesInRegion);
+        assertFalse(EmptyCapitalCitiesInRegion.isEmpty());
+        System.out.println("Capital Cities in Region is not empty");
+    }
 
     @Test
     void displayCities()
@@ -171,5 +259,31 @@ public class AppTest {
         country.setCapital("902");
         countries.add(country);
         app.displayCountries(countries);
+    }
+
+
+    @Test
+    public void testReportCountryIsEmpty() {
+        // Prepare test data
+        ArrayList<Country> emptyList = new ArrayList<>();
+        // Call the method
+        app.displayCountries(emptyList);
+    }
+
+    //check if the countries in the world contain null value or not
+    @Test
+    void printSalariesTestContainsNull()
+    {
+        ArrayList<Country> countriesContainNull = new ArrayList<>();
+        countriesContainNull.add(null);
+        app.displayCountries(countriesContainNull);
+    }
+
+    @Test
+    void testDisplayAllQuery() {
+        // Call display all query
+        app.displayAllQuery();
+        // Assert that each array list is null
+        assertNotNull(app.getAllCapitalCitiesByPopulation());
     }
 }

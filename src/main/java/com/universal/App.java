@@ -1,3 +1,9 @@
+/**
+ * This class is the main class where the reports are generated. In this class, there are different public
+ * methods where each report is represented. There are four main type of reports in the class. They are related
+ * on country, city, capital city and population.
+ */
+
 package com.universal;
 
 import java.sql.Connection;
@@ -147,12 +153,12 @@ public class App
             return countries;
         }
         try (Statement stmt = con.createStatement()) {
-            String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name" +
-                    "FROM city" +
-                    "INNER JOIN country" +
-                    "ON city.id = country.capital" +
-                    "WHERE country.continent = 'Asia' AND country.region = 'Southeast Asia'" +
-                    "ORDER BY country.population DESC";
+            String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name " +
+                    "FROM city " +
+                    "INNER JOIN country " +
+                    "ON city.id = country.capital " +
+                    "WHERE country.continent = 'Asia' AND country.region = 'Southeast Asia' " +
+                    "ORDER BY country.population DESC ";
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
@@ -456,7 +462,7 @@ public class App
     /** retrieves and print all the countries ordered by population by descending
      */
 
-    public void displayAllQuerys() {
+    public void displayAllQuery() {
         String ANSI_BOLD1 = "\u001B[1m"; // ANSI escape code for bold
         String ANSI_RESET1 = "\u001B[0m"; // ANSI escape code to reset formatting
 
@@ -531,7 +537,7 @@ public class App
 
         // Connect to database
         // a.connect();
-        a.displayAllQuerys();
+        a.displayAllQuery();
 
         // Disconnect from database
         a.disconnect();

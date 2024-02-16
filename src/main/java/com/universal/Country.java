@@ -30,42 +30,6 @@ public class Country
      */
     private String Continent;
 
-
-    /**
-     * Country's GNP
-     */
-    private String GNP;
-
-    /**
-     * Country's GNPOld
-     */
-    private String GNPOld;
-
-    /**
-     * Country's governemntform
-     */
-    private String GovernmentForm;
-
-    /**
-     * Country's headofstate
-     */
-    private String HeadOfState;
-
-    /**
-     * Country's IndepYear
-     */
-    private String IndepYear;
-
-    /**
-     * Country's LifeExpectancy
-     */
-    private String LifeExpectancy;
-
-    /**
-     * Country's LocalName
-     */
-    private String LocalName;
-
     /**
      * Country's Name
      */
@@ -132,83 +96,6 @@ public class Country
     }
 
     /**
-     * The following is getter setter method related to GNP.
-     */
-    public String getGNP() {
-        return GNP;
-    }
-
-    public void setGNP(String GNP) {
-        this.GNP = GNP;
-    }
-
-    /**
-     * The following is getter setter method related to GNPOld.
-     */
-    public String getGNPOld() {
-        return GNPOld;
-    }
-
-    public void setGNPOld(String GNPOld) {
-        this.GNPOld = GNPOld;
-    }
-
-    /**
-     * The following is getter setter method related to governmentform.
-     */
-    public String getGovernmentForm() {
-        return GovernmentForm;
-    }
-
-    public void setGovernmentForm(String governmentForm) {
-        GovernmentForm = governmentForm;
-    }
-
-    /**
-     * The following is getter setter method related to headofstate.
-     */
-    public String getHeadOfState() {
-        return HeadOfState;
-    }
-
-    public void setHeadOfState(String headOfState) {
-        HeadOfState = headOfState;
-    }
-
-    /**
-     * The following is getter setter method related to IndepYear.
-     */
-    public String getIndepYear() {
-        return IndepYear;
-    }
-
-    public void setIndepYear(String indepYear) {
-        IndepYear = indepYear;
-    }
-
-    /**
-     * The following is getter setter method related to LifeExpectancy.
-     */
-    public String getLifeExpectancy() {
-        return LifeExpectancy;
-    }
-
-    public void setLifeExpectancy(String lifeExpectancy) {
-        LifeExpectancy = lifeExpectancy;
-    }
-
-    /**
-     * The following is getter setter method related to LocalName.
-     */
-    public String getLocalName() {
-        return LocalName;
-    }
-
-    public void setLocalName(String localName) {
-        LocalName = localName;
-    }
-
-    /**
      * The following is getter setter method related to name.
      */
     public String getName() {
@@ -241,15 +128,5 @@ public class Country
         Region = region;
     }
 
-    /**
-     * The following is getter setter method related to surfacearea.
-     */
-    public String getSurfaceArea() {
-        return SurfaceArea;
-    }
-
-    public void setSurfaceArea(String surfaceArea) {
-        SurfaceArea = surfaceArea;
-    }
 }
 
