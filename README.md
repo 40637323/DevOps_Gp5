@@ -110,5 +110,5 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 | 22   |The top 7 populated capital cities in a region where 7 is provided by the user.   | Yes | ![image22.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image22.png) |
 | 23   |The population of people, people living in cities, and people not living in cities in each continent.   | Yes | ![image23.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image23.png) |
 | 24   |The population of people, people living in cities, and people not living in cities in each region.   | Yes | ![image24.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image24.png) |
-| 25   |The population of people, people living in cities, and people not living in cities in each country.   | Yes | ![image25.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image25.jpg) |
+| 25   |The population of people, people living in cities, and people not living in cities in each country.   | Yes | ![image25.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image25.png) |
 | ... | ...   | ... | ...        |
