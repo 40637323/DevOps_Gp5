@@ -465,8 +465,8 @@ public class App
 
         System.out.println("+----------------------------------------+----------------------------------------+--------------+");
     }
-    //Display Continent Population Report
-    public void printPopulationReport() {
+    //Display The population of people, people living in cities, and people not living in cities in each continent.
+    public void printPopulationOfLivingOrNotLivinginContinentReport() {
         if (con == null) {
             System.out.println("No connection");
             return;
@@ -483,7 +483,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
-            System.out.println("\u001B[1mPopulation Report by Continent\u001B[0m");
+            System.out.println("\u001B[1mThe population of people, people living in cities, and people not living in cities in each continent\u001B[0m");
             System.out.println("+----------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
             System.out.println("| Continent            | Total Population    | City Population     | City Population %   | Non-City Population | Non-City Population %|");
             System.out.println("+----------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
@@ -506,8 +506,8 @@ public class App
             System.out.println("Error executing query: " + e.getMessage());
         }
     }
-    //Region Population Report
-    public void printRegionPopulationReport() {
+    //The population of people, people living in cities, and people not living in cities in each region.
+    public void printPopulationOfLivingOrNotLivinginRegionReport() {
         if (con == null) {
             System.out.println("No connection");
             return;
@@ -524,7 +524,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
-            System.out.println("\u001B[1mRegion Population Report\u001B[0m");
+            System.out.println("\u001B[1mThe population of people, people living in cities, and people not living in cities in each region\u001B[0m");
             System.out.println("+---------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
             System.out.println("| Region                    | Total Population    | City Population     | City Pop. %         | Non-City Population | Non-City Pop. %     |");
             System.out.println("+---------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
@@ -548,8 +548,8 @@ public class App
         }
     }
 
-    //Country Population Report
-    public void printCountryPopulationReport() {
+    //The population of people, people living in cities, and people not living in cities in each country
+    public void printPopulationOfLivingOrNotLivinginCountryReport() {
         if (con == null) {
             System.out.println("No connection");
             return;
@@ -566,7 +566,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
-            System.out.println("\u001B[1mCountry Population Report\u001B[0m");
+            System.out.println("\u001B[1mThe population of people, people living in cities, and people not living in cities in each country\u001B[0m");
             System.out.println("+----------------------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
             System.out.println("| Country                                | Total Population    | City Population     | City Pop. %         | Non-City Population | Non-City Pop. %     |");
             System.out.println("+----------------------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
@@ -639,7 +639,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
-            System.out.println("\u001B[1mWorld Population Report\u001B[0m");
+            System.out.println("\u001B[1mThe population of the world\u001B[0m");
             System.out.println("+------------------+");
             System.out.println("| World Population |");
             System.out.println("+------------------+");
@@ -666,7 +666,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
-            System.out.println("\u001B[1mContinent Population Report\u001B[0m");
+            System.out.println("\u001B[1mThe population of a continent\u001B[0m");
             System.out.println("+-------------------+---------------------+");
             System.out.println("| Continent         | Population          |");
             System.out.println("+-------------------+---------------------+");
@@ -694,7 +694,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
-            System.out.println("\u001B[1mRegion Population Report\u001B[0m");
+            System.out.println("\u001B[1mThe population of a region\u001B[0m");
             System.out.println("+----------------------+---------------------+");
             System.out.println("| Region               | Population          |");
             System.out.println("+----------------------+---------------------+");
@@ -722,7 +722,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
-            System.out.println("\u001B[1mCountry Population Report\u001B[0m");
+            System.out.println("\u001B[1mThe population of a country\u001B[0m");
             System.out.println("+----------------------------------------------------+---------------------+");
             System.out.println("| Country                                            | Population          |");
             System.out.println("+----------------------------------------------------+---------------------+");
@@ -750,7 +750,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
-            System.out.println("\u001B[1mDistrict Population Report\u001B[0m");
+            System.out.println("\u001B[1mThe population of a district\u001B[0m");
             System.out.println("+--------------------------------+---------------------+");
             System.out.println("| District                       | Population          |");
             System.out.println("+--------------------------------+---------------------+");
@@ -778,7 +778,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
-            System.out.println("\u001B[1mCity Population Report\u001B[0m");
+            System.out.println("\u001B[1mThe population of a city\u001B[0m");
             System.out.println("+--------------------------------+---------------------+");
             System.out.println("| City                           | Population          |");
             System.out.println("+--------------------------------+---------------------+");
@@ -873,9 +873,9 @@ public class App
         // Connect to database
         // a.connect();
         a.displayAllQuery();
-        a.printPopulationReport();
-        a.printRegionPopulationReport();
-        a.printCountryPopulationReport();
+        a.printPopulationOfLivingOrNotLivinginContinentReport();
+        a.printPopulationOfLivingOrNotLivinginRegionReport();
+        a.printPopulationOfLivingOrNotLivinginCountryReport();
         a.printSelectedLanguageSpeakers();
         a.printWorldPopulation();
         a.printContinentPopulation();
