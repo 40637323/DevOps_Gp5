@@ -110,17 +110,6 @@ public class Country
     }
 
     /**
-     * The following is getter setter method related to code2.
-     */
-    public int getCode2() {
-        return Code2;
-    }
-
-    public void setCode2(int code2) {
-        Code2 = code2;
-    }
-
-    /**
      * The following is getter setter method related to continent.
      */
     public String getContinent() {
@@ -130,83 +119,6 @@ public class Country
     public void setContinent(String continent) {
         Continent = continent;
     }
-
-//    /**
-//     * The following is getter setter method related to GNP.
-//     */
-//    public String getGNP() {
-//        return GNP;
-//    }
-//
-//    public void setGNP(String GNP) {
-//        this.GNP = GNP;
-//    }
-//
-//    /**
-//     * The following is getter setter method related to GNPOld.
-//     */
-//    public String getGNPOld() {
-//        return GNPOld;
-//    }
-//
-//    public void setGNPOld(String GNPOld) {
-//        this.GNPOld = GNPOld;
-//    }
-//
-//    /**
-//     * The following is getter setter method related to governmentform.
-//     */
-//    public String getGovernmentForm() {
-//        return GovernmentForm;
-//    }
-//
-//    public void setGovernmentForm(String governmentForm) {
-//        GovernmentForm = governmentForm;
-//    }
-//
-//    /**
-//     * The following is getter setter method related to headofstate.
-//     */
-//    public String getHeadOfState() {
-//        return HeadOfState;
-//    }
-//
-//    public void setHeadOfState(String headOfState) {
-//        HeadOfState = headOfState;
-//    }
-//
-//    /**
-//     * The following is getter setter method related to IndepYear.
-//     */
-//    public String getIndepYear() {
-//        return IndepYear;
-//    }
-//
-//    public void setIndepYear(String indepYear) {
-//        IndepYear = indepYear;
-//    }
-//
-//    /**
-//     * The following is getter setter method related to LifeExpectancy.
-//     */
-//    public String getLifeExpectancy() {
-//        return LifeExpectancy;
-//    }
-//
-//    public void setLifeExpectancy(String lifeExpectancy) {
-//        LifeExpectancy = lifeExpectancy;
-//    }
-//
-//    /**
-//     * The following is getter setter method related to LocalName.
-//     */
-//    public String getLocalName() {
-//        return LocalName;
-//    }
-//
-//    public void setLocalName(String localName) {
-//        LocalName = localName;
-//    }
 
     /**
      * The following is getter setter method related to name.

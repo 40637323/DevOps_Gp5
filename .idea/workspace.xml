@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update App.java file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" afterDir="false" />
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Delete unnecessary files">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/Country.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +36,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/top_n_population" />
+        <entry key="$PROJECT_DIR$" value="feature/all-view" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,7 +81,7 @@
     "JUnit.AppIntegrationTest.executor": "Run",
     "JUnit.AppIntegrationTest.testGetBottomOfTopSevenCountriesInAsiaByPopulation.executor": "Run",
     "JUnit.AppTest.displayAllQuery.executor": "Run",
-    "JUnit.AppTest.executor": "Coverage",
+    "JUnit.AppTest.executor": "Run",
     "JUnit.Unnamed.executor": "Coverage",
     "Maven.DevOpsCW_Gp5 [clean].executor": "Run",
     "Maven.DevOpsCW_Gp5 [compile].executor": "Run",
@@ -101,7 +99,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/all-view",
+    "git-widget-placeholder": "feature/top__n__population",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOps_Gp5",
     "node.js.detected.package.eslint": "true",
@@ -256,7 +254,7 @@
       <workItem from="1707400365420" duration="6358000" />
       <workItem from="1707444301753" duration="1802000" />
       <workItem from="1707456716396" duration="53000" />
-      <workItem from="1708059535672" duration="937000" />
+      <workItem from="1708059535672" duration="1357000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -450,7 +448,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708059705180</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Update Testing files">
+      <option name="closed" value="true" />
+      <created>1708060600913</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708060600913</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Delete unnecessary files">
+      <option name="closed" value="true" />
+      <created>1708060863660</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708060863660</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +501,9 @@
     <MESSAGE value="Update unit testing(AppTest.java)" />
     <MESSAGE value="Update AppTest for unit testing" />
     <MESSAGE value="Update App.java file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update App.java file" />
+    <MESSAGE value="Update Testing files" />
+    <MESSAGE value="Delete unnecessary files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete unnecessary files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1708020776016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
