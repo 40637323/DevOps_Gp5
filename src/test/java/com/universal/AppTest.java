@@ -262,6 +262,7 @@ public class AppTest {
         app.displayCountries(countries);
     }
 
+
     @Test
     void testDisplayAllQuery() {
         // Call display all query
