@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/Countrylanguage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +38,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,7 +94,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/all-view",
+    "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOps_Gp5",
     "node.js.detected.package.eslint": "true",
