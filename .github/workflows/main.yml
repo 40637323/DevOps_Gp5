@@ -21,12 +21,14 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - name: Unit Tests
-        run: |
-          docker build -t database ./db 
-          docker run --name world -dp 33060:3306 database
-          mvn -Dtest=com.universal.AppIntegrationTest test          
-          docker stop world
-          docker rm world
+        run: mvn -Dtest=com.napier.sem.AppTest test
+      - name: CodeCov
+        uses: codecov/codecov-action@v2
+        with:
+                # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+                directory: ./target/site/jacoco
+                flags: Unit Tests # optional
+                verbose: true # optional (default = false)
         
 
   IntegrationTests:
@@ -53,8 +55,8 @@ jobs:
       - name: CodeCov
         uses: codecov/codecov-action@v4.0.1
         with:
-          env:
-           token:9b9bf058-33bf-4392-92b2-89212f226ce8
+         # env:
+          # token:9b9bf058-33bf-4392-92b2-89212f226ce8
           # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           slug: 40637323/DevOps_Gp5
           directory: ./target/site/jacocok
