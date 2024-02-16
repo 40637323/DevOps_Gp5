@@ -112,3 +112,4 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 | 24   |The population of people, people living in cities, and people not living in cities in each region.   | Yes | ![image24.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image24.png) |
 | 25   |The population of people, people living in cities, and people not living in cities in each country.   | Yes | ![image25.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image25.png) |
 | ... | ...   | ... | ...        |
+
