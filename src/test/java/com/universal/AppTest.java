@@ -504,6 +504,33 @@ public class AppTest {
     }
 
     @Test
+    void PrintFunctionsConnectionNullTest(){
+        app.con = null;
+        app.printPopulationOfLivingOrNotLivinginContinentReport();
+        app.printPopulationOfLivingOrNotLivinginCountryReport();
+        app.printPopulationOfLivingOrNotLivinginRegionReport();
+        app.printSelectedLanguageSpeakers();
+        app.printWorldPopulation();
+        app.printContinentPopulation();
+        app.printRegionPopulation();
+        app.printCountryPopulation();
+        app.printDistrictPopulation();
+        app.printCityPopulation();
+        System.out.println("No Connection Test Ran Successfully");
+        app.connect(DB_LOCATION, DB_DELAY);
+        app.printPopulationOfLivingOrNotLivinginContinentReport();
+        app.printPopulationOfLivingOrNotLivinginCountryReport();
+        app.printPopulationOfLivingOrNotLivinginRegionReport();
+        app.printSelectedLanguageSpeakers();
+        app.printWorldPopulation();
+        app.printContinentPopulation();
+        app.printRegionPopulation();
+        app.printCountryPopulation();
+        app.printDistrictPopulation();
+        app.printCityPopulation();
+    }
+
+    @Test
     void testDisplayAllQuery() {
         // Call display all query
         app.displayAllQuery();
