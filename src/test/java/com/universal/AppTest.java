@@ -18,16 +18,21 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class AppTest {
+
+    //connecting to database
     private static final String DB_LOCATION = "localhost:33060";
     private static final int DB_DELAY = 30000;
     private static App app;
 
+
+    // set up before making the testing
     @BeforeAll
     public static void setUpBeforeClass() {
         app = new App();
         app.connect(DB_LOCATION, DB_DELAY);
     }
 
+    // make the database disconnect after all the test are checked
     @AfterAll
     public static void tearDown() {
         app.disconnect();
@@ -42,7 +47,6 @@ public class AppTest {
     }
 
     // check if the countries in the world is Empty or not
-
     @Test
     public void testGetCountryisEmpty() {
         List<Country> EmptyCountries= app.getCountries();
@@ -53,6 +57,7 @@ public class AppTest {
         System.out.println("Countries in World is not Empty");
     }
 
+    // check if the countries in Asia is noll or not
     @Test
     public void testGetCountriesInAsia() {
         List<Country> asianCountries = app.getCountriesInAsia();
@@ -60,6 +65,7 @@ public class AppTest {
         System.out.println("Get Country In Asia Function's output is not null");
     }
 
+    //test if the country in Asia is Empty or not
     @Test
     public void testGetCountryInAsiaIsEmpty() {
         List<Country> EmptyCountriesAsia= app.getCountriesInAsia();
@@ -70,6 +76,7 @@ public class AppTest {
         System.out.println("Countries in Asia is not Empty");
     }
 
+    // check if the countries in South East Asia is noll or not
     @Test
     public void testGetCountriesInSouthEastAsia() {
         List<Country> SouthEastAsiaCountries = app.getCountriesInSouthEastAsia();
@@ -77,6 +84,8 @@ public class AppTest {
         System.out.println("Get Country In South East Asia Function's output is not null");
     }
 
+
+    //check if the country inSouth East Asia is Empty or not
     @Test
     public void testGetCountryInSouthEastAsiaIsEmpty() {
         List<Country> EmptyCountriesSouthEastAsia= app.getCountriesInAsia();
@@ -86,6 +95,8 @@ public class AppTest {
         assertFalse(EmptyCountriesSouthEastAsia.isEmpty());
         System.out.println("Countries in SouthEast Asia is not Empty");
     }
+
+    //check if the output is null or not
     @Test
     public void testGetCitiesOrderByPopulation() {
         List<City> cityWorld = app.getCitiesOrderedByPopulation();
@@ -93,6 +104,7 @@ public class AppTest {
         System.out.println("Get Cities ordered by population Function's output is not null");
     }
 
+    //Check the ger cities functions is empty or not
     @Test
     public void testGetCitiesIsEmpty() {
         List<City> EmptyCities= app.getCitiesOrderedByPopulation();
@@ -103,6 +115,7 @@ public class AppTest {
         System.out.println("Cities in World is not empty");
     }
 
+    //check if the output is null or not
     @Test
     public void testGetCitiesByContinentOrderByPopulation() {
         List<City> cityContinent = app.getCitiesByContinentOrderedByPopulation();
@@ -111,6 +124,7 @@ public class AppTest {
 
     }
 
+    //check the get cities by continent function is empty or not
     @Test
     public void testGetCitiesByContinentIsEmpty() {
         List<City> EmptyCitiesByContinent= app.getCitiesByContinentOrderedByPopulation();
@@ -121,6 +135,7 @@ public class AppTest {
         System.out.println("Cities in Continent is not empty");
     }
 
+    //check the get cities by region order by population is null or not
     @Test
     public void testGetCitiesByRegionOrderByPopulation() {
         List<City> cityRegion = app.getCitiesByRegionOrderedByPopulation();
@@ -128,6 +143,7 @@ public class AppTest {
         System.out.println("Get Cities by Region Function's output is not null");
     }
 
+    //check the get cities by region order by population is empty or not
     @Test
     public void testGetCitiesByRegionIsEmpty() {
         List<City> EmptyCitiesByRegion= app.getCitiesByRegionOrderedByPopulation();
@@ -138,6 +154,7 @@ public class AppTest {
         System.out.println("Cities in Region is not empty");
     }
 
+    //check the get cities in country order by population is null or not
     @Test
     public void testGetCitiesInCountryOrderByPopulation() {
         List<City> cityCountry = app.getCitiesInCountryOrderedByPopulation();
@@ -145,6 +162,7 @@ public class AppTest {
         System.out.println("Get Cities in Country Function's output is not null");
     }
 
+    //check the get cities in country order by population is empty or not
     @Test
     public void testGetCitiesByCountryIsEmpty() {
         List<City> EmptyCitiesByCountry= app.getCitiesInCountryOrderedByPopulation();
@@ -155,6 +173,7 @@ public class AppTest {
         System.out.println("Cities in Country is not empty");
     }
 
+    //check the get cities in district order by population is null or not
     @Test
     public void testGetCitiesInDistinct() {
         List<City> cityDiscrict = app.getCitiesInDistrict();
@@ -162,6 +181,7 @@ public class AppTest {
         System.out.println("Get Cities in Distinct Function's output is not null");
     }
 
+    //check the get cities in district order by population is empty or not
     @Test
     public void testGetCitiesByDistrictIsEmpty() {
         List<City> EmptyCitiesByDistrict= app.getCitiesInDistrict();
@@ -172,6 +192,8 @@ public class AppTest {
         System.out.println("Cities in District is not empty");
     }
 
+
+    //check the get capital cities in world order by population is null or not
     @Test
     public void testGetAllCapitalCitiesByPopulation() {
         List<City> CapitalCities = app.getAllCapitalCitiesByPopulation();
@@ -179,6 +201,7 @@ public class AppTest {
         System.out.println("Get all Capital Cities by Population Function's output is not null");
     }
 
+    //check the get capital cities in World order by population is empty or not
     @Test
     public void testGetCapitalCitiesIsEmpty() {
         List<City> EmptyCapitalCities = app.getAllCapitalCitiesByPopulation();
@@ -189,6 +212,7 @@ public class AppTest {
         System.out.println("Capital Cities in World is not empty");
     }
 
+    //check the get capital cities in continent order by population is null or not
     @Test
     public void testCapitalInContinent() {
         List<City> CapitalContinent = app.getCapitalCitiesByContinentOrderedByPopulation();
@@ -196,6 +220,7 @@ public class AppTest {
         System.out.println("Get Capital Cities by Continent Function's output is not null");
     }
 
+    //check the get capital cities in continent order by population is empty or not
     @Test
     public void testGetCapitalCitiesInContinentIsEmpty() {
         List<City> EmptyCapitalCitiesIncontinent = app.getCapitalCitiesByContinentOrderedByPopulation();
@@ -206,6 +231,7 @@ public class AppTest {
         System.out.println("Capital Cities in Continent is not empty");
     }
 
+    //check the get capital cities in region order by population is null or not
     @Test
     public void testCapitalInRegion() {
         List<City> CapitalRegion = app.getCapitalCitiesByRegionOrderedByPopulation();
@@ -213,6 +239,7 @@ public class AppTest {
         System.out.println("Get Capital Cities by Region Function's output is not null");
     }
 
+    //check the get capital cities in region order by population is empty or not
     @Test
     public void testGetCapitalCitiesInRegionIsEmpty() {
         List<City> EmptyCapitalCitiesInRegion = app.getCapitalCitiesByRegionOrderedByPopulation();
@@ -223,6 +250,7 @@ public class AppTest {
         System.out.println("Capital Cities in Region is not empty");
     }
 
+    //check the get top 7 countries is null or not
     @Test
     public void testTop7Countries() {
         List<Country> Top7PopulatedCountries= app.getTopSevenCountriesInWorldByPopulation();
@@ -230,6 +258,7 @@ public class AppTest {
         System.out.println("Top 7 countries in the World Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 countries function is null or not
     @Test
     public void testTop7CountriesisEmpty() {
         List<Country> topCountries= app.getTopSevenCountriesInWorldByPopulation();
@@ -240,7 +269,7 @@ public class AppTest {
         System.out.println("Top 7 countries in the World Report is not empty");
     }
 
-
+    //check the get top 7 countries in Asia is null or not
     @Test
     public void testTop7CountriesInAsia() {
         List<Country> Top7PopulatedCountriesInAsia= app.getTopSevenCountriesInAsiaByPopulation();
@@ -248,6 +277,7 @@ public class AppTest {
         System.out.println("Top 7 Countries in Asia Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 countries in Asia is empty or not
     @Test
     public void testTop7CountriesAsiaIsEmpty() {
         List<Country> topCountriesAsia = app.getTopSevenCountriesInAsiaByPopulation();
@@ -258,6 +288,7 @@ public class AppTest {
         System.out.println("Top 7 countries in Asia Report is not empty");
     }
 
+    //check the get top 7 countries in South East Asia is null or not
     @Test
     public void testTop7CountriesInSouthEastAsia() {
         List<Country> Top7CountriesInSouthEastAsia= app.getTopSevenCountriesInSouthEastAsia();
@@ -265,6 +296,7 @@ public class AppTest {
         System.out.println("Top 7 Countries in South East Asia Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 countries in South East Asia is empty or not
     @Test
     public void testTop7CountriesSouthEastAsiaIsEmpty() {
         List<Country> topCountriesSouthEastAsia = app.getTopSevenCountriesInAsiaByPopulation();
@@ -275,6 +307,7 @@ public class AppTest {
         System.out.println("Top 7 countries in South East Asia Report is not empty");
     }
 
+    //check the get top 7 cities is null or not
     @Test
     public void testTop7CitiesInWorld() {
         List<City> Top7CitiesInWorld= app.getTopSevenCitiesInWorldOrderedByPopulation();
@@ -282,6 +315,7 @@ public class AppTest {
         System.out.println("Top 7 Cities in World Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 cities is empty or not
     @Test
     public void testTop7CitiesInWorldIsEmpty() {
         List<City> topCitiesInWorld = app.getTopSevenCitiesInWorldOrderedByPopulation();
@@ -292,6 +326,7 @@ public class AppTest {
         System.out.println("Top 7 cities in world Report is not empty");
     }
 
+    //check the get top 7 cities in continent is null or not
     @Test
     public void testTop7CitiesInContinent() {
         List<City> Top7CitiesInContinent= app.getTopSevenCitiesInContinentOrderedByPopulation();
@@ -299,6 +334,7 @@ public class AppTest {
         System.out.println("Top 7 Cities in Continent Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 cities in continent is empty or not
     @Test
     public void testTop7CitiesInContinentIsEmpty() {
         List<City> topCitiesInContinent = app.getTopSevenCitiesInContinentOrderedByPopulation();
@@ -309,7 +345,7 @@ public class AppTest {
         System.out.println("Top 7 cities in continent Report is not empty");
     }
 
-
+    //check the get top 7 cities in region is null or not
     @Test
     public void testTop7CitiesInRegion() {
         List<City> Top7CitiesInRegion= app.getTopSevenCitiesInRegionOrderedByPopulation();
@@ -317,6 +353,7 @@ public class AppTest {
         System.out.println("Top 7 Cities in Region Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 cities in region is empty or not
     @Test
     public void testTop7CitiesInRegionIsEmpty() {
         List<City> topCitiesInRegion = app.getTopSevenCitiesInRegionOrderedByPopulation();
@@ -327,6 +364,7 @@ public class AppTest {
         System.out.println("Top 7 cities in region Report is not empty");
     }
 
+    //check the get top 7 cities in country is null or not
     @Test
     public void testTop7CitiesInCountry() {
         List<City> Top7CitiesInCountry= app.getTopSevenCitiesInCountryOrderedByPopulation();
@@ -334,6 +372,7 @@ public class AppTest {
         System.out.println("Top 7 Cities in Region Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 cities in country is empty or not
     @Test
     public void testTop7CitiesInCountryIsEmpty() {
         List<City> topCitiesInCountry = app.getTopSevenCitiesInCountryOrderedByPopulation();
@@ -344,6 +383,7 @@ public class AppTest {
         System.out.println("Top 7 cities in country Report is not empty");
     }
 
+    //check the get top 7 cities in district is null or not
     @Test
     public void testTop7CitiesInDistrict() {
         List<City> Top7CitiesInDistrict= app.getTopSevenCitiesInDistrictOrderedByPopulation();
@@ -351,6 +391,7 @@ public class AppTest {
         System.out.println("Top 7 Cities in District Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 cities in district is empty or not
     @Test
     public void testTop7CitiesInDistrictIsEmpty() {
         List<City> topCitiesInDistrict = app.getTopSevenCitiesInDistrictOrderedByPopulation();
@@ -361,6 +402,7 @@ public class AppTest {
         System.out.println("Top 7 cities in district Report is not empty");
     }
 
+    //check the get top 7 capital cities in world is null or not
     @Test
     public void testTop7CapitalCitiesInWorld() {
         List<City> Top7CapitalCitiesInWorld= app.getTopSevenCapitalCitiesOrderedByPopulation();
@@ -368,6 +410,7 @@ public class AppTest {
         System.out.println("Top 7 Capital Cities in World Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 capital cities in world is empty or not
     @Test
     public void testTop7CapitalCitiesIsEmpty() {
         List<City> topCapitalCities = app.getTopSevenCapitalCitiesOrderedByPopulation();
@@ -378,6 +421,7 @@ public class AppTest {
         System.out.println("Top 7 capital cities in world Report is not empty");
     }
 
+    //check the get top 7 capital cities in continent is null or not
     @Test
     public void testTop7CapitalCitiesInContinent() {
         List<City> Top7CapitalCitiesInContinent= app.getTopSevenCapitalCitiesByContinentOrderedByPopulation();
@@ -385,6 +429,7 @@ public class AppTest {
         System.out.println("Top 7 Capital Cities in Continent Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 capital cities in continent is empty or not
     @Test
     public void testTop7CapitalCitiesInContinentIsEmpty() {
         List<City> topCapitalCitiesInContinent = app.getTopSevenCapitalCitiesByContinentOrderedByPopulation();
@@ -395,6 +440,7 @@ public class AppTest {
         System.out.println("Top 7 capital cities in continent Report is not empty");
     }
 
+    //check the get top 7 capital cities in region is null or not
     @Test
     public void testTop7CapitalCitiesInRegion() {
         List<City> Top7CapitalCitiesInRegion= app.getTopSevenCapitalCitiesByRegionOrderedByPopulation();
@@ -402,6 +448,7 @@ public class AppTest {
         System.out.println("Top 7 Capital Cities in Region Organized by largest to smallest is not null");
     }
 
+    //check the get top 7 capital cities in region is empty or not
     @Test
     public void testTop7CapitalCitiesInRegionIsEmpty() {
         List<City> topCapitalCitiesInRegion = app.getTopSevenCapitalCitiesByRegionOrderedByPopulation();
@@ -412,6 +459,7 @@ public class AppTest {
         System.out.println("Top 7 capital cities in Region Report is not empty");
     }
 
+    //add a new cities to check the set method is work or not
     @Test
     void displayCities()
     {
@@ -425,6 +473,7 @@ public class AppTest {
         app.displayCities(city);
     }
 
+    //add a new capital cities to check the set method is work or not
     @Test
     void displayCapitalCities()
     {
@@ -437,6 +486,7 @@ public class AppTest {
         app.displayCapitalCities(capitalcity);
     }
 
+    //add a new countries to check the set method is work or not
     @Test
     void displayCountries()
     {
@@ -452,7 +502,7 @@ public class AppTest {
         app.displayCountries(countries);
     }
 
-
+    //test the display countries is empty or not
     @Test
     public void testReportCountryIsEmpty() {
         // Prepare test data
@@ -463,19 +513,51 @@ public class AppTest {
 
     //check if the countries in the world contain null value or not
     @Test
-    void printSalariesTestContainsNull()
+    void printDisplayCitiesTestContainsNull()
     {
         ArrayList<Country> countriesContainNull = new ArrayList<>();
         countriesContainNull.add(null);
         app.displayCountries(countriesContainNull);
     }
 
-//    @Test
-//    void testprintPopulationOfLivingOrNotLivinginContinentReport(){
-//        app.printPopulationOfLivingOrNotLivinginContinentReport();
-//    }
+    //test the display cities is empty or not
+    @Test
+    public void testReportCitiesIsEmpty() {
+        // Prepare test data
+        ArrayList<City> emptyList = new ArrayList<>();
+        // Call the method
+        app.displayCities(emptyList);
+    }
+
+    //check if the cities in the world contain null value or not
+    @Test
+    void DisplayCitiesTestContainsNull()
+    {
+        ArrayList<City> countriesContainNull = new ArrayList<>();
+        countriesContainNull.add(null);
+        app.displayCities(countriesContainNull);
+    }
 
 
+    //test the display capital cities is empty or not
+    @Test
+    public void testReportCapitalCitiesIsEmpty() {
+        // Prepare test data
+        ArrayList<City> emptyList = new ArrayList<>();
+        // Call the method
+        app.displayCapitalCities(emptyList);
+    }
+
+    //check if the capital cities contain null value or not
+    @Test
+    void DisplayCapitalCitiesTestContainsNull()
+    {
+        ArrayList<City> countriesContainNull = new ArrayList<>();
+        countriesContainNull.add(null);
+        app.displayCapitalCities(countriesContainNull);
+    }
+
+    //test the print functions has database connection, if yes, return the data
     @Test
     void PrintFunctionsConnectionNullTest(){
         app.con = null;
@@ -503,11 +585,20 @@ public class AppTest {
         app.printCityPopulation();
     }
 
+    //test the output queries are work or not
     @Test
     void testDisplayAllQuery() {
         // Call display all query
         app.displayAllQuery();
         // Assert that each array list is null
         assertNotNull(app.getAllCapitalCitiesByPopulation());
+    }
+
+    //test the main method
+    @Test
+    public void testMainWithNoArguments() {
+        String[] args = {};
+        App.main(args);
+        assertNotNull(app);
     }
 }
