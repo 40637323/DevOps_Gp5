@@ -848,16 +848,17 @@ public class App
     //The population of people, people living in cities, and people not living in cities in each region.
     public void printPopulationOfLivingOrNotLivinginRegionReport() {
         if (con == null) {
-            System.out.println("printPopulationOfLivingOrNotLivinginRegionReport");
+            System.out.println("No database connection.");
             return;
         }
         String sql = "SELECT " +
                 "country.Region, " +
                 "SUM(country.Population) AS TotalRegionPopulation, " +
-                "SUM(city.Population) AS CityPopulation, " +
-                "(SUM(country.Population) - SUM(city.Population)) AS NonCityPopulation " +
+                "COALESCE(SUM(cityPop.CityPopulation), 0) AS CityPopulation, " +
+                "(SUM(country.Population) - COALESCE(SUM(cityPop.CityPopulation), 0)) AS NonCityPopulation " +
                 "FROM country " +
-                "JOIN city ON country.Code = city.CountryCode " +
+                "LEFT JOIN (SELECT CountryCode, SUM(Population) AS CityPopulation FROM city GROUP BY CountryCode) cityPop " +
+                "ON country.Code = cityPop.CountryCode " +
                 "GROUP BY country.Region;";
 
         try (Statement stmt = con.createStatement();
@@ -874,8 +875,8 @@ public class App
                 long cityPopulation = rs.getLong("CityPopulation");
                 long nonCityPopulation = rs.getLong("NonCityPopulation");
 
-                double cityPopulationPercentage = (double) cityPopulation / totalRegionPopulation * 100;
-                double nonCityPopulationPercentage = (double) nonCityPopulation / totalRegionPopulation * 100;
+                double cityPopulationPercentage = totalRegionPopulation > 0 ? (double) cityPopulation / totalRegionPopulation * 100 : 0;
+                double nonCityPopulationPercentage = totalRegionPopulation > 0 ? (double) nonCityPopulation / totalRegionPopulation * 100 : 0;
 
                 System.out.printf("| %-25s | %,19d | %,19d | %,19.2f%% | %,19d | %,19.2f%% |\n",
                         region, totalRegionPopulation, cityPopulation, cityPopulationPercentage, nonCityPopulation, nonCityPopulationPercentage);
