@@ -33,17 +33,6 @@ public class City {
     private int Population;
 
     /**
-     * The following is getter setter method related to ID.
-     */
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
-
-    /**
      * The following is getter setter method related to countrycode.
      */
     public String getCountryCode() {
