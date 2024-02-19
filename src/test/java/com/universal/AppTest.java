@@ -3,6 +3,9 @@
  * */
 package com.universal;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -465,6 +468,40 @@ public class AppTest {
         ArrayList<Country> countriesContainNull = new ArrayList<>();
         countriesContainNull.add(null);
         app.displayCountries(countriesContainNull);
+    }
+
+//    @Test
+//    void testprintPopulationOfLivingOrNotLivinginContinentReport(){
+//        app.printPopulationOfLivingOrNotLivinginContinentReport();
+//    }
+
+
+
+    @Test
+    void PrintFunctionsConnectionNullTest(){
+        app.con = null;
+        app.printPopulationOfLivingOrNotLivinginContinentReport();
+        app.printPopulationOfLivingOrNotLivinginCountryReport();
+        app.printPopulationOfLivingOrNotLivinginRegionReport();
+        app.printSelectedLanguageSpeakers();
+        app.printWorldPopulation();
+        app.printContinentPopulation();
+        app.printRegionPopulation();
+        app.printCountryPopulation();
+        app.printDistrictPopulation();
+        app.printCityPopulation();
+        System.out.println("No Connection Test Ran Successfully");
+        app.connect(DB_LOCATION, DB_DELAY);
+        app.printPopulationOfLivingOrNotLivinginContinentReport();
+        app.printPopulationOfLivingOrNotLivinginCountryReport();
+        app.printPopulationOfLivingOrNotLivinginRegionReport();
+        app.printSelectedLanguageSpeakers();
+        app.printWorldPopulation();
+        app.printContinentPopulation();
+        app.printRegionPopulation();
+        app.printCountryPopulation();
+        app.printDistrictPopulation();
+        app.printCityPopulation();
     }
 
     @Test
