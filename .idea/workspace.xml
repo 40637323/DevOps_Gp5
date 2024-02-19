@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="delete unnecessary files">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" afterDir="false" />
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update Merge">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/PopulationReport.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +86,7 @@
     "JUnit.AppTest.testViewPopulationInContinentConNull.executor": "Coverage",
     "JUnit.AppTest.testprintPopulationOfLivingOrNotLivinginContinentReport.executor": "Coverage",
     "JUnit.Unnamed.executor": "Coverage",
+    "JUnit.com.universal in DevOpsCW_Gp5.executor": "Coverage",
     "Maven.DevOpsCW_Gp5 [clean].executor": "Run",
     "Maven.DevOpsCW_Gp5 [compile].executor": "Run",
     "Maven.DevOpsCW_Gp5 [package].executor": "Run",
@@ -118,7 +120,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.AppTest">
+  <component name="RunManager">
     <configuration name="AppIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DevOpsCW_Gp5" />
       <extension name="coverage">
@@ -129,22 +131,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.universal" />
       <option name="MAIN_CLASS_NAME" value="com.universal.AppIntegrationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest" type="JUnit" factoryName="JUnit" activateToolWindowBeforeRun="false" nameIsGenerated="true">
-      <module name="DevOpsCW_Gp5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.universal.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.universal" />
-      <option name="MAIN_CLASS_NAME" value="com.universal.AppTest" />
-      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -198,6 +184,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.universal in DevOpsCW_Gp5" type="JUnit" factoryName="JUnit" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+      <module name="DevOpsCW_Gp5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.universal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.universal" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -220,7 +222,7 @@
     </configuration>
     <list>
       <item itemvalue="Docker.Dockerfile" />
-      <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="JUnit.com.universal in DevOpsCW_Gp5" />
       <item itemvalue="JUnit.AppTest.PrintFunctionsConnectionNullTest" />
       <item itemvalue="JUnit.AppTest.testViewPopulationInContinentConNull" />
       <item itemvalue="JUnit.AppTest.testprintPopulationOfLivingOrNotLivinginContinentReport" />
@@ -260,6 +262,7 @@
       <workItem from="1707444301753" duration="1802000" />
       <workItem from="1707456716396" duration="53000" />
       <workItem from="1708260024398" duration="3455000" />
+      <workItem from="1708314928061" duration="470000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -517,7 +520,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708067737133</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Update Merge">
+      <option name="closed" value="true" />
+      <created>1708272515076</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1708272515076</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Update Merge">
+      <option name="closed" value="true" />
+      <created>1708272571473</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1708272571473</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +554,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added App.java file" />
     <MESSAGE value="Updating the code in the App file to be convenient in testing" />
     <MESSAGE value="Update the files to make testing and Add AppTest to make unit testing" />
     <MESSAGE value="Update the AppTest for Unit Testing" />
@@ -560,7 +578,8 @@
     <MESSAGE value="Update integration testing for view population" />
     <MESSAGE value="Update app.java" />
     <MESSAGE value="delete unnecessary files" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete unnecessary files" />
+    <MESSAGE value="Update Merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Merge" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest_testViewPopulationInContinentConNull.ic" NAME="AppTest.testViewPopulationInContinentConNull Coverage Results" MODIFIED="1708269727925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -575,7 +594,7 @@
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest_testprintPopulationOfLivingOrNotLivinginContinentReport.ic" NAME="AppTest.testprintPopulationOfLivingOrNotLivinginContinentReport Coverage Results" MODIFIED="1708269624327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.universal.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/DevOps_Gp5$com_universal_in_DevOpsCW_Gp5.ic" NAME="com.universal in DevOpsCW_Gp5 Coverage Results" MODIFIED="1708271601326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$com_universal_in_DevOpsCW_Gp5.ic" NAME="com.universal in DevOpsCW_Gp5 Coverage Results" MODIFIED="1708315060701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.universal.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/DevOps_Gp5$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1707370209890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
