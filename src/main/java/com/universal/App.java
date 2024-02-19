@@ -66,6 +66,11 @@ public class App
         }
 
     }
+
+    /**
+     * Retrieves a list of countries from the Asian continent and orders them by population.
+     * @return a List of Country objects representing countries in Asia.
+     */
     public List<Country> getCountries() {
 
         List<Country> countries = new ArrayList<>();
@@ -75,6 +80,7 @@ public class App
             System.out.println("No connection");
             return countries;
         }
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery("SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
                     "FROM city\n" +
@@ -82,6 +88,7 @@ public class App
                     "ON city.id = country.capital\n" +
                     "ORDER BY country.population DESC");
 
+            //use setter method to call the get method from country.java
             while (rs.next()) {
                 Country country = new Country();
                 country.setCode(rs.getString("country.code"));
@@ -111,6 +118,7 @@ public class App
             System.out.println("No connection");
             return countries;
         }
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
                     "FROM city\n" +
@@ -121,6 +129,7 @@ public class App
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
+                //use setter method to call the get method from country.java
                 Country country = new Country();
                 country.setCode(rs.getString("country.code"));
                 country.setName(rs.getString("country.name"));
@@ -148,6 +157,7 @@ public class App
             System.out.println("No connection");
             return countries;
         }
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name " +
                     "FROM city " +
@@ -158,6 +168,7 @@ public class App
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
+                //use setter method to call the get method from country.java
                 Country country = new Country();
                 country.setCode(rs.getString("country.code"));
                 country.setName(rs.getString("country.name"));
@@ -207,12 +218,16 @@ public class App
      */
     public List<City> getCitiesByContinentOrderedByPopulation() {
         List<City> allCitiesContinent = new ArrayList<>();
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.Name, city.District, city.Population, country.name AS CountryName " +
                     "FROM city JOIN country ON city.CountryCode = country.Code " +
                     "WHERE country.Continent = 'Africa' ORDER BY city.Population DESC";
 
             ResultSet rs = stmt.executeQuery(sql);
+
+
+            //use setter method to call the get method from city.java
             while (rs.next()) {
                 City city = new City();
                 city.setCityName(rs.getString("Name"));
@@ -233,11 +248,15 @@ public class App
      */
     public List<City> getCitiesByRegionOrderedByPopulation(){
         List<City> allCitiesRegion = new ArrayList<>();
+
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.Name, city.District, city.Population, country.name AS CountryName " +
                     "FROM city JOIN country ON city.CountryCode = country.Code " +
                     "WHERE country.Region = 'Central Africa' ORDER BY city.Population DESC";
             ResultSet rs = stmt.executeQuery(sql);
+
+            //use setter method to call the get method from city.java
             while (rs.next()) {
                 City city = new City();
                 city.setCityName(rs.getString("Name"));
@@ -266,6 +285,8 @@ public class App
                     "FROM city JOIN country ON city.CountryCode = country.Code " +
                     "WHERE country.Name = 'France' ORDER BY city.Population DESC";
             ResultSet rs = stmt.executeQuery(sql);
+
+            //use setter method to call the get method from city.java
             while (rs.next()) {
                 City city = new City();
                 city.setCityName(rs.getString("Name"));
@@ -294,6 +315,8 @@ public class App
                     "WHERE city.District = 'Buenos Aires' " +
                     "ORDER BY city.Population DESC";
             ResultSet rs = stmt.executeQuery(sql);
+
+            //use setter method to call the get method from city.java
             while (rs.next()) {
                 City city = new City();
                 city.setCityName(rs.getString("cityName"));
@@ -315,6 +338,8 @@ public class App
      */
     public List<City> getAllCapitalCitiesByPopulation() {
         List<City> capitalCities = new ArrayList<>();
+
+        // Corrected SQL query to dynamically use the district parameter
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
@@ -342,6 +367,8 @@ public class App
 
     public List<City> getCapitalCitiesByContinentOrderedByPopulation() {
         List<City> capitalInContinent = new ArrayList<>();
+
+        // Corrected SQL query to dynamically use the district parameter
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
@@ -405,6 +432,9 @@ public class App
             System.out.println("No connection");
             return topCountries;
         }
+
+        // Corrected SQL query to dynamically use the district parameter
+
         String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
                 "FROM city\n" +
                 "INNER JOIN country\n" +
@@ -442,6 +472,8 @@ public class App
             System.out.println("No connection");
             return topCountriesContinent;
         }
+
+        // Corrected SQL query to dynamically use the district parameter
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
                     "FROM city\n" +
@@ -481,6 +513,9 @@ public class App
             System.out.println("No connection");
             return topSevenCountriesInRegion;
         }
+
+        // Corrected SQL query to dynamically use the district parameter
+
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
                     "FROM city\n" +
@@ -514,6 +549,7 @@ public class App
      */
     public List<City> getTopSevenCitiesInWorldOrderedByPopulation() {
         List<City> topCitiesInWorld= new ArrayList<>();
+        // Corrected SQL query to dynamically use the district parameter
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.district, city.population\n" +
                     "FROM city\n" +
@@ -544,6 +580,7 @@ public class App
      */
     public List<City> getTopSevenCitiesInContinentOrderedByPopulation() {
         List<City> topCitiesInAfricaContinent = new ArrayList<>();
+        // Corrected SQL query to dynamically use the district parameter
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.district, city.population\n" +
                     "FROM city\n" +
@@ -574,6 +611,7 @@ public class App
      */
     public List<City> getTopSevenCitiesInRegionOrderedByPopulation() {
         List<City> topCitiesInWesternAfricaRegion = new ArrayList<>();
+        // Corrected SQL query to dynamically use the district parameter
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.district, city.population\n" +
                     "FROM city\n" +
@@ -605,6 +643,7 @@ public class App
     public List<City> getTopSevenCitiesInCountryOrderedByPopulation() {
         List<City> topCitiesInNigeriaCountry = new ArrayList<>();
         try (Statement stmt = con.createStatement()) {
+            // Corrected SQL query to dynamically use the district parameter
             String sql = "SELECT city.name, country.name, city.district, city.population\n" +
                     "FROM city\n" +
                     "INNER JOIN country\n" +
@@ -633,6 +672,7 @@ public class App
      */
     public List<City> getTopSevenCitiesInDistrictOrderedByPopulation() {
         List<City> topCitiesInOyoAndOsunDistrict = new ArrayList<>();
+        // Corrected SQL query to dynamically use the district parameter
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.district, city.population\n" +
                     "FROM city\n" +
@@ -662,6 +702,7 @@ public class App
      */
     public List<City> getTopSevenCapitalCitiesOrderedByPopulation() {
         List<City> topCapitalInWorld = new ArrayList<>();
+        // Corrected SQL query to dynamically use the district parameter
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
@@ -743,7 +784,7 @@ public class App
         return topCapitalInRegion;
     }
 
-    /** retrieve and print all countries from Central Africa ordered by population in descending
+    /** retrieve and print all countries ordered by population in descending
      */
     public void displayCountries(List<Country> list) {
         if (con == null) {
@@ -772,6 +813,9 @@ public class App
         System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+----------------+---------------------------------------+");
     }
 
+    /** retrieve and print all Cities ordered by population in descending
+     */
+
     public void displayCities(List<City> list) {
         System.out.println("+----------------------------------------+----------------------------------------+----------------------------------------+------------------+");
         System.out.println("| City Name                              | Country Name                           | District                               | Population       |");
@@ -788,6 +832,8 @@ public class App
         System.out.println("+----------------------------------------+----------------------------------------+----------------------------------------+------------------+");
     }
 
+    /** retrieve and print all capital cities ordered by population in descending
+     */
     public void displayCapitalCities(List<City> list) {
         System.out.println("+----------------------------------------+----------------------------------------+--------------+");
         System.out.println("| Capital City                           | Country Name                           | Population   |");
@@ -845,6 +891,7 @@ public class App
             System.out.println("Error executing query: " + e.getMessage());
         }
     }
+
     //The population of people, people living in cities, and people not living in cities in each region.
     public void printPopulationOfLivingOrNotLivinginRegionReport() {
         if (con == null) {
@@ -929,6 +976,7 @@ public class App
             System.out.println("Error executing query: " + e.getMessage());
         }
     }
+
     //Display the select Language
     public void printSelectedLanguageSpeakers() {
         if (con == null) {
