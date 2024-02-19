@@ -30,42 +30,6 @@ public class Country
      */
     private String Continent;
 
-
-    /**
-     * Country's GNP
-     */
-    private String GNP;
-
-    /**
-     * Country's GNPOld
-     */
-    private String GNPOld;
-
-    /**
-     * Country's governemntform
-     */
-    private String GovernmentForm;
-
-    /**
-     * Country's headofstate
-     */
-    private String HeadOfState;
-
-    /**
-     * Country's IndepYear
-     */
-    private String IndepYear;
-
-    /**
-     * Country's LifeExpectancy
-     */
-    private String LifeExpectancy;
-
-    /**
-     * Country's LocalName
-     */
-    private String LocalName;
-
     /**
      * Country's Name
      */
@@ -74,7 +38,7 @@ public class Country
     /**
      * Country's Population
      */
-    private int Population;
+    private Long Population;
 
     /**
      * Country's Region
@@ -110,17 +74,6 @@ public class Country
     }
 
     /**
-     * The following is getter setter method related to code2.
-     */
-    public int getCode2() {
-        return Code2;
-    }
-
-    public void setCode2(int code2) {
-        Code2 = code2;
-    }
-
-    /**
      * The following is getter setter method related to continent.
      */
     public String getContinent() {
@@ -129,83 +82,6 @@ public class Country
 
     public void setContinent(String continent) {
         Continent = continent;
-    }
-
-    /**
-     * The following is getter setter method related to GNP.
-     */
-    public String getGNP() {
-        return GNP;
-    }
-
-    public void setGNP(String GNP) {
-        this.GNP = GNP;
-    }
-
-    /**
-     * The following is getter setter method related to GNPOld.
-     */
-    public String getGNPOld() {
-        return GNPOld;
-    }
-
-    public void setGNPOld(String GNPOld) {
-        this.GNPOld = GNPOld;
-    }
-
-    /**
-     * The following is getter setter method related to governmentform.
-     */
-    public String getGovernmentForm() {
-        return GovernmentForm;
-    }
-
-    public void setGovernmentForm(String governmentForm) {
-        GovernmentForm = governmentForm;
-    }
-
-    /**
-     * The following is getter setter method related to headofstate.
-     */
-    public String getHeadOfState() {
-        return HeadOfState;
-    }
-
-    public void setHeadOfState(String headOfState) {
-        HeadOfState = headOfState;
-    }
-
-    /**
-     * The following is getter setter method related to IndepYear.
-     */
-    public String getIndepYear() {
-        return IndepYear;
-    }
-
-    public void setIndepYear(String indepYear) {
-        IndepYear = indepYear;
-    }
-
-    /**
-     * The following is getter setter method related to LifeExpectancy.
-     */
-    public String getLifeExpectancy() {
-        return LifeExpectancy;
-    }
-
-    public void setLifeExpectancy(String lifeExpectancy) {
-        LifeExpectancy = lifeExpectancy;
-    }
-
-    /**
-     * The following is getter setter method related to LocalName.
-     */
-    public String getLocalName() {
-        return LocalName;
-    }
-
-    public void setLocalName(String localName) {
-        LocalName = localName;
     }
 
     /**
@@ -222,11 +98,11 @@ public class Country
     /**
      * The following is getter setter method related to population.
      */
-    public int getPopulation() {
+    public Long getPopulation() {
         return Population;
     }
 
-    public void setPopulation(int population) {
+    public void setPopulation(Long population) {
         Population = population;
     }
 
@@ -241,15 +117,5 @@ public class Country
         Region = region;
     }
 
-    /**
-     * The following is getter setter method related to surfacearea.
-     */
-    public String getSurfaceArea() {
-        return SurfaceArea;
-    }
-
-    public void setSurfaceArea(String surfaceArea) {
-        SurfaceArea = surfaceArea;
-    }
 }
 
