@@ -119,4 +119,3 @@ Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/a
 | 31   |The population of a city.   | Yes | ![image31.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image31.png) |
 | 32   |Language Speakers Report.   | Yes | ![image32.png](https://github.com/40637323/DevOps_Gp5/blob/master/images/image32.png) |
 | ... | ...   | ... | ...        |
-
