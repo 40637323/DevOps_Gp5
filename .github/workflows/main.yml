@@ -27,7 +27,6 @@ jobs:
           docker stop world
           docker rm world
         
-
   IntegrationTests:
     name: Integration Tests
     runs-on: ubuntu-22.04
@@ -52,15 +51,15 @@ jobs:
       - name: CodeCov
         uses: codecov/codecov-action@v4.0.1
         with:
-          env:
-           token:9b9bf058-33bf-4392-92b2-89212f226ce8
+          #env:
+          # token:9b9bf058-33bf-4392-92b2-89212f226ce8
           # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           slug: 40637323/DevOps_Gp5
           directory: ./target/site/jacocok
           flags: Integration Tests # optional
           verbose: true # optional (default = false)
   build:
-    name: Build and Start Using docker-compose
+    name: Build Run in Docker and Deploy Release
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -76,3 +75,11 @@ jobs:
         run: |
           mvn package -DskipTests
           docker-compose up --abort-on-container-exit
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+            repo_token: "${{ secrets.GITHUB_TOKEN }}"
+            prerelease: false
+            automatic_release_tag: "latest"
+            title: "Release ${{ github.ref }}"
+            files: |
+              ./target/*.jar
