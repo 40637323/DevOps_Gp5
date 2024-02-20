@@ -948,15 +948,14 @@ public class App
     //The population of people, people living in cities, and people not living in cities in each country
     public void printPopulationOfLivingOrNotLivinginCountryReport() {
         if (con == null) {
-            System.out.println("printPopulationOfLivingOrNotLivinginCountryReport");
+            System.out.println("No database connection.");
             return;
         }
-        //implement query for getting output the population of living or not living country report
         String sql = "SELECT " +
                 "c.Name AS Country, " +
                 "c.Population AS TotalPopulation, " +
-                "IFNULL(SUM(ct.Population), 0) AS CityPopulation, " +
-                "(c.Population - IFNULL(SUM(ct.Population), 0)) AS NonCityPopulation " +
+                "LEAST(c.Population, IFNULL(SUM(ct.Population), 0)) AS CityPopulation, " +
+                "(c.Population - LEAST(c.Population, IFNULL(SUM(ct.Population), 0))) AS NonCityPopulation " +
                 "FROM country c " +
                 "LEFT JOIN city ct ON c.Code = ct.CountryCode " +
                 "GROUP BY c.Name, c.Population;";
@@ -970,7 +969,6 @@ public class App
             System.out.println("+----------------------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
 
             while (rs.next()) {
-                //output the data using getter method
                 String country = rs.getString("Country");
                 long totalPopulation = rs.getLong("TotalPopulation");
                 long cityPopulation = rs.getLong("CityPopulation");
