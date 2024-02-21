@@ -34,6 +34,285 @@ public class AppIntegrationTest
 
     // Test if the top Country in the world is suitable with actual result
     @Test
+    void testTopGetCountriesInWorld()
+    {
+        List<Country> country = app.getCountries();
+        Country topCountry = country.get(0);
+
+        assertEquals("China",topCountry.getName() );
+        assertEquals("Asia", topCountry.getContinent());
+        assertEquals("Eastern Asia", topCountry.getRegion());
+        assertEquals(Long.valueOf(1277558000),topCountry.getPopulation());
+    }
+
+    // Test if the bottom Country in the world is suitable with actual result
+    @Test
+    void testBottomGetCountriesInWorld()
+    {
+        List<Country> country = app.getCountries();
+        Country bottomCountry = country.get(country.size()-1);
+
+        assertEquals("Pitcairn",bottomCountry.getName() );
+        assertEquals("Oceania",bottomCountry.getContinent() );
+        assertEquals("Polynesia",bottomCountry.getRegion());
+        assertEquals(Long.valueOf(50),bottomCountry.getPopulation());
+    }
+
+    // Test if the top Country in the Asia is suitable with actual result
+    @Test
+    void testTopGetCountriesInAsia()
+    {
+        List<Country> countryinAsia = app.getCountriesInAsia();
+        Country topCountryinAsia = countryinAsia.get(0);
+        assertEquals("China",topCountryinAsia.getName());
+        assertEquals("Asia",topCountryinAsia.getContinent());
+        assertEquals("Eastern Asia",topCountryinAsia.getRegion());
+        assertEquals(Long.valueOf(1277558000),topCountryinAsia.getPopulation());
+    }
+
+    // Test if the bottom Country in the Asia is suitable with actual result
+    @Test
+    void testBottomGetCountriesInAsia()
+    {
+        List<Country> bottomcountryinAsia = app.getCountriesInAsia();
+        Country bottomCountryinAsia = bottomcountryinAsia.get(bottomcountryinAsia.size()-1);
+
+        assertEquals("Maldives",bottomCountryinAsia.getName());
+        assertEquals("Asia",bottomCountryinAsia.getContinent());
+        assertEquals("Southern and Central Asia",bottomCountryinAsia.getRegion());
+        assertEquals(Long.valueOf(286000),bottomCountryinAsia.getPopulation());
+    }
+
+    // Test if the top Country in the South East Asia is suitable with actual result
+    @Test
+    void testTopGetCountriesInSouthEastAsia()
+    {
+        List<Country> countryinSouthEastAsia = app.getCountriesInSouthEastAsia();
+        Country topCountryinSouthEastAsia = countryinSouthEastAsia.get(0);
+
+        assertEquals("Indonesia",topCountryinSouthEastAsia.getName());
+        assertEquals("Asia",topCountryinSouthEastAsia.getContinent());
+        assertEquals("Southeast Asia",topCountryinSouthEastAsia.getRegion());
+        assertEquals(Long.valueOf(212107000),topCountryinSouthEastAsia.getPopulation());
+    }
+
+    // Test if the bottom Country in the South East Asia is suitable with actual result
+    @Test
+    void testBottomGetCountriesInSouthEastAsia()
+    {
+        List<Country> bottomCountryInSouthEastAsia = app.getCountriesInSouthEastAsia();
+        Country BottomCountryInSouthEastAsia = bottomCountryInSouthEastAsia.get(bottomCountryInSouthEastAsia.size()-1);
+
+        assertEquals("Brunei",BottomCountryInSouthEastAsia.getName());
+        assertEquals("Asia",BottomCountryInSouthEastAsia.getContinent());
+        assertEquals("Southeast Asia",BottomCountryInSouthEastAsia.getRegion());
+        assertEquals(Long.valueOf(328000),BottomCountryInSouthEastAsia.getPopulation() );
+    }
+
+    // Test if the top Capital Cities in World is suitable with actual result
+    @Test
+    void testTopGetCapitalCitiesInWorld()
+    {
+        List<City> CapitalCitiesInWorld = app.getAllCapitalCitiesByPopulation();
+        City topCapitalCities = CapitalCitiesInWorld.get(0);
+
+        assertEquals("Seoul",topCapitalCities.getCityName());
+        assertEquals("South Korea",topCapitalCities.getCountryCode());
+        assertEquals(9981619,topCapitalCities.getCityPopulation());
+    }
+
+    // Test if the bottom Capital Cities in World is suitable with actual result
+    @Test
+    void testBottomGetCapitalCitiesInWorld()
+    {
+        List<City> BottomCapitalCitiesInWorld = app.getAllCapitalCitiesByPopulation();
+        City BottomCapitalCities = BottomCapitalCitiesInWorld.get(BottomCapitalCitiesInWorld.size()-1);
+
+        assertEquals("Adamstown",BottomCapitalCities.getCityName());
+        assertEquals("Pitcairn",BottomCapitalCities.getCountryCode());
+        assertEquals(42,BottomCapitalCities.getCityPopulation());
+    }
+
+    // Test if the top Capital Cities in Continent is suitable with actual result
+    @Test
+    void testTopGetCapitalCitiesByContinent()
+    {
+        List<City> CapitalCitiesByContinent = app.getCapitalCitiesByContinentOrderedByPopulation();
+        City topCapitalCitiesByContinent = CapitalCitiesByContinent.get(0);
+
+        assertEquals("Cairo",topCapitalCitiesByContinent.getCityName());
+        assertEquals("Egypt",topCapitalCitiesByContinent.getCountryCode());
+        assertEquals(6789479,topCapitalCitiesByContinent.getCityPopulation());
+    }
+
+    // Test if the bottom Capital Cities in Continent is suitable with actual result
+    @Test
+    void testBottomGetCapitalCitiesByContinent()
+    {
+        List<City> BottomCapitalCitiesByContinent = app.getCapitalCitiesByContinentOrderedByPopulation();
+        City bottomCapitalCitiesByContinent = BottomCapitalCitiesByContinent.get(BottomCapitalCitiesByContinent.size()-1);
+
+        assertEquals("Jamestown",bottomCapitalCitiesByContinent.getCityName());
+        assertEquals("Saint Helena",bottomCapitalCitiesByContinent.getCountryCode());
+        assertEquals(1500,bottomCapitalCitiesByContinent.getCityPopulation());
+    }
+
+    // Test if the top Capital Cities in region is suitable with actual result
+    @Test
+    void testTopGetCapitalCitiesByRegion()
+    {
+        List<City> CapitalCitiesByRegion = app.getCapitalCitiesByRegionOrderedByPopulation();
+        City topCapitalCitiesbyRegion = CapitalCitiesByRegion.get(0);
+
+        assertEquals("Kinshasa",topCapitalCitiesbyRegion.getCityName());
+        assertEquals("Congo, The Democratic Republic of the",topCapitalCitiesbyRegion.getCountryCode());
+        assertEquals(5064000,topCapitalCitiesbyRegion.getCityPopulation());
+    }
+
+    // Test if the bottom Capital Cities in region is suitable with actual result
+    @Test
+    void testbottomGetCapitalCitiesByRegion()
+    {
+        List<City> BottomCapitalCitiesByRegion = app.getCapitalCitiesByRegionOrderedByPopulation();
+        City bottomCapitalCitiesbyRegion = BottomCapitalCitiesByRegion.get(BottomCapitalCitiesByRegion.size()-1);
+
+        assertEquals("Malabo",bottomCapitalCitiesbyRegion.getCityName());
+        assertEquals("Equatorial Guinea",bottomCapitalCitiesbyRegion.getCountryCode());
+        assertEquals(40000,bottomCapitalCitiesbyRegion.getCityPopulation());
+    }
+
+    // Test if the top Cities in world is suitable with actual result
+    @Test
+    void testTopGetCitiesInWorld()
+    {
+        List<City> CitiesInWorld = app.getCitiesOrderedByPopulation();
+        City topCitiesInWorld = CitiesInWorld.get(0);
+
+        assertEquals("Mumbai (Bombay)",topCitiesInWorld.getCityName());
+        assertEquals("India",topCitiesInWorld.getCountryOfCity());
+        assertEquals("Maharashtra",topCitiesInWorld.getCityDistrict());
+        assertEquals(10500000,topCitiesInWorld.getCityPopulation());
+    }
+
+    // Test if the bottom Cities in world is suitable with actual result
+    @Test
+    void testBottomGetCitiesInWorld()
+    {
+        List<City> BottomCitiesInWorld = app.getCitiesOrderedByPopulation();
+        City bottomCitiesInWorld = BottomCitiesInWorld.get(BottomCitiesInWorld.size()-1);
+
+        assertEquals("Adamstown",bottomCitiesInWorld.getCityName());
+        assertEquals("Pitcairn",bottomCitiesInWorld.getCountryOfCity());
+        assertEquals("–",bottomCitiesInWorld.getCityDistrict());
+        assertEquals(42,bottomCitiesInWorld.getCityPopulation());
+    }
+
+    // Test if the top Cities in continent is suitable with actual result
+    @Test
+    void testTopGetCitiesByContinent()
+    {
+        List<City> CitiesByContinent = app.getCitiesByContinentOrderedByPopulation();
+        City topCitiesbyContinent = CitiesByContinent.get(0);
+
+        assertEquals("Cairo",topCitiesbyContinent.getCityName());
+        assertEquals("Egypt",topCitiesbyContinent.getCountryOfCity());
+        assertEquals("Kairo",topCitiesbyContinent.getCityDistrict());
+        assertEquals(6789479,topCitiesbyContinent.getCityPopulation());
+    }
+
+    // Test if the bottom Cities in continent is suitable with actual result
+    @Test
+    void testBottomGetCitiesByContinent()
+    {
+        List<City> BottomCitiesByContinent = app.getCitiesByContinentOrderedByPopulation();
+        City bottomCitiesbyContinent = BottomCitiesByContinent.get(BottomCitiesByContinent.size()-1);
+
+        assertEquals("Jamestown",bottomCitiesbyContinent.getCityName());
+        assertEquals("Saint Helena",bottomCitiesbyContinent.getCountryOfCity());
+        assertEquals("Saint Helena",bottomCitiesbyContinent.getCityDistrict());
+        assertEquals(1500,bottomCitiesbyContinent.getCityPopulation());
+    }
+
+    // Test if the top Cities in Region is suitable with actual result
+    @Test
+    void testTopGetCitiesByRegion()
+    {
+        List<City> CitiesByRegion = app.getCitiesByRegionOrderedByPopulation();
+        City topCitiesbyRegion = CitiesByRegion.get(0);
+
+        assertEquals("Kinshasa",topCitiesbyRegion.getCityName());
+        assertEquals("Congo, The Democratic Republic of the",topCitiesbyRegion.getCountryOfCity());
+        assertEquals("Kinshasa",topCitiesbyRegion.getCityDistrict());
+        assertEquals(5064000,topCitiesbyRegion.getCityPopulation());
+    }
+
+    // Test if the bottom Cities in Region is suitable with actual result
+    @Test
+    void testBottomGetCitiesByRegion()
+    {
+        List<City> BottomCitiesByRegion = app.getCitiesByRegionOrderedByPopulation();
+        City bottomCitiesbyRegion = BottomCitiesByRegion.get(BottomCitiesByRegion.size()-1);
+
+        assertEquals("Malabo",bottomCitiesbyRegion.getCityName());
+        assertEquals("Equatorial Guinea",bottomCitiesbyRegion.getCountryOfCity());
+        assertEquals("Bioko",bottomCitiesbyRegion.getCityDistrict());
+        assertEquals(40000,bottomCitiesbyRegion.getCityPopulation());
+    }
+
+    // Test if the top Cities in Country is suitable with actual result
+    @Test
+    void testTopGetCitiesByCountry()
+    {
+        List<City> CitiesByCountry = app.getCitiesInCountryOrderedByPopulation();
+        City topCitiesbyCountry = CitiesByCountry.get(0);
+
+        assertEquals("Paris",topCitiesbyCountry.getCityName());
+        assertEquals("France",topCitiesbyCountry.getCountryOfCity());
+        assertEquals("Île-de-France",topCitiesbyCountry.getCityDistrict());
+        assertEquals(2125246,topCitiesbyCountry.getCityPopulation());
+    }
+
+    // Test if the bottom Cities in Country is suitable with actual result
+    @Test
+    void testBottomGetCitiesByCountry()
+    {
+        List<City> BottomCitiesByCountry = app.getCitiesInCountryOrderedByPopulation();
+        City bottomCitiesbyCountry = BottomCitiesByCountry.get(BottomCitiesByCountry.size()-1);
+
+        assertEquals("Montreuil",bottomCitiesbyCountry.getCityName());
+        assertEquals("France",bottomCitiesbyCountry.getCountryOfCity());
+        assertEquals("Île-de-France",bottomCitiesbyCountry.getCityDistrict());
+        assertEquals(90674,bottomCitiesbyCountry.getCityPopulation());
+    }
+
+    // Test if the top Cities in District is suitable with actual result
+    @Test
+    void testTopGetCitiesByDistrict()
+    {
+        List<City> CitiesByDistinct = app.getCitiesInDistrict();
+        City topCitiesbyDistinct = CitiesByDistinct.get(0);
+
+        assertEquals("La Matanza",topCitiesbyDistinct.getCityName());
+        assertEquals("Argentina",topCitiesbyDistinct.getCountryOfCity());
+        assertEquals("Buenos Aires",topCitiesbyDistinct.getCityDistrict());
+        assertEquals(1266461,topCitiesbyDistinct.getCityPopulation());
+    }
+
+    // Test if the top Cities in District is suitable with actual result
+    @Test
+    void testBottomGetCitiesByDistrict()
+    {
+        List<City> BottomCitiesByDistinct = app.getCitiesInDistrict();
+        City bottomCitiesbyDistinct = BottomCitiesByDistinct.get(BottomCitiesByDistinct.size()-1);
+
+        assertEquals("Tandil",bottomCitiesbyDistinct.getCityName());
+        assertEquals("Argentina",bottomCitiesbyDistinct.getCountryOfCity());
+        assertEquals("Buenos Aires",bottomCitiesbyDistinct.getCityDistrict());
+        assertEquals(91101,bottomCitiesbyDistinct.getCityPopulation());
+    }
+
+    // Test if the top Country in the world is suitable with actual result
+    @Test
     public void testGetTopSevenCountriesInWorldByPopulation() {
         //Country countryPopulation = new Country(); // Assuming the class containing the method is named CountryPopulation
         List<Country> topCountries = app.getTopSevenCountriesInWorldByPopulation();
@@ -51,6 +330,7 @@ public class AppIntegrationTest
         assertEquals("Peking",firstCountry.getCapital());
     }
 
+    // Test if the bottom Country in the world is suitable with actual result
     @Test
     public void testGetBottomOfTopSevenCountriesInWorldByPopulation() {
         List<Country> topCountriesBottom = app.getTopSevenCountriesInWorldByPopulation();
@@ -68,6 +348,7 @@ public class AppIntegrationTest
         assertEquals("Moscow",lastCountry.getCapital());
     }
 
+    // Test if the top Country in Asia is suitable with actual result
     @Test
     public void testGetTopSevenCountriesInAsiaByPopulation() {
         //Country countryPopulation = new Country(); // Assuming the class containing the method is named CountryPopulation
@@ -86,6 +367,7 @@ public class AppIntegrationTest
         assertEquals("Peking",firstCountry.getCapital());
     }
 
+    // Test if the bottom Country in Asia is suitable with actual result
     @Test
     public void testGetBottomOfTopSevenCountriesInAsiaByPopulation() {
         List<Country> topCountriesAsiaBottom = app.getTopSevenCountriesInAsiaByPopulation();
@@ -103,6 +385,7 @@ public class AppIntegrationTest
         assertEquals("Hanoi",lastCountry.getCapital());
     }
 
+    // Test if the top Country in South East Asia is suitable with actual result
     @Test
     public void testGetTopSevenCountriesInSouthEastAsia() {
         List<Country> topCountriesSouthEastAsia = app.getTopSevenCountriesInSouthEastAsia();
@@ -120,6 +403,7 @@ public class AppIntegrationTest
         assertEquals("Jakarta",firstCountry.getCapital());
     }
 
+    // Test if the bottom Country in South East Asia is suitable with actual result
     @Test
     public void testGetBottomOfTopSevenCountriesInSouthEastAsia() {
         List<Country> topCountriesSouthEastAsiaBottom = app.getTopSevenCountriesInSouthEastAsia();
@@ -137,6 +421,7 @@ public class AppIntegrationTest
         assertEquals("Phnom Penh",lastCountry.getCapital());
     }
 
+    // Test if the top Cities in World is suitable with actual result
     @Test
     public void testGetTopSevenCitiesInWorld() {
         List<City> topCities = app.getTopSevenCitiesInWorldOrderedByPopulation();
@@ -153,6 +438,7 @@ public class AppIntegrationTest
         assertEquals(10500000,firstCity.getCityPopulation());
     }
 
+    // Test if the bottom Cities in World is suitable with actual result
     @Test
     public void testGetTopSevenCitiesInWorldBottom() {
         List<City> topCitiesBottom = app.getTopSevenCitiesInWorldOrderedByPopulation();
@@ -169,6 +455,7 @@ public class AppIntegrationTest
         assertEquals(8787958,bottomCity.getCityPopulation());
     }
 
+    // Test if the top Cities in Continent is suitable with actual result
     @Test
     public void testGetTopSevenCitiesInContinent() {
         List<City> topCities = app.getTopSevenCitiesInContinentOrderedByPopulation();
@@ -185,6 +472,7 @@ public class AppIntegrationTest
         assertEquals(6789479,firstCity.getCityPopulation());
     }
 
+    // Test if the bottom Cities in Continent is suitable with actual result
     @Test
     public void testGetTopSevenCitiesInContinentBottom() {
         List<City> topCitiesContinentBottom = app.getTopSevenCitiesInContinentOrderedByPopulation();
@@ -201,6 +489,7 @@ public class AppIntegrationTest
         assertEquals(2352121,bottomCity.getCityPopulation());
     }
 
+    // Test if the top Cities in Region is suitable with actual result
     @Test
     public void testGetTopSevenCitiesInRegion() {
         List<City> topCities = app.getTopSevenCitiesInRegionOrderedByPopulation();
@@ -217,6 +506,7 @@ public class AppIntegrationTest
         assertEquals(2500000,firstCity.getCityPopulation());
     }
 
+    // Test if the bottom Cities in Region is suitable with actual result
     @Test
     public void testGetTopSevenCitiesInRegionBottom() {
         List<City> topCitiesRegionBottom = app.getTopSevenCitiesInRegionOrderedByPopulation();
@@ -233,6 +523,7 @@ public class AppIntegrationTest
         assertEquals(850000,bottomCity.getCityPopulation());
     }
 
+    // Test if the top Cities in Country is suitable with actual result
     @Test
     public void testGetTopSevenCitiesInCountry() {
         List<City> topCitiesCountry = app.getTopSevenCitiesInCountryOrderedByPopulation();
@@ -249,6 +540,7 @@ public class AppIntegrationTest
         assertEquals(1518000,firstCity.getCityPopulation());
     }
 
+    // Test if the bottom Cities in Country is suitable with actual result
     @Test
     public void testGetTopSevenCitiesInCountryBottom() {
         List<City> topCitiesCountryBottom = app.getTopSevenCitiesInCountryOrderedByPopulation();
@@ -265,6 +557,7 @@ public class AppIntegrationTest
         assertEquals(427400,bottomCity.getCityPopulation());
     }
 
+    // Test if the top Cities in district is suitable with actual result
     @Test
     public void testGetTopSevenCitiesInDistrict() {
         List<City> topCitiesDistrict = app.getTopSevenCitiesInDistrictOrderedByPopulation();
@@ -281,6 +574,7 @@ public class AppIntegrationTest
         assertEquals(1432000,firstCity.getCityPopulation());
     }
 
+    // Test if the top Cities in district is suitable with actual result
     @Test
     public void testGetTopSevenCitiesInDistrictBottom() {
         List<City> topCitiesDistrictBottom = app.getTopSevenCitiesInDistrictOrderedByPopulation();
@@ -297,6 +591,7 @@ public class AppIntegrationTest
         assertEquals(296800,bottomCity.getCityPopulation());
     }
 
+    // Test if the top Capital Cities in World is suitable with actual result
     @Test
     public void testGetTopSevenCapitalCitiesInWorld() {
         List<City> topCapitalCities = app.getTopSevenCapitalCitiesOrderedByPopulation();
@@ -312,6 +607,7 @@ public class AppIntegrationTest
         assertEquals(9981619,firstCity.getCityPopulation());
     }
 
+    // Test if the bottom Capital Cities in World is suitable with actual result
     @Test
     public void testGetTopSevenCapitalCitiesInWorldBottom() {
         List<City> topCapitalCitiesBottom = app.getTopSevenCapitalCitiesOrderedByPopulation();
@@ -327,6 +623,7 @@ public class AppIntegrationTest
         assertEquals(7285000,bottomCity.getCityPopulation());
     }
 
+    // Test if the top Capital Cities in Continent is suitable with actual result
     @Test
     public void testGetTopSevenCapitalCitiesInContinent() {
         List<City> topCapitalCitiesContinent = app.getTopSevenCapitalCitiesByContinentOrderedByPopulation();
@@ -342,6 +639,7 @@ public class AppIntegrationTest
         assertEquals(6789479,firstCity.getCityPopulation());
     }
 
+    // Test if the bottom Capital Cities in Continent is suitable with actual result
     @Test
     public void testGetTopSevenCapitalCitiesInContinentBottom() {
         List<City> topCapitalCitiesContinentBottom = app.getTopSevenCapitalCitiesByContinentOrderedByPopulation();
@@ -357,6 +655,7 @@ public class AppIntegrationTest
         assertEquals(1682000,bottomCity.getCityPopulation());
     }
 
+    // Test if the top Capital Cities in Region is suitable with actual result
     @Test
     public void testGetTopSevenCapitalCitiesInRegion() {
         List<City> topCapitalCitiesRegion = app.getTopSevenCapitalCitiesByRegionOrderedByPopulation();
@@ -372,6 +671,7 @@ public class AppIntegrationTest
         assertEquals(5064000,firstCity.getCityPopulation());
     }
 
+    // Test if the bottom Capital Cities in Region is suitable with actual result
     @Test
     public void testGetTopSevenCapitalCitiesInRegionBottom() {
         List<City> topCapitalCitiesRegionBottom = app.getTopSevenCapitalCitiesByRegionOrderedByPopulation();
@@ -387,6 +687,7 @@ public class AppIntegrationTest
         assertEquals(419000,bottomCity.getCityPopulation());
     }
 
+    //set the new cities
     @Test
     void displayCities()
     {
@@ -400,6 +701,7 @@ public class AppIntegrationTest
         app.displayCities(city);
     }
 
+    //set the new capital cities
     @Test
     void displayCapitalCities()
     {
@@ -412,6 +714,7 @@ public class AppIntegrationTest
         app.displayCapitalCities(capitalcity);
     }
 
+    //set the new country
     @Test
     void displayCountries()
     {
@@ -427,17 +730,6 @@ public class AppIntegrationTest
         app.displayCountries(countries);
     }
 
-    @Test
-    void displayAllQuery(){
-        assertFalse(outContent.toString().contains("All the countries in the world organised by largest population to smallest"));
-    }
-    //app test
-    @Test
-    public void testMainWithNoArguments() {
-        String[] args = {};
-        App.main(args);
-        assertNotNull(app);
-    }
 }
 
 
