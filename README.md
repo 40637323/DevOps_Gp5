@@ -22,10 +22,14 @@ To generate population reports for city, country, continent, region, capital, wo
 - maven-assembly-plugin (Version - 3.3.0)
 
 ## Project Structure
-There are five classes implemented. These classes are located under src/main/java/com.universal/
+There are three classes implemented. These classes are located under src/main/java/com.universal/
 - App.java
 - City.java
 - Country.java
+There are two classs for testing.These classes are located under /src/test/java/com/universal/
+- AppTest.java
+- AppIntegrationTest.java
+Where: Unit testing is provided in AppTest.java and integrating testing is provided in AppIntegrationTest.java.
 
 ## Code of Conduct:
 - School late - 1 mark
@@ -45,7 +49,7 @@ There are five classes implemented. These classes are located under src/main/jav
     - feature
       - all-view
       - top_n_population
-      - view-record
+      - view-population
   - release
 
 ## Tests:
