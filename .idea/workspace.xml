@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Deployment update">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update Merge">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/PopulationReport.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +26,19 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Hein Htet Naing &lt;135005782+heinhn@users.noreply.github.com&gt;" />
         <option value="40637323 &lt;40637323@live.napier.ac.uk&gt;" />
       </list>
     </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="release" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,9 +80,13 @@
     "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "Docker.test-dockerfile/Dockerfile.executor": "Run",
-    "JUnit.AppIntegrationTest.executor": "Coverage",
-    "JUnit.AppTest.executor": "Run",
+    "JUnit.AppIntegrationTest.executor": "Run",
+    "JUnit.AppTest.PrintFunctionsConnectionNullTest.executor": "Coverage",
+    "JUnit.AppTest.executor": "Coverage",
+    "JUnit.AppTest.testViewPopulationInContinentConNull.executor": "Coverage",
+    "JUnit.AppTest.testprintPopulationOfLivingOrNotLivinginContinentReport.executor": "Coverage",
     "JUnit.Unnamed.executor": "Coverage",
+    "JUnit.com.universal in DevOpsCW_Gp5.executor": "Coverage",
     "Maven.DevOpsCW_Gp5 [clean].executor": "Run",
     "Maven.DevOpsCW_Gp5 [compile].executor": "Run",
     "Maven.DevOpsCW_Gp5 [package].executor": "Run",
@@ -83,10 +95,15 @@
     "Maven.DevOpsGroup3 [clean].executor": "Run",
     "Maven.DevOpsGroup3 [package].executor": "Run",
     "Maven.DevOpsGroup3 [test].executor": "Run",
+    "Maven.DevOpsGroup5 [clean].executor": "Run",
+    "Maven.DevOpsGroup5 [package].executor": "Run",
+    "Maven.DevOps_Gp5 [clean].executor": "Run",
+    "Maven.DevOps_Gp5 [package].executor": "Run",
+    "Maven.DevOps_Gp5 [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/all-view",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOps_Gp5",
     "node.js.detected.package.eslint": "true",
@@ -103,7 +120,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.AppIntegrationTest">
+  <component name="RunManager">
     <configuration name="AppIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DevOpsCW_Gp5" />
       <extension name="coverage">
@@ -119,7 +136,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest" type="JUnit" factoryName="JUnit" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+    <configuration name="AppTest.PrintFunctionsConnectionNullTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DevOpsCW_Gp5" />
       <extension name="coverage">
         <pattern>
@@ -129,8 +146,56 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.universal" />
       <option name="MAIN_CLASS_NAME" value="com.universal.AppTest" />
+      <option name="METHOD_NAME" value="PrintFunctionsConnectionNullTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testViewPopulationInContinentConNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DevOpsCW_Gp5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.universal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.universal" />
+      <option name="MAIN_CLASS_NAME" value="com.universal.AppTest" />
+      <option name="METHOD_NAME" value="testViewPopulationInContinentConNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testprintPopulationOfLivingOrNotLivinginContinentReport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DevOpsCW_Gp5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.universal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.universal" />
+      <option name="MAIN_CLASS_NAME" value="com.universal.AppTest" />
+      <option name="METHOD_NAME" value="testprintPopulationOfLivingOrNotLivinginContinentReport" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.universal in DevOpsCW_Gp5" type="JUnit" factoryName="JUnit" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+      <module name="DevOpsCW_Gp5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.universal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.universal" />
+      <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,63 +220,28 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="app" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="db" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile" />
-      <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="JUnit.com.universal in DevOpsCW_Gp5" />
+      <item itemvalue="JUnit.AppTest.PrintFunctionsConnectionNullTest" />
+      <item itemvalue="JUnit.AppTest.testViewPopulationInContinentConNull" />
+      <item itemvalue="JUnit.AppTest.testprintPopulationOfLivingOrNotLivinginContinentReport" />
       <item itemvalue="JUnit.AppIntegrationTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppIntegrationTest" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+        <item itemvalue="JUnit.AppTest.PrintFunctionsConnectionNullTest" />
+        <item itemvalue="JUnit.AppTest.testViewPopulationInContinentConNull" />
+        <item itemvalue="JUnit.AppTest.testprintPopulationOfLivingOrNotLivinginContinentReport" />
         <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="JUnit.AppIntegrationTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24582b8d" />
       </set>
     </attachedChunks>
   </component>
@@ -229,6 +259,10 @@
       <workItem from="1706765447426" duration="269000" />
       <workItem from="1707318230465" duration="18319000" />
       <workItem from="1707400365420" duration="6358000" />
+      <workItem from="1707444301753" duration="1802000" />
+      <workItem from="1707456716396" duration="53000" />
+      <workItem from="1708260024398" duration="3455000" />
+      <workItem from="1708314928061" duration="470000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -334,79 +368,175 @@
       <option name="project" value="LOCAL" />
       <updated>1707405397667</updated>
     </task>
-    <task id="LOCAL-00014" summary="Deployment implement">
+    <task id="LOCAL-00014" summary="merging release to master">
       <option name="closed" value="true" />
-      <created>1708063483615</created>
+      <created>1707417427192</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1708063483615</updated>
+      <updated>1707417427192</updated>
     </task>
-    <task id="LOCAL-00015" summary="Deployment implement">
+    <task id="LOCAL-00015" summary="changing main.yml">
       <option name="closed" value="true" />
-      <created>1708064253226</created>
+      <created>1707419803261</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1708064253226</updated>
+      <updated>1707419803261</updated>
     </task>
-    <task id="LOCAL-00016" summary="Deployment update">
+    <task id="LOCAL-00016" summary="Update Unit Test and Integration Testing for top N">
       <option name="closed" value="true" />
-      <created>1708064630784</created>
+      <created>1708004664934</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1708064630784</updated>
+      <updated>1708004664934</updated>
     </task>
-    <task id="LOCAL-00017" summary="Deployment update">
+    <task id="LOCAL-00017" summary="Update Unit Test and Integration Testing for top N">
       <option name="closed" value="true" />
-      <created>1708064815572</created>
+      <created>1708006372622</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1708064815572</updated>
+      <updated>1708006372622</updated>
     </task>
-    <task id="LOCAL-00018" summary="Deployment update">
+    <task id="LOCAL-00018" summary="Update the integration testing for Top 7 populated countries">
       <option name="closed" value="true" />
-      <created>1708065106400</created>
+      <created>1708012247455</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1708065106400</updated>
+      <updated>1708012247455</updated>
     </task>
-    <task id="LOCAL-00019" summary="Deployment update">
+    <task id="LOCAL-00019" summary="Merge, create new class for Population Report">
       <option name="closed" value="true" />
-      <created>1708065459917</created>
+      <created>1708021406596</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1708065459917</updated>
+      <updated>1708021406597</updated>
     </task>
-    <task id="LOCAL-00020" summary="Deployment update">
+    <task id="LOCAL-00020" summary="The population of people, people living in cities, and people not living in cities in each continent.">
       <option name="closed" value="true" />
-      <created>1708065627073</created>
+      <created>1708021583649</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1708065627073</updated>
+      <updated>1708021583649</updated>
     </task>
-    <task id="LOCAL-00021" summary="Deployment update">
+    <task id="LOCAL-00021" summary="The population of people, people living in cities, and people not living in cities in each region.">
       <option name="closed" value="true" />
-      <created>1708065911752</created>
+      <created>1708021658123</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1708065911752</updated>
+      <updated>1708021658123</updated>
     </task>
-    <task id="LOCAL-00022" summary="Deployment update">
+    <task id="LOCAL-00022" summary="The population of people, people living in cities, and people not living in cities in each country.">
       <option name="closed" value="true" />
-      <created>1708066303210</created>
+      <created>1708021761724</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1708066303210</updated>
+      <updated>1708021761724</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Languages from greatest number to smallest, including the percentage of the world population for Chinese,English,Hindi,Spanish and Arabic.">
+      <option name="closed" value="true" />
+      <created>1708021916440</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708021916440</updated>
+    </task>
+    <task id="LOCAL-00024" summary="The population of the world.">
+      <option name="closed" value="true" />
+      <created>1708022149246</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022149246</updated>
+    </task>
+    <task id="LOCAL-00025" summary="The population of the world fix the place">
+      <option name="closed" value="true" />
+      <created>1708022267933</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022267933</updated>
+    </task>
+    <task id="LOCAL-00026" summary="The population of a continent.">
+      <option name="closed" value="true" />
+      <created>1708022345118</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022345118</updated>
+    </task>
+    <task id="LOCAL-00027" summary="The population of a region.">
+      <option name="closed" value="true" />
+      <created>1708022445780</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022445780</updated>
+    </task>
+    <task id="LOCAL-00028" summary="The population of a country.">
+      <option name="closed" value="true" />
+      <created>1708022530504</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022530504</updated>
+    </task>
+    <task id="LOCAL-00029" summary="The population of a district.">
+      <option name="closed" value="true" />
+      <created>1708022644947</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022644947</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Update integration testing for view population">
+      <option name="closed" value="true" />
+      <created>1708024301507</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1708024301507</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Update app.java">
+      <option name="closed" value="true" />
+      <created>1708025033490</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1708025033490</updated>
+    </task>
+    <task id="LOCAL-00032" summary="delete unnecessary files">
+      <option name="closed" value="true" />
+      <created>1708067737133</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1708067737133</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Update Merge">
+      <option name="closed" value="true" />
+      <created>1708272515076</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1708272515076</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Update Merge">
+      <option name="closed" value="true" />
+      <created>1708272571473</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1708272571473</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,27 +554,53 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First commit, adding initial files." />
-    <MESSAGE value="attempt to merge into dev" />
-    <MESSAGE value="Added App.java file" />
     <MESSAGE value="Updating the code in the App file to be convenient in testing" />
     <MESSAGE value="Update the files to make testing and Add AppTest to make unit testing" />
     <MESSAGE value="Update the AppTest for Unit Testing" />
     <MESSAGE value="starting intergration testing" />
     <MESSAGE value="updating main.yml for integrating testing" />
     <MESSAGE value="adding bold in printing to app.java" />
-    <MESSAGE value="Deployment implement" />
-    <MESSAGE value="Deployment update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deployment update" />
+    <MESSAGE value="merging release to master" />
+    <MESSAGE value="changing main.yml" />
+    <MESSAGE value="Update Unit Test and Integration Testing for top N" />
+    <MESSAGE value="Update the integration testing for Top 7 populated countries" />
+    <MESSAGE value="Merge, create new class for Population Report" />
+    <MESSAGE value="The population of people, people living in cities, and people not living in cities in each continent." />
+    <MESSAGE value="The population of people, people living in cities, and people not living in cities in each region." />
+    <MESSAGE value="The population of people, people living in cities, and people not living in cities in each country." />
+    <MESSAGE value="Languages from greatest number to smallest, including the percentage of the world population for Chinese,English,Hindi,Spanish and Arabic." />
+    <MESSAGE value="The population of the world." />
+    <MESSAGE value="The population of the world fix the place" />
+    <MESSAGE value="The population of a continent." />
+    <MESSAGE value="The population of a region." />
+    <MESSAGE value="The population of a country." />
+    <MESSAGE value="The population of a district." />
+    <MESSAGE value="Update integration testing for view population" />
+    <MESSAGE value="Update app.java" />
+    <MESSAGE value="delete unnecessary files" />
+    <MESSAGE value="Update Merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Merge" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1707411480955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest_testViewPopulationInContinentConNull.ic" NAME="AppTest.testViewPopulationInContinentConNull Coverage Results" MODIFIED="1708269727925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.universal.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest_PrintFunctionsConnectionNullTest.ic" NAME="AppTest.PrintFunctionsConnectionNullTest Coverage Results" MODIFIED="1708270205995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.universal.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1708020776016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.universal.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest_testprintPopulationOfLivingOrNotLivinginContinentReport.ic" NAME="AppTest.testprintPopulationOfLivingOrNotLivinginContinentReport Coverage Results" MODIFIED="1708269624327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.universal.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$com_universal_in_DevOpsCW_Gp5.ic" NAME="com.universal in DevOpsCW_Gp5 Coverage Results" MODIFIED="1708315060701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.universal.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/DevOps_Gp5$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1707370209890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.universal.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1707370918063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1708270466017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.universal.*</FILTER>
     </SUITE>
   </component>

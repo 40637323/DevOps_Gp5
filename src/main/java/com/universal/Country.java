@@ -30,6 +30,42 @@ public class Country
      */
     private String Continent;
 
+
+    /**
+     * Country's GNP
+     */
+    private String GNP;
+
+    /**
+     * Country's GNPOld
+     */
+    private String GNPOld;
+
+    /**
+     * Country's governemntform
+     */
+    private String GovernmentForm;
+
+    /**
+     * Country's headofstate
+     */
+    private String HeadOfState;
+
+    /**
+     * Country's IndepYear
+     */
+    private String IndepYear;
+
+    /**
+     * Country's LifeExpectancy
+     */
+    private String LifeExpectancy;
+
+    /**
+     * Country's LocalName
+     */
+    private String LocalName;
+
     /**
      * Country's Name
      */
@@ -74,6 +110,17 @@ public class Country
     }
 
     /**
+     * The following is getter setter method related to code2.
+     */
+    public int getCode2() {
+        return Code2;
+    }
+
+    public void setCode2(int code2) {
+        Code2 = code2;
+    }
+
+    /**
      * The following is getter setter method related to continent.
      */
     public String getContinent() {
@@ -83,6 +130,7 @@ public class Country
     public void setContinent(String continent) {
         Continent = continent;
     }
+
 
     /**
      * The following is getter setter method related to name.
