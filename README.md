@@ -26,9 +26,11 @@ There are three classes implemented. These classes are located under src/main/ja
 - App.java
 - City.java
 - Country.java
+  
 There are two classs for testing.These classes are located under /src/test/java/com/universal/
 - AppTest.java
 - AppIntegrationTest.java
+  
 Where: Unit testing is provided in AppTest.java and integrating testing is provided in AppIntegrationTest.java.
 
 ## Code of Conduct:
