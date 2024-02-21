@@ -4,10 +4,7 @@ on:
     branches:
       - master
       - feature/all-view
-<<<<<<<<< Temporary merge branch 1
-=========
       - feature/view-population
->>>>>>>>> Temporary merge branch 2
       - develop
 jobs:
   UnitTests:
@@ -59,7 +56,7 @@ jobs:
            token:9b9bf058-33bf-4392-92b2-89212f226ce8
           # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           slug: 40637323/DevOps_Gp5
-          directory: ./target/site/jacocok
+          directory: ./target/site/jacoco
           flags: Integration Tests # optional
           verbose: true # optional (default = false)
   build:
