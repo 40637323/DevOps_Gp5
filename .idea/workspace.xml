@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="">
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="adding comments in App.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/universal/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/universal/City.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +96,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/view-population",
+    "git-widget-placeholder": "feature/all-view",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/DELL/IdeaProjects/DevOpsCourseWork/DevOps_Gp5",
     "node.js.detected.package.eslint": "true",
@@ -106,7 +104,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "database.query.execution",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -236,7 +234,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24582b8d" />
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
       </set>
     </attachedChunks>
   </component>
@@ -256,6 +254,7 @@
       <workItem from="1707400365420" duration="6358000" />
       <workItem from="1707444301753" duration="1802000" />
       <workItem from="1707456716396" duration="53000" />
+      <workItem from="1708496913315" duration="5879000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -406,7 +405,8 @@
     <MESSAGE value="adding bold in printing to app.java" />
     <MESSAGE value="merging release to master" />
     <MESSAGE value="changing main.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="changing main.yml" />
+    <MESSAGE value="adding comments in App.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding comments in App.java" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppTest_testViewPopulationInContinentConNull.ic" NAME="AppTest.testViewPopulationInContinentConNull Coverage Results" MODIFIED="1708269727925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

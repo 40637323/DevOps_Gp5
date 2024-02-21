@@ -91,8 +91,6 @@ public class City {
      * The following is getter setter method for retrieving country name where related city located.
      */
 
-    //private String nameOfCountry = String.valueOf(new ArrayList<>());  // private ArrayList
-
     // Getter
     private String countryName;
     public String getCountryOfCity() {
