@@ -26,8 +26,6 @@ There are five classes implemented. These classes are located under src/main/jav
 - App.java
 - City.java
 - Country.java
-- Countrylanguage.java
-- Main.java
 
 ## Code of Conduct:
 - School late - 1 mark
