@@ -4,7 +4,10 @@ on:
     branches:
       - master
       - feature/all-view
+<<<<<<<<< Temporary merge branch 1
+=========
       - feature/view-population
+>>>>>>>>> Temporary merge branch 2
       - develop
 jobs:
   UnitTests:

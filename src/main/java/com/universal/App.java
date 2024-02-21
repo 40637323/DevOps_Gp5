@@ -68,18 +68,20 @@ public class App
     }
 
     /**
-     * Retrieves a list of countries in the world and orders them by population.
-     * @return a List of Country objects representing countries in the world.
+     * Retrieves a list of countries from the world and orders them by population.
+     * @return a List of Country objects
      */
     public List<Country> getCountries() {
 
-        List<Country> countries = new ArrayList<>();
+        List<Country> countries = new ArrayList<>(); // create a new array list
+
         // Check connection is not null
         if (con == null)
         {
             System.out.println("No connection");
             return countries;
         }
+
         //execute the query form database
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery("SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
@@ -88,43 +90,37 @@ public class App
                     "ON city.id = country.capital\n" +
                     "ORDER BY country.population DESC");
 
+            //use setter method to call the get method from country.java
             while (rs.next()) {
-                //creating a new object from the country class
-                Country country = new Country();
-
-                //using setter method to call the get method from country.java
+                Country country = new Country(); //create a new object
                 country.setCode(rs.getString("country.code")); //set the country code
-                country.setName(rs.getString("country.name")); //set the country name 
-                country.setContinent(rs.getString("country.continent")); //set the country's related continent
-                country.setRegion(rs.getString("country.region")); //set the country's related region
+                country.setName(rs.getString("country.name")); //set the country name
+                country.setContinent(rs.getString("country.continent")); //set the country continent
+                country.setRegion(rs.getString("country.region")); //set the country region
                 country.setPopulation(rs.getLong("country.population")); //set the country population
-                country.setCapital(rs.getString("city.name")); // set the capital city name of the country
+                country.setCapital(rs.getString("city.name")); //set the capital city name
 
-                //adding a new created object to the list "countries"
-                countries.add(country);
+                countries.add(country); //add the country object to the list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
 
-        return countries; // return list which includes retrieved query
+        return countries; //return the array list which includes necessary information
     }
     /**
      * Retrieves a list of countries from the Asian continent and orders them by population.
      * @return a List of Country objects representing countries in Asia.
      */
     public List<Country> getCountriesInAsia() {
+        List<Country> countries = new ArrayList<>(); //create a new array list
 
-        //create a new list 
-        List<Country> countries = new ArrayList<>();
-
-        //check to know if there is connection
+        //check to know if there is a connection
         if (con == null)
         {
             System.out.println("No connection");
             return countries;
         }
-        
         //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
@@ -136,33 +132,28 @@ public class App
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
-                //create a new object to set retrieved information
-                Country country = new Country();
-
                 //use setter method to call the get method from country.java
-                country.setCode(rs.getString("country.code")); // set the country code
+                Country country = new Country(); // create a new country object
+                country.setCode(rs.getString("country.code")); //set the country code
                 country.setName(rs.getString("country.name")); //set the country name
-                country.setContinent(rs.getString("country.continent")); //set the country's related continent
-                country.setRegion(rs.getString("country.region")); //set the country's related region
+                country.setContinent(rs.getString("country.continent")); //set the country continent
+                country.setRegion(rs.getString("country.region")); //set the country region
                 country.setPopulation(rs.getLong("country.population")); //set the country population
-                country.setCapital(rs.getString("city.name")); //set the capital city of the country
+                country.setCapital(rs.getString("city.name")); //set the capital city name of the country
 
-                 //adding a new created object to the list "countries"
-                countries.add(country);
+                countries.add(country); //add country object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return countries; //return retrieved query list
+        return countries; //return the array list which includes necessary information
     }
 
     /** Retrieves a list of countries from the South East Asia region and orders them by population.
      * @return a List of Country for representing countries in South East Asia.
      */
     public List<Country> getCountriesInSouthEastAsia() {
-        
-        //create a new arraylist 
-        List<Country> countries = new ArrayList<>();
+        List<Country> countries = new ArrayList<>(); //create a new array list
 
         //check to know if there is connection
         if (con == null)
@@ -170,7 +161,7 @@ public class App
             System.out.println("No connection");
             return countries;
         }
-        
+
         //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name " +
@@ -182,37 +173,30 @@ public class App
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
-                
-                //create a new object to set retrieved information
-                Country country = new Country();
-
                 //use setter method to call the get method from country.java
+                Country country = new Country(); //create a new country object
                 country.setCode(rs.getString("country.code")); //set the country code
                 country.setName(rs.getString("country.name")); //set the country name
-                country.setContinent(rs.getString("country.continent")); //set the country's related continent
-                country.setRegion(rs.getString("country.region")); //set the country's related region 
+                country.setContinent(rs.getString("country.continent")); //set the country continent
+                country.setRegion(rs.getString("country.region")); //set the country region
                 country.setPopulation(rs.getLong("country.population")); //set the country population
                 country.setCapital(rs.getString("city.name")); //set the capital city name of the country
-                 
-                //adding a new created object to the list "countries"
-                countries.add(country);
+
+                countries.add(country); //add country object to the array list "countries"
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return countries; // return retrieved query list
+        return countries;  //return the array list which includes necessary information
     }
 
     /** report related to all the cities in the world organised by largest population to smallest.
-     * @return a list of city objects.
      * */
     public List<City> getCitiesOrderedByPopulation() {
+        List<City> allCitiesWorld = new ArrayList<>(); //create a new array list
 
-        //create a new array list 
-        List<City> allCitiesWorld = new ArrayList<>();
-        
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
-            // Adjusted SQL query to exclude city ID
             String sql = "SELECT city.name, city.district, city.Population, country.name AS CountryName " +
                     "FROM city " +
                     "JOIN country ON city.CountryCode = country.Code " +
@@ -220,12 +204,10 @@ public class App
             ResultSet rs = stmt.executeQuery(sql);
 
             //use the setter method to get the city data
-            while (rs.next()) 
-
-                //create a new object 
-                City city = new City();
+            while (rs.next()) {
+                City city = new City(); //create a new city object
                 city.setCityName(rs.getString("name")); // Set the city name
-                city.setCountryOfCity(rs.getString("CountryName")); // Set the country name where the city locates
+                city.setCountryOfCity(rs.getString("CountryName")); // Set the country name
                 city.setCityDistrict(rs.getString("district")); // Set the district
                 city.setCityPopulation(rs.getInt("Population")); // Set the population
 
@@ -235,14 +217,15 @@ public class App
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return allCitiesWorld; // return the retrieved query list 
+        return allCitiesWorld; //return the array list which includes necessary information
     }
 
     /** report related to all the cities in a continent organised by largest population to smallest.
      * @return a List of City objects.
      */
     public List<City> getCitiesByContinentOrderedByPopulation() {
-        List<City> allCitiesContinent = new ArrayList<>();
+        List<City> allCitiesContinent = new ArrayList<>(); //create a new array list
+
         //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.Name, city.District, city.Population, country.name AS CountryName " +
@@ -253,26 +236,25 @@ public class App
 
             //use setter method to call the get method from city.java
             while (rs.next()) {
-                City city = new City(); // create a new city object
+                City city = new City(); //create a new city object
                 city.setCityName(rs.getString("Name")); // set the city name
-                city.setCountryOfCity(rs.getString("CountryName")); //set the country name where the city locates
-                city.setCityDistrict(rs.getString("District")); //set the district related to city
-                city.setCityPopulation(rs.getInt("Population")); //set city population
+                city.setCountryOfCity(rs.getString("CountryName")); //set the country name of that city
+                city.setCityDistrict(rs.getString("District")); //set the city district
+                city.setCityPopulation(rs.getInt("Population")); //set the city population
 
-                allCitiesContinent.add(city); // add city object to the lsit 
+                allCitiesContinent.add(city); //add a city object to the array list
             }
 
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return allCitiesContinent; // return the retrieved query list
+        return allCitiesContinent;  //return the array list which includes necessary information
     }
 
     /** report related to all the cities in a region organised by largest population to smallest.
-    * @return the list of city objects.
      */
     public List<City> getCitiesByRegionOrderedByPopulation(){
-        List<City> allCitiesRegion = new ArrayList<>(); //create a new list
+        List<City> allCitiesRegion = new ArrayList<>(); //create a new array list
 
         //execute the query form database
         try (Statement stmt = con.createStatement()) {
@@ -283,27 +265,27 @@ public class App
 
             //use setter method to call the get method from city.java
             while (rs.next()) {
-                City city = new City();
-                city.setCityName(rs.getString("Name")); // set the city name 
-                city.setCountryOfCity(rs.getString("CountryName")); //set the country name where city locates
-                city.setCityDistrict(rs.getString("District")); //set the city's related district
+                City city = new City(); //create a new city object
+                city.setCityName(rs.getString("Name")); //set the city name
+                city.setCountryOfCity(rs.getString("CountryName")); //set the country name of that city
+                city.setCityDistrict(rs.getString("District")); //set the city district
                 city.setCityPopulation(rs.getInt("Population")); //set the city population
 
-                allCitiesRegion.add(city); // add city object to the list
+                allCitiesRegion.add(city); //add the city object to the array list
             }
 
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return allCitiesRegion; //return the retrieved query list 
+        return allCitiesRegion; //return the array list which includes necessary information
     }
 
     /** report related to all the cities in a country organised by largest population to smallest.
-     * @return the list of cities
+     *
      */
 
     public List<City> getCitiesInCountryOrderedByPopulation() {
-        List<City> allCitiesCountry = new ArrayList<>(); //create a new list 
+        List<City> allCitiesCountry = new ArrayList<>(); //create a new array list
         try (Statement stmt = con.createStatement()) {
             // SQL query to select cities in a specific country ordered by population
             String sql = "SELECT city.Name, city.District, city.Population, country.name AS CountryName " +
@@ -313,11 +295,11 @@ public class App
 
             //use setter method to call the get method from city.java
             while (rs.next()) {
-                City city = new City();
-                city.setCityName(rs.getString("Name")); //set city name
-                city.setCountryOfCity(rs.getString("CountryName")); //set the related country name to the city
+                City city = new City(); //create a new city object
+                city.setCityName(rs.getString("Name")); //set the city name
+                city.setCountryOfCity(rs.getString("CountryName")); ///set the country name of that city
                 city.setCityDistrict(rs.getString("District")); //set the city district
-                city.setCityPopulation(rs.getInt("Population")); //set the city population 
+                city.setCityPopulation(rs.getInt("Population")); //set the city population
 
                 allCitiesCountry.add(city); // Add the city object to the list
             }
@@ -325,16 +307,15 @@ public class App
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return allCitiesCountry; //return the list 
+        return allCitiesCountry; //return the array list which includes necessary information
     }
 
     /** report related to all the cities in a 'Bueno Aires' district organised by largest population to smallest.
-    * @return the city list
      */
     public List<City> getCitiesInDistrict() {
-        List<City> allCitiesDistrict = new ArrayList<>(); // create a new list
+        List<City> allCitiesDistrict = new ArrayList<>(); //create a new array list
         try (Statement stmt = con.createStatement()) {
-            // Corrected SQL query to retrieve information on the district parameter
+            // Corrected SQL query to use the district parameter
             String sql = "SELECT city.name AS cityName, country.name AS countryName, city.District, city.population " +
                     "FROM city " +
                     "JOIN country ON city.CountryCode = country.Code " +
@@ -346,57 +327,56 @@ public class App
             while (rs.next()) {
                 City city = new City(); //create a new city object
                 city.setCityName(rs.getString("cityName")); //set the city name
-                city.setCountryOfCity(rs.getString("countryName")); //set the country name where city locates
-                city.setCityDistrict(rs.getString("District")); //set the city district
+                city.setCountryOfCity(rs.getString("countryName")); //set the country name where the city locates
+                city.setCityDistrict(rs.getString("District")); // set the city district
                 city.setCityPopulation(rs.getInt("population")); //set the city population
 
-                allCitiesDistrict.add(city); //add city objet to the list
+                allCitiesDistrict.add(city); //add the city object to the array list
             }
 
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return allCitiesDistrict; //return the list
+        return allCitiesDistrict; //return the array list which includes necessary information
     }
 
 
     /** report related to all the capital cities in the world organised by largest population to smallest.
-    * @ return the capital city list
      */
     public List<City> getAllCapitalCitiesByPopulation() {
-        List<City> capitalCities = new ArrayList<>(); //create a new list 
+        List<City> capitalCities = new ArrayList<>(); //create a new array list
 
-        // Correct SQL query to retrieve information on the capital cities in the world
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
                     "INNER JOIN country\n" +
                     "ON city.countryCode = country.code AND city.id = country.capital\n" +
                     "ORDER BY city.population DESC\n";
+
+            //returns an instance of ResultSet when a select query is executed.
             ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
             while (rs.next()) {
-                City city = new City(); //create a new object
+                City city = new City(); //create a new city object
                 city.setCityName(rs.getString("city.name")); //set the capital city name
-                city.setCountryCode(rs.getString("country.name")); //set the country name
+                city.setCountryCode(rs.getString("country.name")); //set the county name
                 city.setCityPopulation(rs.getInt("city.Population")); //set the capital city population
 
-                capitalCities.add(city); // add city object to the list
+                capitalCities.add(city); //add the city object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return capitalCities; //return the list of capital cities in the world
+        return capitalCities; //return the array list which includes necessary information
     }
 
     /** All the capital cities in a continent organised by largest population to smallest.
-     * @return the capital cities list 
      */
 
     public List<City> getCapitalCitiesByContinentOrderedByPopulation() {
-        List<City> capitalInContinent = new ArrayList<>(); //creat a new list 
+        List<City> capitalInContinent = new ArrayList<>(); //create a new array list
 
-        // SQL query to retrieve capital cities in a continent 
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
@@ -404,29 +384,31 @@ public class App
                     "ON city.countryCode = country.code AND city.id = country.capital\n" +
                     "WHERE country.continent = 'Africa'\n" +
                     "ORDER BY city.population DESC\n";
+
+            //returns an instance of ResultSet when a select query is executed
             ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
             while (rs.next()) {
-                City city = new City(); //create a new city object 
+                City city = new City(); //create a new city object
                 city.setCityName(rs.getString("city.name")); //set the capital city name
                 city.setCountryCode(rs.getString("country.name")); //set the country name
-                city.setCityPopulation(rs.getInt("city.Population")); //set the capital city population 
+                city.setCityPopulation(rs.getInt("city.Population")); //set the population of capital city
 
-                capitalInContinent.add(city); // add city object to the list
+                capitalInContinent.add(city); //add city object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return capitalInContinent; //return the list 
+        return capitalInContinent; //return the array list which includes necessary information
     }
 
     /** All the capital cities in a region organised by largest to smallest.
-     * @return the capital cities list 
+     *
+     * @return the list of city object
      */
     public List<City> getCapitalCitiesByRegionOrderedByPopulation() {
-        List<City> capitalInRegion = new ArrayList<>(); //create a new list
+        List<City> capitalInRegion = new ArrayList<>(); //create a new array list
 
-        //SQL query for retriving the capital cities in a region 
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
@@ -434,29 +416,29 @@ public class App
                     "ON city.countryCode = country.code AND city.id = country.capital\n" +
                     "WHERE country.continent = 'Africa' AND country.region = 'Central Africa'\n" +
                     "ORDER BY city.population DESC";
+
+            //returns an instance of ResultSet when a select query is executed
             ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
             while (rs.next()) {
-                City city = new City(); //create a new city object 
+                City city = new City(); //create a city object
                 city.setCityName(rs.getString("city.name")); //set the capital city name
                 city.setCountryCode(rs.getString("country.name")); //set the country name
                 city.setCityPopulation(rs.getInt("city.Population")); //set the capital city population
 
-                capitalInRegion.add(city); //add city object to the list 
+                capitalInRegion.add(city); //add city object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return capitalInRegion; //return the list 
+        return capitalInRegion; //return the array list which includes necessary information
     }
 
 
     /**
      * Retrieves a list of Top 7 Countries form world, ordered by population in descending order.
-     * @return the country list
      */
     public List<Country> getTopSevenCountriesInWorldByPopulation() {
-        List<Country> topCountries = new ArrayList<>(); //create a new list 
+        List<Country> topCountries = new ArrayList<>(); //create a new array list
 
         //check to know if there is connection
         if (con == null)
@@ -465,7 +447,7 @@ public class App
             return topCountries;
         }
 
-        // SQL query for the top 7 countries in the world 
+        //execute the query form database
         String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
                 "FROM city\n" +
                 "INNER JOIN country\n" +
@@ -475,39 +457,37 @@ public class App
 
         try (PreparedStatement pstmt = con.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery()) {
-            
             //use the setter method to get the output for the top 7 countries in world
             while (rs.next()) {
                 Country country = new Country(); //create a new country object
-                country.setCode(rs.getString("country.code")); //set the country code 
-                country.setName(rs.getString("country.name")); //set the country name
-                country.setContinent(rs.getString("country.continent")); //set the continent related to the country
-                country.setRegion(rs.getString("country.region")); //set the region related to the country
-                country.setPopulation(rs.getLong("country.population")); //set the country population 
-                country.setCapital(rs.getString("city.name")); //set the captial city name of the country 
+                country.setCode(rs.getString("country.code")); //set the country code
+                country.setName(rs.getString("country.name")); //sett the country name
+                country.setContinent(rs.getString("country.continent")); //set the continent of related country
+                country.setRegion(rs.getString("country.region")); //set the region of the country
+                country.setPopulation(rs.getLong("country.population")); //set the country population
+                country.setCapital(rs.getString("city.name")); //set the capital city name of the country
 
-                topCountries.add(country); // add country object to the list
+                topCountries.add(country); //add the country object to the arry list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return topCountries; // return the list 
+        return topCountries; //return the array list which includes necessary information
     }
     /**
      * Retrieves a list of Top 7 Countries form 'Asia' continent, ordered by population in descending order.
-     * @return the list of countries in a continent 
      */
     public List<Country> getTopSevenCountriesInAsiaByPopulation() {
-        List<Country> topCountriesContinent = new ArrayList<>(); //create a new list
+        List<Country> topCountriesContinent = new ArrayList<>(); //create a new array list
 
-        //check to know if there is connection 
+        //check to know if there is connection
         if (con == null)
         {
             System.out.println("No connection");
             return topCountriesContinent;
         }
 
-        // SQL query to list top 7 countries in Asia 
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
                     "FROM city\n" +
@@ -520,37 +500,37 @@ public class App
 
             //use the setter method to get the output for the top 7 countries in Asia
             while (rs.next()) {
-                Country country = new Country(); // create a new 'country' object 
-                country.setCode(rs.getString("country.code")); //set the country code 
-                country.setName(rs.getString("country.name")); //set the country name 
-                country.setContinent(rs.getString("country.continent")); //set the country's related continent 
-                country.setRegion(rs.getString("country.region")); //set the country's related region
+                Country country = new Country(); //create a country object
+                country.setCode(rs.getString("country.code")); //set the country code
+                country.setName(rs.getString("country.name")); //set the country name
+                country.setContinent(rs.getString("country.continent")); //set the country's continent
+                country.setRegion(rs.getString("country.region")); //set the country's region
                 country.setPopulation(rs.getLong("country.population")); //set the country population
-                country.setCapital(rs.getString("city.name")); //set the capital city name of the country 
+                country.setCapital(rs.getString("city.name")); //set the capital city name of the country
 
-                topCountriesContinent.add(country); // add the country object to the list 
+                topCountriesContinent.add(country); //add country object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return topCountriesContinent; //return the list 
+        return topCountriesContinent; //return the array list which includes necessary information
     }
 
     /**
      * Retrieves a list top 7 countries from the SouthEast Asia region and orders them by population.
-     * @return a List of Country for representing countries in SouthEast Asia
+     * @return a List of Country for representing countries in Central Africa.
      */
     public List<Country> getTopSevenCountriesInSouthEastAsia() {
-        List<Country> topSevenCountriesInRegion = new ArrayList<>(); // create a new list 
+        List<Country> topSevenCountriesInRegion = new ArrayList<>(); //create a new array list
 
-        //check to know if there is connection 
+        //check to know if there is connection
         if (con == null)
         {
             System.out.println("No connection");
             return topSevenCountriesInRegion;
         }
 
-        // SQL query to retrieve the top 7 countries in the SouthEast Asia region
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT country.code, country.name, country.continent, country.region, country.population, city.name\n" +
                     "FROM city\n" +
@@ -563,29 +543,29 @@ public class App
 
             //use the setter method to get the output for the top 7 countries in South East Asia
             while (rs.next()) {
-                Country country = new Country(); //create a new country object 
-                country.setCode(rs.getString("country.code")); //set the country code 
+                Country country = new Country(); //create the country object
+                country.setCode(rs.getString("country.code")); //set the country code
                 country.setName(rs.getString("country.name")); //set the country name
-                country.setContinent(rs.getString("country.continent")); //set the country's related continent 
-                country.setRegion(rs.getString("country.region")); //set the country's related region  
-                country.setPopulation(rs.getLong("country.population")); //set the country population 
-                country.setCapital(rs.getString("city.name")); // set the capital city name of the country 
+                country.setContinent(rs.getString("country.continent")); //set the country's continent
+                country.setRegion(rs.getString("country.region")); //set the country's region
+                country.setPopulation(rs.getLong("country.population")); //set the country population
+                country.setCapital(rs.getString("city.name")); //set the capital city of the country
 
-                topSevenCountriesInRegion.add(country); // add country object to the list
+                topSevenCountriesInRegion.add(country); //add the country object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return topSevenCountriesInRegion; //return the list 
+        return topSevenCountriesInRegion; //return the array list which includes necessary information
     }
 
     /**retrieves a list of top seven populated cities in the world
      * @return a list of cities object.
      */
     public List<City> getTopSevenCitiesInWorldOrderedByPopulation() {
-        List<City> topCitiesInWorld= new ArrayList<>(); //create the new list 
-        
-        // SQL query to retrieve a list of top seven populated cities in the world 
+        List<City> topCitiesInWorld= new ArrayList<>(); //create a new array list
+
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.district, city.population\n" +
                     "FROM city\n" +
@@ -593,31 +573,32 @@ public class App
                     "ON city.countryCode = country.code\n" +
                     "ORDER BY city.population DESC\n" +
                     "LIMIT 7";
+
+            //returns an instance of ResultSet when a select query is executed.
             ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
             while (rs.next()) {
                 City city = new City(); //create a new city object
                 city.setCityName(rs.getString("city.name")); //set the city name
-                city.setCountryOfCity(rs.getString("country.name")); //set the country name where city locates 
-                city.setCityDistrict(rs.getString("city.district")); //set the city district 
-                city.setCityPopulation(rs.getInt("city.population")); // set the city population
+                city.setCountryOfCity(rs.getString("country.name")); //set the country name
+                city.setCityDistrict(rs.getString("city.district")); //set the city's district
+                city.setCityPopulation(rs.getInt("city.population")); //set the city population
 
-                topCitiesInWorld.add(city); //add the city object to the list
+                topCitiesInWorld.add(city); //add the city object to the array list
 
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return topCitiesInWorld; //return the list
+        return topCitiesInWorld; //return the array list which includes necessary information
     }
 
     /**retrieves a list of top seven populated cities in the continent africa
      * @return a list of cities object.
      */
     public List<City> getTopSevenCitiesInContinentOrderedByPopulation() {
-        List<City> topCitiesInAfricaContinent = new ArrayList<>(); //create a new list
-        
-        // SQL query to retrieve information in a continent
+        List<City> topCitiesInAfricaContinent = new ArrayList<>(); //create a new array list
+
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.district, city.population\n" +
                     "FROM city\n" +
@@ -626,31 +607,31 @@ public class App
                     "WHERE country.continent = 'Africa'\n" +
                     "ORDER BY city.population DESC\n" +
                     "LIMIT 7";
+
+            //returns an instance of ResultSet when a select query is executed.
             ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
-            
             while (rs.next()) {
-                City city = new City(); //create a new city object 
-                city.setCityName(rs.getString("city.name")); // set the city name 
-                city.setCountryOfCity(rs.getString("country.name")); //set the country name where city locates
-                city.setCityDistrict(rs.getString("city.district")); //set the city district
+                City city = new City(); //create a new city object
+                city.setCityName(rs.getString("city.name")); //set the city name
+                city.setCountryOfCity(rs.getString("country.name")); //set the country name
+                city.setCityDistrict(rs.getString("city.district")); //set the city's district
                 city.setCityPopulation(rs.getInt("city.population")); //set the city population
 
-                topCitiesInAfricaContinent.add(city); //add city object to the list 
+                topCitiesInAfricaContinent.add(city); //add the city object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return topCitiesInAfricaContinent; //return the list 
+        return topCitiesInAfricaContinent; //return the array list which includes necessary information
     }
 
     /**retrieves a list of top seven populated cities in a region 'western Africa' from the continent 'Africa'
      * @return a list of cities object.
      */
     public List<City> getTopSevenCitiesInRegionOrderedByPopulation() {
-        List<City> topCitiesInWesternAfricaRegion = new ArrayList<>(); //create a new list 
-        
-        // SQL query to retrieve top seven populated cities in a region 
+        List<City> topCitiesInWesternAfricaRegion = new ArrayList<>(); //create a new array list
+
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.district, city.population\n" +
                     "FROM city\n" +
@@ -659,31 +640,32 @@ public class App
                     "WHERE country.continent = 'Africa' AND country.region = 'Western Africa'\n" +
                     "ORDER BY city.population DESC\n" +
                     "LIMIT 7";
-            ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
-            
-            while (rs.next()) {
-                City city = new City(); //create a new city object 
-                city.setCityName(rs.getString("city.name")); //set the city name
-                city.setCountryOfCity(rs.getString("country.name")); //set the country name where city locates
-                city.setCityDistrict(rs.getString("city.district")); //set the city's related district 
-                city.setCityPopulation(rs.getInt("city.population")); //set the city population 
 
-                topCitiesInWesternAfricaRegion.add(city); //add the city object to the list
+            //returns an instance of ResultSet when a select query is executed.
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                City city = new City(); //create a new city object
+                city.setCityName(rs.getString("city.name")); //set the city name
+                city.setCountryOfCity(rs.getString("country.name")); //set the country name
+                city.setCityDistrict(rs.getString("city.district")); //set the city's district
+                city.setCityPopulation(rs.getInt("city.population")); //set the city population
+
+                topCitiesInWesternAfricaRegion.add(city); // add the city object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return topCitiesInWesternAfricaRegion; // return the list 
+        return topCitiesInWesternAfricaRegion; //return the array list which includes necessary information
     }
 
     /**retrieves a list of top seven populated cities in 'Nigeria' country in a region 'Central Africa' from the continent 'Africa'
      * @return a list of cities object.
      */
     public List<City> getTopSevenCitiesInCountryOrderedByPopulation() {
-        List<City> topCitiesInNigeriaCountry = new ArrayList<>(); //create a new list 
+        List<City> topCitiesInNigeriaCountry = new ArrayList<>(); //create a new array list
+
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
-            // SQL query which retrieves top seven populated cities in a country 
             String sql = "SELECT city.name, country.name, city.district, city.population\n" +
                     "FROM city\n" +
                     "INNER JOIN country\n" +
@@ -691,30 +673,30 @@ public class App
                     "WHERE country.continent = 'Africa' AND country.region = 'Western Africa' AND country.name = 'Nigeria'\n" +
                     "ORDER BY city.population DESC\n" +
                     "LIMIT 7";
-            ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
-            
-            while (rs.next()) {
-                City city = new City(); //create a new city object 
-                city.setCityName(rs.getString("city.name")); //set the city name 
-                city.setCountryOfCity(rs.getString("country.name")); //set the country name 
-                city.setCityDistrict(rs.getString("city.district")); //set the city related district 
-                city.setCityPopulation(rs.getInt("city.population")); //set the city population 
 
-                topCitiesInNigeriaCountry.add(city); //add city object to the list 
+            //returns an instance of ResultSet when a select query is executed.
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                City city = new City(); //create the city object
+                city.setCityName(rs.getString("city.name")); //set the city name
+                city.setCountryOfCity(rs.getString("country.name")); //set the country name
+                city.setCityDistrict(rs.getString("city.district")); //set the city's district
+                city.setCityPopulation(rs.getInt("city.population")); //set the city population
+
+                topCitiesInNigeriaCountry.add(city); //add the city object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return topCitiesInNigeriaCountry; //return the list 
+        return topCitiesInNigeriaCountry; //return the array list which includes necessary information
     }
     /**retrieves a list of top seven populated cities in district 'Oyo & Osun' from 'Nigeria' country in a region 'Central Africa' from the continent 'Africa'
      * @return a list of cities object.
      */
     public List<City> getTopSevenCitiesInDistrictOrderedByPopulation() {
-        List<City> topCitiesInOyoAndOsunDistrict = new ArrayList<>(); //create a new list 
-        
-        //SQL query to retrieve cities' information on district parameter
+        List<City> topCitiesInOyoAndOsunDistrict = new ArrayList<>(); //create a new array list
+
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.district, city.population\n" +
                     "FROM city\n" +
@@ -723,30 +705,31 @@ public class App
                     "WHERE country.continent = 'Africa' AND country.region = 'Western Africa' AND country.name = 'Nigeria' AND city.district = 'Oyo & Osun'\n" +
                     "ORDER BY city.population DESC\n" +
                     "LIMIT 7";
-            ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
-            
-            while (rs.next()) {
-                City city = new City(); //create a city object
-                city.setCityName(rs.getString("city.name")); //set the city name 
-                city.setCountryOfCity(rs.getString("country.name")); //set the country name
-                city.setCityDistrict(rs.getString("city.district")); //set the city related district 
-                city.setCityPopulation(rs.getInt("city.population")); //set the city population 
 
-                topCitiesInOyoAndOsunDistrict.add(city); //add city object to the list 
+            //returns an instance of ResultSet when a select query is executed.
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                City city = new City(); //create a new city object
+                city.setCityName(rs.getString("city.name")); //set the city name
+                city.setCountryOfCity(rs.getString("country.name")); //set the country name
+                city.setCityDistrict(rs.getString("city.district")); //set the city's district
+                city.setCityPopulation(rs.getInt("city.population")); //set the city population
+
+                topCitiesInOyoAndOsunDistrict.add(city); //add the city object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return topCitiesInOyoAndOsunDistrict; //return the list 
+        return topCitiesInOyoAndOsunDistrict; //return the array list which includes necessary information
     }
 
     /**retrieves a list of top seven populated capital cities in the world
      * @return a list of cities object.
      */
     public List<City> getTopSevenCapitalCitiesOrderedByPopulation() {
-        List<City> topCapitalInWorld = new ArrayList<>();
-        // Corrected SQL query to dynamically use the district parameter
+        List<City> topCapitalInWorld = new ArrayList<>(); //create a new array list
+
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
@@ -754,27 +737,30 @@ public class App
                     "ON city.countryCode = country.code AND city.id = country.capital\n" +
                     "ORDER BY city.population DESC\n" +
                     "LIMIT 7";
-            ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
-            while (rs.next()) {
-                City city = new City();
-                city.setCityName(rs.getString("city.name"));
-                city.setCountryCode(rs.getString("country.name"));
-                city.setCityPopulation(rs.getInt("city.Population"));
 
-                topCapitalInWorld.add(city);
+            //returns an instance of ResultSet when a select query is executed.
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                City city = new City(); //create a new city object
+                city.setCityName(rs.getString("city.name")); //set the capital city name
+                city.setCountryCode(rs.getString("country.name")); //set the country name
+                city.setCityPopulation(rs.getInt("city.Population")); //set the capital city's population
+
+                topCapitalInWorld.add(city); // add the city object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return topCapitalInWorld;
+        return topCapitalInWorld; //return the array list which includes necessary information
     }
 
     /**retrieves a list of top seven populated capital cities in the continent 'Africa'
      * @return a list of cities object.
      */
     public List<City> getTopSevenCapitalCitiesByContinentOrderedByPopulation() {
-        List<City> topCapitalInContinent = new ArrayList<>();
+        List<City> topCapitalInContinent = new ArrayList<>(); //create a new array list
+
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
@@ -783,27 +769,30 @@ public class App
                     "WHERE country.continent = 'Africa'\n" +
                     "ORDER BY city.population DESC\n" +
                     "LIMIT 7";
-            ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
-            while (rs.next()) {
-                City city = new City();
-                city.setCityName(rs.getString("city.name"));
-                city.setCountryCode(rs.getString("country.name"));
-                city.setCityPopulation(rs.getInt("city.Population"));
 
-                topCapitalInContinent.add(city);
+            //returns an instance of ResultSet when a select query is executed.
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                City city = new City(); //create a new city object
+                city.setCityName(rs.getString("city.name")); //set the capital city name
+                city.setCountryCode(rs.getString("country.name")); //set the country name
+                city.setCityPopulation(rs.getInt("city.Population")); //set the city population
+
+                topCapitalInContinent.add(city); //add the city object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
         }
-        return topCapitalInContinent;
+        return topCapitalInContinent; //return the array list which includes necessary information
     }
 
     /**retrieves a list of top seven populated capital cities in the 'Central Africa' Region
      * @return a list of cities object.
      */
     public List<City> getTopSevenCapitalCitiesByRegionOrderedByPopulation() {
-        List<City> topCapitalInRegion= new ArrayList<>();
+        List<City> topCapitalInRegion= new ArrayList<>(); //create a new array list
+
+        //execute the query form database
         try (Statement stmt = con.createStatement()) {
             String sql = "SELECT city.name, country.name, city.population\n" +
                     "FROM city\n" +
@@ -812,15 +801,16 @@ public class App
                     "WHERE country.continent = 'Africa' AND country.region = 'Central Africa'\n" +
                     "ORDER BY city.population DESC\n" +
                     "LIMIT 7";
-            ResultSet rs = stmt.executeQuery(sql);
-            //executeQuery(): It returns an instance of ResultSet when a select query is executed.
-            while (rs.next()) {
-                City city = new City();
-                city.setCityName(rs.getString("city.name"));
-                city.setCountryCode(rs.getString("country.name"));
-                city.setCityPopulation(rs.getInt("city.Population"));
 
-                topCapitalInRegion.add(city);
+            //returns an instance of ResultSet when a select query is executed.
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                City city = new City(); //create a new city object
+                city.setCityName(rs.getString("city.name")); //set the capital city name
+                city.setCountryCode(rs.getString("country.name")); //set the country name
+                city.setCityPopulation(rs.getInt("city.Population")); //set the capital city's population
+
+                topCapitalInRegion.add(city); //add the city object to the array list
             }
         } catch (SQLException e) {
             System.out.println("Error executing query: " + e.getMessage());
@@ -831,11 +821,14 @@ public class App
     /** retrieve and print all countries ordered by population in descending
      */
     public void displayCountries(List<Country> list) {
+
+        //check to know if there is connection
         if (con == null) {
             System.out.println("No connection");
             return;
         }
 
+        //table header
         System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+----------------+--------------------------------------+");
         System.out.println("| Code  | Name                                   | Continent       | Region                        | Population     | Capital                              |");
         System.out.println("+-------+----------------------------------------+-----------------+-------------------------------+----------------+--------------------------------------+");
@@ -862,6 +855,8 @@ public class App
      */
 
     public void displayCities(List<City> list) {
+
+        //table header
         System.out.println("+----------------------------------------+----------------------------------------+----------------------------------------+------------------+");
         System.out.println("| City Name                              | Country Name                           | District                               | Population       |");
         System.out.println("+----------------------------------------+----------------------------------------+----------------------------------------+------------------+");
@@ -881,6 +876,8 @@ public class App
     /** retrieve and print all capital cities ordered by population in descending
      */
     public void displayCapitalCities(List<City> list) {
+
+        //table header
         System.out.println("+----------------------------------------+----------------------------------------+--------------+");
         System.out.println("| Capital City                           | Country Name                           | Population   |");
         System.out.println("+----------------------------------------+----------------------------------------+--------------+");
@@ -897,8 +894,12 @@ public class App
     }
 
 
-    //Display The population of people, people living in cities, and people not living in cities in each continent.
+    /** Display The population of people, people living in cities, and people not living in cities in each continent.
+     *
+     */
     public void printPopulationOfLivingOrNotLivinginContinentReport() {
+
+        //check to know if there is connection
         if (con == null) {
             System.out.println("Print Population Of Living Or Not Living in Continent Report");
             return;
@@ -916,6 +917,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
+            //table header
             System.out.println("\u001B[1mThe population of people, people living in cities, and people not living in cities in each continent\u001B[0m");
             System.out.println("+----------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
             System.out.println("| Continent            | Total Population    | City Population     | City Population %   | Non-City Population | Non-City Population %|");
@@ -923,14 +925,15 @@ public class App
 
             //output the data using get method
             while (rs.next()) {
-                String continent = rs.getString("Continent");
-                long totalPopulation = rs.getLong("TotalPopulation");
-                long cityPopulation = rs.getLong("CityPopulation");
-                long nonCityPopulation = rs.getLong("NonCityPopulation");
+                String continent = rs.getString("Continent"); //get the name of continent
+                long totalPopulation = rs.getLong("TotalPopulation"); //get the total population
+                long cityPopulation = rs.getLong("CityPopulation"); //get the city population
+                long nonCityPopulation = rs.getLong("NonCityPopulation"); //get the population in rural area
 
-                double cityPopulationPercentage = (double) cityPopulation / totalPopulation * 100;
-                double nonCityPopulationPercentage = (double) nonCityPopulation / totalPopulation * 100;
+                double cityPopulationPercentage = (double) cityPopulation / totalPopulation * 100; //calculate the population of the city
+                double nonCityPopulationPercentage = (double) nonCityPopulation / totalPopulation * 100; //calculate the population of people in rural area
 
+                //adding the necessary data to the table
                 System.out.printf("| %-20s | %,19d | %,19d | %,19.2f%% | %,19d | %,19.2f%% |\n",
                         continent, totalPopulation, cityPopulation, cityPopulationPercentage, nonCityPopulation, nonCityPopulationPercentage);
             }
@@ -941,8 +944,12 @@ public class App
         }
     }
 
-    //The population of people, people living in cities, and people not living in cities in each region.
+    /**The population of people, people living in cities, and people not living in cities in each region.
+     *
+     */
     public void printPopulationOfLivingOrNotLivinginRegionReport() {
+
+        //check to know if there is connection
         if (con == null) {
             System.out.println("No database connection.");
             return;
@@ -961,6 +968,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
+            //table header
             System.out.println("\u001B[1mThe population of people, people living in cities, and people not living in cities in each region\u001B[0m");
             System.out.println("+---------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
             System.out.println("| Region                    | Total Population    | City Population     | City Pop. %         | Non-City Population | Non-City Pop. %     |");
@@ -968,14 +976,15 @@ public class App
 
             while (rs.next()) {
                 //output the data using getter method
-                String region = rs.getString("Region");
-                long totalRegionPopulation = rs.getLong("TotalRegionPopulation");
-                long cityPopulation = rs.getLong("CityPopulation");
-                long nonCityPopulation = rs.getLong("NonCityPopulation");
+                String region = rs.getString("Region"); //get the name of the region
+                long totalRegionPopulation = rs.getLong("TotalRegionPopulation"); //get the total population
+                long cityPopulation = rs.getLong("CityPopulation"); //get the city population
+                long nonCityPopulation = rs.getLong("NonCityPopulation"); //get the population in rural area
 
-                double cityPopulationPercentage = totalRegionPopulation > 0 ? (double) cityPopulation / totalRegionPopulation * 100 : 0;
-                double nonCityPopulationPercentage = totalRegionPopulation > 0 ? (double) nonCityPopulation / totalRegionPopulation * 100 : 0;
+                double cityPopulationPercentage = totalRegionPopulation > 0 ? (double) cityPopulation / totalRegionPopulation * 100 : 0; //get the population of people in urban area
+                double nonCityPopulationPercentage = totalRegionPopulation > 0 ? (double) nonCityPopulation / totalRegionPopulation * 100 : 0; //get the population of people in rural area
 
+                //set information in the table
                 System.out.printf("| %-25s | %,19d | %,19d | %,19.2f%% | %,19d | %,19.2f%% |\n",
                         region, totalRegionPopulation, cityPopulation, cityPopulationPercentage, nonCityPopulation, nonCityPopulationPercentage);
             }
@@ -986,12 +995,17 @@ public class App
         }
     }
 
-    //The population of people, people living in cities, and people not living in cities in each country
+    /**The population of people, people living in cities, and people not living in cities in each country
+     *
+     */
     public void printPopulationOfLivingOrNotLivinginCountryReport() {
+
+        //check to know if there is connection
         if (con == null) {
             System.out.println("No database connection.");
             return;
         }
+        //implement query for getting output the population of living or not living country report
         String sql = "SELECT " +
                 "c.Name AS Country, " +
                 "c.Population AS TotalPopulation, " +
@@ -1004,20 +1018,22 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
+            //table header
             System.out.println("\u001B[1mThe population of people, people living in cities, and people not living in cities in each country\u001B[0m");
             System.out.println("+----------------------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
             System.out.println("| Country                                | Total Population    | City Population     | City Pop. %         | Non-City Population | Non-City Pop. %     |");
             System.out.println("+----------------------------------------+---------------------+---------------------+---------------------+---------------------+---------------------+");
 
             while (rs.next()) {
-                String country = rs.getString("Country");
-                long totalPopulation = rs.getLong("TotalPopulation");
-                long cityPopulation = rs.getLong("CityPopulation");
-                long nonCityPopulation = rs.getLong("NonCityPopulation");
+                String country = rs.getString("Country"); //get the country name
+                long totalPopulation = rs.getLong("TotalPopulation"); //get the total population of the country
+                long cityPopulation = rs.getLong("CityPopulation"); //get the population of people in urban area
+                long nonCityPopulation = rs.getLong("NonCityPopulation"); //get the population of people in rural area
 
-                double cityPopulationPercentage = totalPopulation > 0 ? (double) cityPopulation / totalPopulation * 100 : 0;
-                double nonCityPopulationPercentage = totalPopulation > 0 ? (double) nonCityPopulation / totalPopulation * 100 : 0;
+                double cityPopulationPercentage = totalPopulation > 0 ? (double) cityPopulation / totalPopulation * 100 : 0; //get the percentage of the population of people in urban area
+                double nonCityPopulationPercentage = totalPopulation > 0 ? (double) nonCityPopulation / totalPopulation * 100 : 0; //get the percentage of population of people in rural area
 
+                //set information in the table
                 System.out.printf("| %-38s | %,19d | %,19d | %,19.2f%% | %,19d | %,19.2f%% |\n",
                         country, totalPopulation, cityPopulation, cityPopulationPercentage, nonCityPopulation, nonCityPopulationPercentage);
             }
@@ -1028,7 +1044,9 @@ public class App
         }
     }
 
-    //Display the select Language
+    /**Display numbers of speakers in Chinese, English, Hindi, Spanish and Arabic
+     *
+     */
     public void printSelectedLanguageSpeakers() {
         if (con == null) {
             System.out.println("printSelectedLanguageSpeakers");
@@ -1048,6 +1066,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
+            //table header
             System.out.println("\u001B[1mSelected Language Speakers Report\u001B[0m");
             System.out.println("+-------------+------------------------+-------------------------------+");
             System.out.println("| Language    | Number of Speakers     | World Population Percentage   |");
@@ -1055,10 +1074,11 @@ public class App
 
             while (rs.next()) {
                 //get the data to get the output
-                String language = rs.getString("Language");
-                long numberOfSpeakers = rs.getLong("NumberOfSpeakers");
-                double worldPopulationPercentage = rs.getDouble("WorldPopulationPercentage");
+                String language = rs.getString("Language"); //get the language name
+                long numberOfSpeakers = rs.getLong("NumberOfSpeakers"); //get the number of speakers in each language
+                double worldPopulationPercentage = rs.getDouble("WorldPopulationPercentage"); //get the percentage of the speakers when comparing to world population
 
+                //set information in the table
                 System.out.printf("| %-11s | %,22d | %,29.2f%% |\n",
                         language, numberOfSpeakers, worldPopulationPercentage);
             }
@@ -1069,8 +1089,10 @@ public class App
         }
     }
 
-    //Display World Population
+    /**Display World Population */
     public void printWorldPopulation() {
+
+        //check to know if there is connection
         if (con == null) {
             System.out.println("printWorldPopulation");
             return;
@@ -1081,11 +1103,13 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
+            //table header
             System.out.println("\u001B[1mThe population of the world\u001B[0m");
             System.out.println("+------------------+");
             System.out.println("| World Population |");
             System.out.println("+------------------+");
 
+            //set the world population in the table
             if (rs.next()) {
                 long worldPopulation = rs.getLong("WorldPopulation");
                 System.out.printf("| %,16d |\n", worldPopulation);
@@ -1097,8 +1121,10 @@ public class App
         }
     }
 
-    //Display Continent Population
+    /** Display Continent Population */
     public void printContinentPopulation() {
+
+        //check to know if there is connection
         if (con == null) {
             System.out.println("printContinentPopulation");
             return;
@@ -1109,6 +1135,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
+            //table header
             System.out.println("\u001B[1mThe population of a continent\u001B[0m");
             System.out.println("+-------------------+---------------------+");
             System.out.println("| Continent         | Population          |");
@@ -1116,9 +1143,9 @@ public class App
 
             while (rs.next()) {
                 //use get method to get the data
-                String continent = rs.getString("Continent");
-                long continentPopulation = rs.getLong("ContinentPopulation");
-                System.out.printf("| %-17s | %,19d |\n", continent, continentPopulation);
+                String continent = rs.getString("Continent"); //get the name of continent
+                long continentPopulation = rs.getLong("ContinentPopulation"); //get the population of continent
+                System.out.printf("| %-17s | %,19d |\n", continent, continentPopulation); //set information in the table
             }
 
             System.out.println("+-------------------+---------------------+");
@@ -1127,8 +1154,10 @@ public class App
         }
     }
 
-    //Display Region Population
+    /** Display Region Population */
     public void printRegionPopulation() {
+
+        //check to know if there is connection
         if (con == null) {
             System.out.println("printRegionPopulation");
             return;
@@ -1139,15 +1168,16 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
+            //table header
             System.out.println("\u001B[1mThe population of a region\u001B[0m");
             System.out.println("+----------------------+---------------------+");
             System.out.println("| Region               | Population          |");
             System.out.println("+----------------------+---------------------+");
 
             while (rs.next()) {
-                String region = rs.getString("Region");
-                long regionPopulation = rs.getLong("RegionPopulation");
-                System.out.printf("| %-20s | %,19d |\n", region, regionPopulation);
+                String region = rs.getString("Region"); //get the name of region
+                long regionPopulation = rs.getLong("RegionPopulation"); //get the population of region
+                System.out.printf("| %-20s | %,19d |\n", region, regionPopulation); //set the information in the table
             }
 
             System.out.println("+----------------------+---------------------+");
@@ -1156,8 +1186,10 @@ public class App
         }
     }
 
-    //Display Country Population
+    /** Display Country Population */
     public void printCountryPopulation() {
+
+        //check to know if there is connection
         if (con == null) {
             System.out.println("printCountryPopulation");
             return;
@@ -1168,6 +1200,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
+            //table header
             System.out.println("\u001B[1mThe population of a country\u001B[0m");
             System.out.println("+----------------------------------------------------+---------------------+");
             System.out.println("| Country                                            | Population          |");
@@ -1175,9 +1208,9 @@ public class App
 
             while (rs.next()) {
                 //use the get method to show the country population
-                String countryName = rs.getString("Name");
-                long population = rs.getLong("Population");
-                System.out.printf("| %-50s | %,19d |\n", countryName, population);
+                String countryName = rs.getString("Name"); //get the name of the country
+                long population = rs.getLong("Population"); //get the population of the country
+                System.out.printf("| %-50s | %,19d |\n", countryName, population); //set information in the table
             }
 
             System.out.println("+----------------------------------------------------+---------------------+");
@@ -1186,8 +1219,10 @@ public class App
         }
     }
 
-    //District Population
+    /** District Population */
     public void printDistrictPopulation() {
+
+        //check to know if there is connection
         if (con == null) {
             System.out.println("printDistrictPopulation");
             return;
@@ -1198,6 +1233,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
+            //table header
             System.out.println("\u001B[1mThe population of a district\u001B[0m");
             System.out.println("+--------------------------------+---------------------+");
             System.out.println("| District                       | Population          |");
@@ -1205,9 +1241,9 @@ public class App
 
             while (rs.next()) {
                 //use the get method to show the output of district population
-                String district = rs.getString("District");
-                long districtPopulation = rs.getLong("DistrictPopulation");
-                System.out.printf("| %-30s | %,19d |\n", district, districtPopulation);
+                String district = rs.getString("District"); //get the district name
+                long districtPopulation = rs.getLong("DistrictPopulation"); //get the population of district
+                System.out.printf("| %-30s | %,19d |\n", district, districtPopulation); //set information in the table
             }
 
             System.out.println("+--------------------------------+---------------------+");
@@ -1216,8 +1252,10 @@ public class App
         }
     }
 
-    //Display City Population
+    /** Display City Population */
     public void printCityPopulation() {
+
+        //check to know if there is connection
         if (con == null) {
             System.out.println("printCityPopulation");
             return;
@@ -1228,6 +1266,7 @@ public class App
         try (Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
+            //table header
             System.out.println("\u001B[1mThe population of a city\u001B[0m");
             System.out.println("+--------------------------------+---------------------+");
             System.out.println("| City                           | Population          |");
@@ -1235,9 +1274,9 @@ public class App
 
             while (rs.next()) {
                 //use the get method to show the output of city population
-                String cityName = rs.getString("Name");
-                long population = rs.getLong("Population");
-                System.out.printf("| %-30s | %,19d |\n", cityName, population);
+                String cityName = rs.getString("Name"); //get the name of the city
+                long population = rs.getLong("Population"); //get the population of the city
+                System.out.printf("| %-30s | %,19d |\n", cityName, population); //set information in the table
             }
             System.out.println("+--------------------------------+---------------------+");
         } catch (SQLException e) {
@@ -1247,7 +1286,7 @@ public class App
 
 
 
-    /** retrieves and print all the countries ordered by population by descending
+    /** collections to display related queries in the output section
      */
 
     public void displayAllQuery() {
@@ -1271,7 +1310,7 @@ public class App
 
         //All the cities in the world organised by largest population to smallest.
         List <City> citiesWorld = getCitiesOrderedByPopulation();
-        System.out.println(ANSI_BOLD1 + "All the capital cities in the world organised by largest population to smallest" + ANSI_RESET1);
+        System.out.println(ANSI_BOLD1 + "All the cities in the world organised by largest population to smallest" + ANSI_RESET1);
         displayCities(citiesWorld);
 
         //All the cities in a continent organised by largest population to smallest.
@@ -1366,6 +1405,9 @@ public class App
 
     }
 
+    /** the reports are shown in the output section
+     *
+     */
     public static void main(String[] args)
     {
         // Create new Application
