@@ -70,7 +70,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Package and Run docker compose
+      - name: Package and Run docker composez
         run: |
           mvn package -DskipTests
           docker-compose up --abort-on-container-exit

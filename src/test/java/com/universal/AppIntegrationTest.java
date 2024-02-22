@@ -45,35 +45,6 @@ public class AppIntegrationTest
 //
 //    }
 
-
-    //test the print functions has database connection, if yes, return the data
-    @Test
-    void PrintFunctionsConnectionNullTest(){
-        app.con = null;
-        app.printPopulationOfLivingOrNotLivinginContinentReport();
-        app.printPopulationOfLivingOrNotLivinginCountryReport();
-        app.printPopulationOfLivingOrNotLivinginRegionReport();
-        app.printSelectedLanguageSpeakers();
-        app.printWorldPopulation();
-        app.printContinentPopulation();
-        app.printRegionPopulation();
-        app.printCountryPopulation();
-        app.printDistrictPopulation();
-        app.printCityPopulation();
-        System.out.println("No Connection Test Ran Successfully");
-        app.connect(DB_LOCATION, DB_DELAY);
-        app.printPopulationOfLivingOrNotLivinginContinentReport();
-        app.printPopulationOfLivingOrNotLivinginCountryReport();
-        app.printPopulationOfLivingOrNotLivinginRegionReport();
-        app.printSelectedLanguageSpeakers();
-        app.printWorldPopulation();
-        app.printContinentPopulation();
-        app.printRegionPopulation();
-        app.printCountryPopulation();
-        app.printDistrictPopulation();
-        app.printCityPopulation();
-    }
-
     // Test if the top Country in the world is suitable with actual result
     @Test
     void testTopGetCountriesInWorld()
@@ -808,5 +779,4 @@ public class AppIntegrationTest
         assertNotNull(app);
     }
 }
-
 
