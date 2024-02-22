@@ -50,14 +50,13 @@ jobs:
           docker rm world
           docker image rm database
       - name: CodeCov
-        uses: codecov/codecov-action@v4.0.1
+        uses: codecov/codecov-action@v2
         with:
           env:
            token:9b9bf058-33bf-4392-92b2-89212f226ce8
           # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          slug: 40637323/DevOps_Gp5
           directory: ./target/site/jacoco
-          flags: Integration Tests # optional
+          flags: Integration-Tests # optional
           verbose: true # optional (default = false)
   build:
     name: Build Run in Docker and Deploy Release
