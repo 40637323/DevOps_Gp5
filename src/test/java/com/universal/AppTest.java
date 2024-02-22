@@ -33,10 +33,10 @@ public class AppTest {
     }
 
     // make the database disconnect after all the test are checked
-    @AfterAll
-    public static void tearDown() {
-        app.disconnect();
-    }
+//    @AfterAll
+//    public static void tearDown() {
+//        app.disconnect();
+//    }
 
     //check if the output is null or not
     @Test

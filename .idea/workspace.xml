@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Deployment update">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppIntegrationTest.java" afterDir="false" />
+    <list default="true" id="16681098-20aa-413d-807a-dbe1da371b89" name="Changes" comment="Update Testing">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/universal/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +287,7 @@
       <workItem from="1707400365420" duration="6358000" />
       <workItem from="1707444301753" duration="1802000" />
       <workItem from="1707456716396" duration="53000" />
-      <workItem from="1708579904255" duration="515000" />
+      <workItem from="1708579904255" duration="769000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, adding initial files.">
       <option name="closed" value="true" />
@@ -411,13 +409,13 @@
       <option name="project" value="LOCAL" />
       <updated>1708064253226</updated>
     </task>
-    <task id="LOCAL-00016" summary="Deployment update">
+    <task id="LOCAL-00016" summary="Update Testing">
       <option name="closed" value="true" />
-      <created>1708064630784</created>
+      <created>1708580456759</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1708064630784</updated>
+      <updated>1708580456759</updated>
     </task>
     <task id="LOCAL-00017" summary="Deployment update">
       <option name="closed" value="true" />
@@ -467,7 +465,7 @@
       <option name="project" value="LOCAL" />
       <updated>1708066303210</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +496,8 @@
     <MESSAGE value="Deployment update" />
     <MESSAGE value="merging release to master" />
     <MESSAGE value="changing main.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="changing main.yml" />
+    <MESSAGE value="Update Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Testing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DevOps_Gp5$AppIntegrationTest.ic" NAME="AppIntegrationTest Coverage Results" MODIFIED="1707411480955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
