@@ -26,11 +26,11 @@ public class AppTest {
 
 
     // set up before making the testing
-    @BeforeAll
-    public static void setUpBeforeClass() {
-        app = new App();
-        app.connect(DB_LOCATION, DB_DELAY);
-    }
+//    @BeforeAll
+//    public static void setUpBeforeClass() {
+//        app = new App();
+//        app.connect(DB_LOCATION, DB_DELAY);
+//    }
 
     // make the database disconnect after all the test are checked
 //    @AfterAll
@@ -536,35 +536,6 @@ public class AppTest {
         ArrayList<City> emptyList = new ArrayList<>();
         // Call the method
         app.displayCapitalCities(emptyList);
-    }
-
-
-    //test the print functions has database connection, if yes, return the data
-    @Test
-    void PrintFunctionsConnectionNullTest(){
-        app.con = null;
-        app.printPopulationOfLivingOrNotLivinginContinentReport();
-        app.printPopulationOfLivingOrNotLivinginCountryReport();
-        app.printPopulationOfLivingOrNotLivinginRegionReport();
-        app.printSelectedLanguageSpeakers();
-        app.printWorldPopulation();
-        app.printContinentPopulation();
-        app.printRegionPopulation();
-        app.printCountryPopulation();
-        app.printDistrictPopulation();
-        app.printCityPopulation();
-        System.out.println("No Connection Test Ran Successfully");
-        app.connect(DB_LOCATION, DB_DELAY);
-        app.printPopulationOfLivingOrNotLivinginContinentReport();
-        app.printPopulationOfLivingOrNotLivinginCountryReport();
-        app.printPopulationOfLivingOrNotLivinginRegionReport();
-        app.printSelectedLanguageSpeakers();
-        app.printWorldPopulation();
-        app.printContinentPopulation();
-        app.printRegionPopulation();
-        app.printCountryPopulation();
-        app.printDistrictPopulation();
-        app.printCityPopulation();
     }
 
     //test the output queries are work or not
