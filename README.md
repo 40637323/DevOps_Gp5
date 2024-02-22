@@ -84,7 +84,7 @@ License [![LICENSE](https://img.shields.io/github/license/40637323/sem.svg?style
 
 Release [![Releases](https://img.shields.io/github/release/40637323/DevOps_Gp5/all.svg?style=flat-square)](https://github.com/40637323/DevOps_Gp5/releases)
 
-Kanban Board [![Kanban Board](https://zube.io/napier-314/population-information-reports/w/workspace-1/kanban?where%5Btypes%5D%5B%5D=issue)
+[Kanban Board] (https://zube.io/napier-314/population-information-reports/w/workspace-1/kanban?where%5Btypes%5D%5B%5D=issue)
 
 ## Requirement Evidence
 
