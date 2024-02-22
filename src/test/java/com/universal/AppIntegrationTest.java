@@ -35,6 +35,7 @@ public class AppIntegrationTest
         app = new App();
         app.connect(DB_LOCATION, DB_DELAY);
     }
+
 //    static App app;
 //
 //    @BeforeAll
