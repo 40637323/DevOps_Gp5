@@ -22,15 +22,28 @@ public class AppIntegrationTest
 {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    static App app;
 
+    //connecting to database
+    private static final String DB_LOCATION = "localhost:33060";
+    private static final int DB_DELAY = 30000;
+    private static App app;
+
+
+    // set up before making the testing
     @BeforeAll
-    static void init()
-    {
+    public static void setUpBeforeClass() {
         app = new App();
-        app.connect("localhost:33060", 30000);
-
+        app.connect(DB_LOCATION, DB_DELAY);
     }
+//    static App app;
+//
+//    @BeforeAll
+//    static void init()
+//    {
+//        app = new App();
+//        app.connect("localhost:33060", 30000);
+//
+//    }
 
     // Test if the top Country in the world is suitable with actual result
     @Test
@@ -730,6 +743,41 @@ public class AppIntegrationTest
         app.displayCountries(countries);
     }
 
+    //test the print functions has database connection, if yes, return the data
+    @Test
+    void PrintFunctionsConnectionNullTest(){
+        app.con = null;
+        app.printPopulationOfLivingOrNotLivinginContinentReport();
+        app.printPopulationOfLivingOrNotLivinginCountryReport();
+        app.printPopulationOfLivingOrNotLivinginRegionReport();
+        app.printSelectedLanguageSpeakers();
+        app.printWorldPopulation();
+        app.printContinentPopulation();
+        app.printRegionPopulation();
+        app.printCountryPopulation();
+        app.printDistrictPopulation();
+        app.printCityPopulation();
+        System.out.println("No Connection Test Ran Successfully");
+        app.connect(DB_LOCATION, DB_DELAY);
+        app.printPopulationOfLivingOrNotLivinginContinentReport();
+        app.printPopulationOfLivingOrNotLivinginCountryReport();
+        app.printPopulationOfLivingOrNotLivinginRegionReport();
+        app.printSelectedLanguageSpeakers();
+        app.printWorldPopulation();
+        app.printContinentPopulation();
+        app.printRegionPopulation();
+        app.printCountryPopulation();
+        app.printDistrictPopulation();
+        app.printCityPopulation();
+    }
+
+    //test the main method
+    @Test
+    public void testMainWithNoArguments() {
+        String[] args = {};
+        App.main(args);
+        assertNotNull(app);
+    }
 }
 
 
