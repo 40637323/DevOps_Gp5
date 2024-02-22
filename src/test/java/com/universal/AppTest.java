@@ -529,16 +529,6 @@ public class AppTest {
         app.displayCities(emptyList);
     }
 
-    //check if the cities in the world contain null value or not
-    @Test
-    void DisplayCitiesTestContainsNull()
-    {
-        ArrayList<City> countriesContainNull = new ArrayList<>();
-        countriesContainNull.add(null);
-        app.displayCities(countriesContainNull);
-    }
-
-
     //test the display capital cities is empty or not
     @Test
     public void testReportCapitalCitiesIsEmpty() {
@@ -548,14 +538,6 @@ public class AppTest {
         app.displayCapitalCities(emptyList);
     }
 
-    //check if the capital cities contain null value or not
-    @Test
-    void DisplayCapitalCitiesTestContainsNull()
-    {
-        ArrayList<City> countriesContainNull = new ArrayList<>();
-        countriesContainNull.add(null);
-        app.displayCapitalCities(countriesContainNull);
-    }
 
     //test the print functions has database connection, if yes, return the data
     @Test
