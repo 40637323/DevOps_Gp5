@@ -26,7 +26,6 @@ jobs:
           docker run --name world -dp 33060:3306 database
           mvn -Dtest=com.universal.AppTest test          
           docker stop world
-          docker rm world
         
   IntegrationTests:
     name: Integration Tests
